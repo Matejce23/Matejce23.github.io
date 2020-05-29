@@ -143,6 +143,18 @@ var slider = tns({
   fixedWidth: 400
   
   });
+  let spanArrows = document.createElement("span");
+  spanArrows.classList.add("pe-7s-angle-left", "pe-lg");
+let sliderButtonLeft = document.querySelectorAll('.tns-controls>button')[0].innerHTML = spanArrows.innerHTML;//"<span class="+"pe-7s-angle-left pe-lg"+"></span>";
+let sliderButtonRight = document.querySelectorAll('.tns-controls>button')[1].innerHTML = "<span class="+"pe-7s-angle-right pe-lg"+"></span>";
+
+// sliderButtons.innerHTML = "<span class="pe-7s-angle-left pe-lg"></span>"
+// let spanArrows = document.createElement("span");
+// spanArrows.classList.Add("pe-7s-angle-left pe-lg");
+//<span class="pe-7s-angle-left pe-lg"></span>
+// for(let i = 0;i < sliderButtons.length;i++) {
+//     sliderButtons[i].innerHTML = "<span class=pe-7s-angle-left pe-lg></span>";
+// }
 
 // =================================== SCROLL ACTIVE CLASS =-===========================
 
