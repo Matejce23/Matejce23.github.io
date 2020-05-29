@@ -137,25 +137,17 @@ var slider = tns({
   items: 2,
   mouseDrag: true,
   slideBy: "page",
+  nav: false,
   swipeAngle: false,
   speed: 800,
   gutter: 10,
-  fixedWidth: 400
+  fixedWidth: 400,
   
   });
-  let spanArrows = document.createElement("span");
-  spanArrows.classList.add("pe-7s-angle-left", "pe-lg");
-let sliderButtonLeft = document.querySelectorAll('.tns-controls>button')[0].innerHTML = spanArrows.innerHTML;//"<span class="+"pe-7s-angle-left pe-lg"+"></span>";
-let sliderButtonRight = document.querySelectorAll('.tns-controls>button')[1].innerHTML = "<span class="+"pe-7s-angle-right pe-lg"+"></span>";
-
-// sliderButtons.innerHTML = "<span class="pe-7s-angle-left pe-lg"></span>"
-// let spanArrows = document.createElement("span");
-// spanArrows.classList.Add("pe-7s-angle-left pe-lg");
-//<span class="pe-7s-angle-left pe-lg"></span>
-// for(let i = 0;i < sliderButtons.length;i++) {
-//     sliderButtons[i].innerHTML = "<span class=pe-7s-angle-left pe-lg></span>";
-// }
-
+  //  ============  Add icons to buttons =============
+let sliderButtonLeft = document.querySelectorAll('.tns-controls>button')[0].innerHTML = "<span class=\"pe-7s-angle-left pe-lg\"></i>";
+let sliderButtonRight = document.querySelectorAll('.tns-controls>button')[1].innerHTML = "<span class=\"pe-7s-angle-right pe-lg\"></i>";
+ 
 // =================================== SCROLL ACTIVE CLASS =-===========================
 
 // let mainNavLinks = document.querySelectorAll("#home-right>ul>li>a");

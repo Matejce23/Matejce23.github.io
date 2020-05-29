@@ -21,61 +21,61 @@
 }
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
-.about-me h3 {
-    font-size: 27px;
-    margin-top: 10px;
-}
-.about-me-text h3 {
-    width: 400px;
-    display: flex;
-    font-size: 22px;
-    padding-bottom: 10px;
-}
-.about-me img {
-    width: 100%;
-    height: 100%;
-}
-.about-me-text p {
-    display: flex;
-    width: 400px;
-    word-wrap: break-word;
-    hyphens: auto;
-    overflow-wrap: break-word;
-}
-.skills h3 {
-    font-size: 25px;
-}
-.skills-2 h3 {
-    margin-top: 20px;
-}
-#testimonial-1 {
-    font-size: 15px;
-    
-}
-#testimonial-2 {
-    
-    font-size: 15px;
-    margin-right: 0px;
-}
-.img-wrap img {
-    width: 55px;
-    border-radius: 50%;
-    margin-top: 0px;
-    margin-left: 4px;
-}
-.work-design img {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-}
-.work-coding img {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-}
-.iframe iframe {
-    width: 90% !important;
-}
+    .about-me h3 {
+        font-size: 27px;
+        margin-top: 10px;
+    }
+    .about-me-text h3 {
+        width: 400px;
+        display: flex;
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+    .about-me img {
+        width: 100%;
+        height: 100%;
+    }
+    .about-me-text p {
+        display: flex;
+        width: 400px;
+        word-wrap: break-word;
+        hyphens: auto;
+        overflow-wrap: break-word;
+    }
+    .skills h3 {
+        font-size: 25px;
+    }
+    .skills-2 h3 {
+        margin-top: 20px;
+    }
+    #testimonial-1 {
+        font-size: 15px;
+        
+    }
+    #testimonial-2 {
+        
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    .img-wrap img {
+        width: 55px;
+        border-radius: 50%;
+        margin-top: 0px;
+        margin-left: 4px;
+    }
+    .work-design img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    }
+    .work-coding img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    }
+    .iframe iframe {
+        width: 90% !important;
+    }
 }
 
 /* // Medium devices (tablets, 768px and up) */

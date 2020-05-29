@@ -289,14 +289,25 @@ span {
     position: relative;
 }
 /* Tiny Slider */
+.tns-controls {
+    position: relative;
+    top: -80px;
+    right: 0;
+    float: right;
+}
 .tns-controls button {
     /* float: right; */
     font-size: 24px;
+    outline: none;
     color: #333;
     border: 1px solid #d8d8d8;
     padding: 2px;
+    margin-right: 5px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+}
+.tns-controls>button:hover {
+    border: 1px solid #e64980 !important;
+    transition: ease-in 0.3s;
 }
 .testimonial {
     position: absolute;
