@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Nassar Portfolio</title>
+
+     
+        <!-- Bootstrap css file -->
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+        <!-- font awesome icons -->
+        <link rel="stylesheet" href="./css/all.min.css">
+
+        <!-- Animate CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+        />
+        <!-- TINY SLIDER 2 (GITHUB) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+
+        <!-- Custom css file -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- ============== HOME SCREEN ================= -->
+        <div id="home" class="site">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-6 col-lg-6 col-xl-6" id="home-left">
+                                <div class="img-box">
+                                    <img src="home_personal.jpg" class="left-background" alt="home-menu">
+                                    <!-- PARENT TABLE -->
+                                    <div class="display-name-table text-white">
+                                        <!-- CHILDREN CELL FOR VERTICAL ALIGN -->
+                                        <div class="display-name-cell">
+                                            <img src="./img/home/me.jpg" class="author-img" alt="me"> 
+                                            <div class="text-js">
+                                                <h1>I'm</h1>
+                                                    <div class="js-type">
+                                                        <span>JOHN DOE</span>
+                                                        <span>DEVELOPER</span>
+                                                        <span>FROM UK</span>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                        </div>
+                            
+                      <!-- ================================== RIGHT MENU =================================================== -->
+
+
+                      <div class="col-6 col-lg-6 col-xl-6 border border-primary">
+                        <div class="right-menu  border bg-right border-primary" id="home-right">
+                            <ul class="nav navbar-nav  flex-column pt-menu-right ml-auto  text-center" id="ul-menu">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#home">home</a>
+                                  </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="#about">about</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="#resume">resume</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#services">services</a>
+                                  </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="#works">works</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="#news">news</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">contact</a>
+                                  </li>
+                              </ul>
+                            </div>
+
+                              <!-- ======================COLLAPSE MENU========================== -->
+
+                              <div class="fixed-top" id="collapse-menu">
+                                <div class="collapse" id="navbarToggleExternalContent">
+                                  <div class="bg-dark p-4">
+                                    <div class="right-menu" id="home-right">
+                                        <ul class="nav navbar-nav flex-column pt-menu-right ml-auto bg-right text-center">
+                                            <li class="nav-item">
+                                              <a class="nav-link" href="#about">about</a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" href="#resume">resume</a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" href="#services">works</a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" href="#news">news</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#contact">contact</a>
+                                              </li>
+                                          </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                        <!-- TOGGLE BUTTON REMOVE CLASS(TOP NAVIGATION) -->
+                                            <nav class="navbar navbar-light bg-light">
+                                            <button class="navbar-toggler" type="button" onclick="removeRightClass()" data-toggle="collapse" data-target="#home-right" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                            </nav>
+                            </div>
+                      </div>  <!-- END OF COLUMN 2 (RIGHT MENU) -->                        
+                    </div> 
+                </div>
+            </div>
+                  <!-- ============== END OF HOME SCREEN ================= -->
+
+                <!-- ============== START ABOUT SECTION ================= -->
+                <section class="about-page border border-primary" id="about">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12">
+                                <div class="about-me">
+                                    <h3>About Me</h3>    
+                                <img src="https://nassar.netlify.app/assets/images/author.jpg" id="about-img" class="author-about float-left mr-3 mb-5 mt-5" alt="author.png">
+                                <div class="about-me-text">
+                                    <h3 id="i-am">I'm John Doe</h3>
+                                    <h3 id="designer">Creative web designer</h3>
+                                    <p class="text-break">
+                                        I'm 24 years old creative web designer based in New York, specializing in User Interface Design and Development. I build clean, appealing, and functional interfaces which comply with the latest web standards.
+                                    </p>
+                                    <p class="text-break">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="row">
+                           <div class="col-5 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                               <div class="skills">
+                                    <h3>My Skills</h3>
+                                    <br>
+                                    <span class="mb-5">Photoshop</span>
+                                    <span class="text-percentage">90 %</span>
+                                    <div class="progress" style="height: 6px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>Illustrator</span>
+                                    <span class="text-percentage">82 %</span>
+                                    <div class="progress" style="height: 6px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>Jquery</span>
+                                    <span class="text-percentage">77 %</span>
+                                    <div class="progress" style="height: 6px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                           </div>
+                           <div class="col-5 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                            <div class="skills-2">
+                                 <h3>Languages</h3>
+                                 
+                                 <span class="mb-5">English</span>
+                                 <span class="text-percentage">93 %</span>
+                                 <div class="progress" style="height: 6px;">
+                                     <div class="progress-bar" role="progressbar" style="width: 93%;" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                                 <span>Spanish</span>
+                                 <span class="text-percentage">86 %</span>
+                                 <div class="progress" style="height: 6px;">
+                                     <div class="progress-bar" role="progressbar" style="width: 86%;" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                                 <span>Italian</span>
+                                 <span class="text-percentage">72 %</span>
+                                 <div class="progress" style="height: 6px;">
+                                     <div class="progress-bar" role="progressbar" style="width: 72%;" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                             </div>
+                        </div>
+                       </div>
+                       <!-- TESTIMONIALS TITLE AND ARROWS -->
+                       <div class="row">
+                           <div class="col-5 col-sm-12 col-md-8 col-lg-6">
+                                <h3 class="pt-5 pb-5">Testimonials</h3>
+                            </div>
+                            <!-- <div class="col-5 col-sm-12 col-md-4 col-lg-6 align-self-end">
+                                <div class="arrows">
+                                    <span class="arrow-left"></span>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- END TESTIMONIALS TITLE AND ARROWS -->
+                        <!-- TESTIMONIALS -->
+                        <div class="row">
+                            <div class="my-slider slide-container">
+                                <!-- ITEM 1 -->
+                                <div> 
+                                        <div class="text-box-container">
+                                                <div class="text-box d-flex">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie, justo nec convallis sollicitudin, sapien lorem dictum lacus, non consequat odio ipsum nec est.</p>    
+                                                </div>
+                                                <div class="img-text-client">
+                                                    <div class="img-wrap">
+                                                        <img src="https://nassar.netlify.app/assets/images/testimonials/client_1.jpg" class="testimonial" alt="testimonial">
+                                                    </div>
+                                                    <h4 id="testimonial-1" class="d-flex">John Doe</h4>
+                                                    <p class="testi-client" class="d-flex">Client</p>
+                                                </div>
+                                        </div>  
+                                </div>
+                                <!-- ITEM 2 -->
+                                <div> 
+                                        <div class="text-box-container">
+                                                <div class="text-box d-flex">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie, justo nec convallis sollicitudin, sapien lorem dictum lacus, non consequat odio ipsum nec est.</p>    
+                                                </div>
+                                                <div class="img-text-client">
+                                                    <div class="img-wrap">
+                                                        <img src="https://nassar.netlify.app/assets/images/testimonials/client_2.jpg" class="testimonial" alt="testimonial">
+                                                    </div>
+                                                    <h4 id="testimonial-1" class="d-flex">John Doe</h4>
+                                                    <p class="testi-client" class="d-flex">Client</p>
+                                                </div>
+                                        </div>  
+                                </div>
+                                <!-- ITEM 3 -->
+                                <div> 
+                                        <div class="text-box-container">
+                                                <div class="text-box d-flex">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie, justo nec convallis sollicitudin, sapien lorem dictum lacus, non consequat odio ipsum nec est.</p>    
+                                                </div>
+                                                <div class="img-text-client">
+                                                    <div class="img-wrap">
+                                                        <img src="https://nassar.netlify.app/assets/images/testimonials/client_3.jpg" class="testimonial" alt="testimonial">
+                                                    </div>
+                                                    <h4 id="testimonial-1" class="d-flex">John Doe</h4>
+                                                    <p class="testi-client" class="d-flex">Client</p>
+                                            </div>
+                                        </div>  
+                                </div>
+                                <!-- ITEM 4 -->
+                                <div> 
+                                        <div class="text-box-container">
+                                                <div class="text-box d-flex">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie, justo nec convallis sollicitudin, sapien lorem dictum lacus, non consequat odio ipsum nec est.</p>    
+                                                </div>
+                                                <div class="img-text-client">
+                                                    <div class="img-wrap">
+                                                        <img src="https://nassar.netlify.app/assets/images/testimonials/client_4.jpg" class="testimonial" alt="testimonial">
+                                                    </div>
+                                                    <h4 id="testimonial-1" class="d-flex">John Doe</h4>
+                                                    <p class="testi-client" class="d-flex">Client</p>
+                                                </div>
+                                    </div>  
+                            </div>
+                            </div>     
+                        </div>
+                      <!-- END OF TESTIMONIALS -->
+                    <!-- ============START OF FUN FACTS================ -->
+                    <h3 class="mt-5 mb-5">Fun Facts</h3>
+                    <div class="row">
+                        <!-- START OF 4 COLUMN ITEMS -->
+                        <!-- COLUMN 1 -->
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                            <div class="fun-facts">
+                                <!-- CONTENT INSIDE BOX -->
+                                <div class="item">
+                                    <i class="far fa-smile fa-3x"></i>
+                                    <h4>150</h4>
+                                    <h5>Happy Clients</h5>
+                                </div>
+                                <!-- END OF CONTENT INSIDE BOX -->
+                            </div>
+                        </div>
+                        <!-- COLUMN 2 -->
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                            <div class="fun-facts">
+                                <!-- CONTENT INSIDE BOX -->
+                                <div class="item">
+                                    <i class="fas fa-briefcase fa-3x"></i>
+                                    <h4>23</h4>
+                                    <h5>Years Experience</h5>
+                                </div>
+                                <!-- END OF CONTENT INSIDE BOX -->
+                            </div>
+                        </div>
+                        <!-- COLUMN 3 -->
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                            <div class="fun-facts">
+                                <!-- CONTENT INSIDE BOX -->
+                                <div class="item">
+                                    <i class="fas fa-medal fa-3x"></i>
+                                    <h4>23</h4>
+                                    <h5>Years Experience</h5>
+                                </div>
+                                <!-- END OF CONTENT INSIDE BOX -->
+                            </div>
+                        </div>
+                        <!-- COLUMN 4 -->
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                            <div class="fun-facts">
+                                <!-- CONTENT INSIDE BOX -->
+                                <div class="item">
+                                    <i class="far fa-thumbs-up fa-3x"></i>
+                                    <h4>250</h4>
+                                    <h5>Projects Done</h5>
+                                </div>
+                                <!-- END OF CONTENT INSIDE BOX -->
+                            </div>
+                        </div>
+                        <!-- END OF 4 COLUMN ITEMS -->
+                    </div>
+                    <!-- ============END OF FUN FACTS================ -->
+                    </div> <!--CONTAINER DIV-->
+                </section>
+                <!-- ============== END ABOUT SECTION ================= -->
+
+                <!-- Start Resume Section -->
+                <section id="resume" class="border border-primary">
+                    <div class="container-fluid">
+                        <!-- ROW 1 -->
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="pb-5 pt-5">My Resume</h3>
+                            </div>
+                        </div>
+                        <!-- ROW 2 -->
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>Education</h4>
+                            </div>
+                            <div class="col-6">
+                                <h4>Experience</h4>
+                            </div>
+                        </div>
+                        <!-- ROW 3 (2X 6 COLUMNS ROWS) -->
+                        <!-- FIRST -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="box-container pt-4">
+                                    <span>2011-2013</span>
+                                    <h5>Education Specialist</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Integer fermentum nibh et metus facilisis sollicitudin.</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="box-container pt-4">
+                                    <span>2016 - Present</span>
+                                    <h5>Lead Web Developer</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Integer fermentum nibh et metus facilisis sollicitudin.</p>
+                                </div> 
+                            </div>
+                        </div>
+                        <!-- SECOND -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="box-container pt-4">
+                                    <span>2008 - 2010</span>
+                                    <h5>Doctoral Degree</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Integer fermentum nibh et metus facilisis sollicitudin.</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="box-container pt-4">
+                                    <span>2012 - 2015</span>
+                                    <h5>Senior Web Developer</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Integer fermentum nibh et metus facilisis sollicitudin.</p>
+                                </div> 
+                            </div>
+                        </div>
+                     <!-- THIRD -->
+                     <div class="row">
+                        <div class="col-6">
+                            <div class="box-container pt-4">
+                                <span>2005 - 2007</span>
+                                <h5>Master Degree</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Integer fermentum nibh et metus facilisis sollicitudin.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="box-container pt-4">
+                                <span>2010 - 2011</span>
+                                <h5>Junior Web Developer</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Integer fermentum nibh et metus facilisis sollicitudin.</p>
+                            </div> 
+                        </div>
+                     </div>
+                     <!-- FOURTH -->
+                     <div class="row">
+                        <div class="col-6">
+                            <div class="box-container pt-4">
+                                <span>2000 - 2004</span>
+                                <h5>Bachelor Degree</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Integer fermentum nibh et metus facilisis sollicitudin.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="box-container pt-4">
+                                <span>2008 - 2009</span>
+                                <h5>Web Web Developer</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Integer fermentum nibh et metus facilisis sollicitudin.</p>
+                            </div> 
+                        </div>
+                     </div>
+                    </div>
+                </section>
+                <!-- End Resume Section -->
+
+                <!-- Start Services Section -->
+                <section id="services" class="border border-primary">
+                    <div class="container-fluid">
+                        <!-- TITLE -->
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="pt-5 pb-5">Services</h3>
+                            </div>
+                        </div>
+                        <!-- START OF 2X 6 COLS -->
+                        <!-- FIRST -->
+                        <div class="row">
+                            <!-- COL 1 -->
+                            <div class="col-6">
+                                <div class="ser-icon">
+                                    <img src="https://nassar.netlify.app/assets/images/services/serv-1.png">
+                                </div>
+                                <div class="ser-content pt-4">
+                                    <h5>Web Design</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                </div>
+                            </div>
+                            <!-- COL 2 -->
+                            <div class="col-6">
+                                <div class="ser-icon">
+                                    <img src="https://nassar.netlify.app/assets/images/services/serv-2.png">
+                                </div>
+                                <div class="ser-content pt-4">
+                                    <h5>Development</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SECOND ROW -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="ser-icon">
+                                    <img src="https://nassar.netlify.app/assets/images/services/serv-3.png">
+                                </div>
+                                <div class="ser-content pt-4">
+                                    <h5>Brand Building</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                </div>
+                            </div>
+                            <!-- COL 2 -->
+                            <div class="col-6">
+                                <div class="ser-icon">
+                                    <img src="https://nassar.netlify.app/assets/images/services/serv-4.png">
+                                </div>
+                                <div class="ser-content pt-4">
+                                    <h5>Clean Code</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ROW 3 -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="ser-icon">
+                                    <img src="https://nassar.netlify.app/assets/images/services/serv-5.png">
+                                </div>
+                                <div class="ser-content pt-4">
+                                    <h5>Mobile apps</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                </div>
+                            </div>
+                            <!-- COL 2 -->
+                            <div class="col-6">
+                                <div class="ser-icon">
+                                    <img src="https://nassar.netlify.app/assets/images/services/serv-6.png">
+                                </div>
+                                <div class="ser-content pt-4">
+                                    <h5>Retina Ready</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Services Section -->
+
+                <!-- Start Works Section -->
+                <section id="works" class="border border-primary">
+                    <div class="container-fluid">
+                        <!-- Title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <h3>Portfolio</h3>
+                            </div>
+                        </div>
+                        <!-- LIST ITEM/MENU/CATEGORIES -->
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <div class="portfolio-categories" id="cate-ul">
+                                    <ul class="portfolio-ul">
+                                        <li class="active">
+                                            <a href="#all" onclick="filterSelection('all')" class="">All</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#coding" onclick="filterSelection('coding')" class="">Coding</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#design" onclick="filterSelection('design')" class="">Design</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#Logo" onclick="filterSelection('logo')" class="">Logo</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                                <div class="row align-items-start" id="row1">
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 pb-4 align-self-start">
+                                        <div class="work-design border border-primary" category ="design">
+                                            <img src="https://nassar.netlify.app/assets/images/works/work-1.jpg" id="#all" >
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 pb-4 align-self-start">
+                                        <div class="work-design border border-primary" category ="coding">
+                                            <img src="https://nassar.netlify.app/assets/images/works/work-2.jpg"  id="#all">
+                                        </div>
+                                    </div>
+                                
+                                
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 pb-4 align-self-start">
+                                        <div class="work-design border border-primary" category="design">
+                                            <img src="https://nassar.netlify.app/assets/images/works/work-3.jpg" id="#all" >
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 pb-4 align-self-start">
+                                        <div class="work-design border border-primary" category="logo">
+                                            <img src="https://nassar.netlify.app/assets/images/works/work-4.jpg"  id="#all">
+                                        </div>
+                                    </div>
+                                
+                                
+                                    <div class="col-12 col-sm-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 pb-4 align-self-start">
+                                        <div class="work-design" category ="coding">
+                                            <img src="https://nassar.netlify.app/assets/images/works/work-6.jpg" id="#all" >
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 pb-4 align-self-start">
+                                        <div class="work-design" category="logo">
+                                            <img src="https://nassar.netlify.app/assets/images/works/work-5.jpg"  id="#all">
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Works Section -->
+
+                <!-- Start News Section -->
+                <section id="news">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="pt-5 pb-5">My Blog</h3>
+                            </div> 
+                        </div>
+                        <!-- ROW 1 -->
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6">
+                                <div class="blog-post pb-5">
+                                    <div class="blog-img">
+                                        <img src="https://nassar.netlify.app/assets/images/blog/1.jpg" class="" alt="top10-books">
+                                    </div>
+                                    <div class="blog-title text-center">
+                                        <span class="border border-primary">September 1, 2019</span>
+                                        <a href="#" class="pb-5 pt-3">The top 10 books in the world</a>
+                                    </div> 
+                                </div> 
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6">
+                                <div class="blog-post border border-light">
+                                    <div class="blog-img">
+                                        <img src="https://nassar.netlify.app/assets/images/blog/2.jpg" class="" alt="100-ways-to-be-happy">
+                                    </div>
+                                    <div class="blog-title">
+                                        <span>August 23, 2019</span>
+                                        <a href="#" class="pb-5 pt-3">100 Ways to be more happy</a>
+                                    </div> 
+                                </div> 
+                            </div>
+                        </div>
+                        <!-- ROW 2 -->
+                        <div class="row pt-5">
+                            <div class="col-12 col-sm-12 col-md-6">
+                                <div class="blog-post pb-5 border border-light">
+                                    <div class="blog-img">
+                                        <img src="https://nassar.netlify.app/assets/images/blog/3.jpg" class="" alt="100-ways-to-be-happy">
+                                    </div>
+                                    <div class="blog-title">
+                                        <span>August 22, 2019</span>
+                                        <a href="#" class="pb-5 pt-3">100 Ways to be more happy</a>
+                                    </div> 
+                                </div> 
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6">
+                                <div class="blog-post border border-light">
+                                    <div class="blog-img">
+                                        <img src="https://nassar.netlify.app/assets/images/blog/4.jpg" class="" alt="100-ways-to-be-happy">
+                                    </div>
+                                    <div class="blog-title">
+                                        <span>August 23, 2019</span>
+                                        <a href="#" class="pb-5 pt-3">The top 10 books in the world</a>
+                                    </div> 
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="load-more text-center pt-5">
+                            <button class="btn btn-danger">Load More</button>
+                        </div>
+                    </div>
+                </section>
+                <!-- End News Section -->
+
+                <!-- Start Contact Section -->
+                <section id="contact">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="pt-5 pb-5">Contact me</h3>
+                            </div> 
+                        </div>
+                        <div class="row" id="row-contact">
+                            <div class="col-12 col-sm-6 col-lg-6">
+                                <div class="location">
+                                    <h4>Location</h4>
+                                    <!-- Google Map -->
+                                    <div class="iframe pt-5">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.2404329768883!2d21.768006051212375!3d41.715330379133526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13542a2cddd2e635%3A0xa58e2cc31d2f7c27!2sDa%20Vinci&#39;s%20Pub!5e0!3m2!1sen!2smk!4v1590071633183!5m2!1sen!2smk" width="350" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-6">
+                                <div class="contact">
+                                    <h4>Contact Form</h4>
+                                    <form class="forms" name="myform" onsubmit="return validateForm()">
+                                    <input type="text" class="" id="fname" name="fname" placeholder="Name" >
+                                    <input type="email" class="" id="email" name="email" placeholder="Email" >
+                                    <textarea name="message" id="message" placeholder="Message" rows="7" cols="30" ></textarea>
+                                    <div class="load-more pt-2">
+                                        <button class="btn btn-danger" type="submit">Send Message</button>
+                                    </div>
+                                    </form>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="inside text-center pt-5">
+                                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                                    <p>New York, NY</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="inside text-center pt-5">
+                                    <i class="far fa-envelope fa-2x"></i>
+                                    <a href="mailto:Your@example.com">Your@example.com</a>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="inside text-center pt-5">
+                                    <i class="fas fa-phone-alt fa-2x"></i>
+                                    <p>+123 456 789</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+                <!-- End Contact Section -->
+
+                <!-- Arrow Menu -->
+
+                <!-- End Arrow Menu -->
+            </div>
+        </div>
+        <!-- Jquery js file -->
+        <script src="./js/jquery.3.5.1.js"></script>
+
+
+        <!-- Bootstrap js file -->
+        <script src="./js/bootstrap.min.js"></script>
+
+        <!-- TINY SLIDER js file -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+        <!-- My js file -->
+        <script src="/js/script.js"></script>
+    </body>
+</html>
