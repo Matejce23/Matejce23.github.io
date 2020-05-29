@@ -144,6 +144,8 @@ var slider = tns({
   startIndex: 4,
   loop: false,
   autoplay: true,
+  prevButton: true,
+  nextButton: true,
   autoplayButton: false
   });
 
