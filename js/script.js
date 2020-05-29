@@ -140,13 +140,8 @@ var slider = tns({
   swipeAngle: false,
   speed: 800,
   gutter: 10,
-  fixedWidth: 400,
-  startIndex: 4,
-  loop: false,
-  autoplay: true,
-  prevButton: true,
-  nextButton: true,
-  autoplayButton: false
+  fixedWidth: 400
+  
   });
 
 // =================================== SCROLL ACTIVE CLASS =-===========================
