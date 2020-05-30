@@ -2,54 +2,54 @@
 // ako collapse-menu pomine 992px izbrisi go ako e pod 992px neka stoj
 // za desno menu ako e na 992px display normalno ako ne dodadi go vo top collapse menu
 // ============================= Fucntion for top fixed menu to show/hide at 992px===========================
-function hideTopMenu(x) {
-    if (x.matches) { // If media query matches
-      menu.classList.add("bottom");
-      menu.classList.remove("top");
-    } else {
-        menu.classList.add("top");
-        menu.classList.remove("bottom");
-    }
-  }
-  var menu = document.getElementById('collapse-menu');
-  var x = window.matchMedia("(max-width: 992px)")
-  hideTopMenu(x) // Call listener function at run time
-  x.addListener(hideTopMenu) // Attach listener function on state changes
+// function hideTopMenu(x) {
+//     if (x.matches) { 
+//       menu.classList.add("bottom");
+//       menu.classList.remove("top");
+//     } else {
+//         menu.classList.add("top");
+//         menu.classList.remove("bottom");
+//     }
+//   }
+//   var menu = document.getElementById('collapse-menu');
+//   var x = window.matchMedia("(max-width: 992px)")
+//   hideTopMenu(x) 
+//   x.addListener(hideTopMenu) 
 
   // ========================== Function for right side menu to show hide also ===============================
-  function hideRightMenu(i) {
-    if (i.matches) { // If media query matches
-        rightMenu.classList.add("right");
-        rightMenu.classList.remove("left");
-    } else {
-        rightMenu.classList.remove("right");
-        rightMenu.classList.add("left");
+//   function hideRightMenu(i) {
+//     if (i.matches) { // If media query matches
+//         rightMenu.classList.add("right");
+//         rightMenu.classList.remove("left");
+//     } else {
+//         rightMenu.classList.remove("right");
+//         rightMenu.classList.add("left");
         
-    }
-  }
-  var rightMenu = document.getElementById('home-right');
-  var i = window.matchMedia("(max-width: 991px)")
-  hideRightMenu(i) // Call listener function at run time
-  i.addListener(hideRightMenu) // Attach listener function on state changes
+//     }
+//   }
+//   var rightMenu = document.getElementById('home-right');
+//   var i = window.matchMedia("(max-width: 991px)")
+//   hideRightMenu(i) // Call listener function at run time
+//   i.addListener(hideRightMenu) // Attach listener function on state changes
 
-  function removeRightClass() {
-      rightMenu.classList.remove("right");
-      rightMenu.classList.add("left");
-  }
+//   function removeRightClass() {
+//       rightMenu.classList.remove("right");
+//       rightMenu.classList.add("left");
+//   }
 
 // ==================================== RIGHT MENU ACTIVE CLASS ================================
-let arr2 = document.querySelectorAll('#home-right>ul>li>a');
-for(let i = 0; i < arr2.length;i++) {
-    arr2[i].addEventListener("click", setActiveLi);
-}
+// let arr2 = document.querySelectorAll('#home-right>ul>li>a');
+// for(let i = 0; i < arr2.length;i++) {
+//     arr2[i].addEventListener("click", setActiveLi);
+// }
 
-function setActiveLi() {
-    for(let i=0; i < document.querySelectorAll('#home-right>ul>li').length; i++)
-    {
-        document.querySelectorAll('#home-right>ul>li')[i].classList = "nav-item";
-    }
-    this.parentElement.classList = "nav-item active";
-}
+// function setActiveLi() {
+//     for(let i=0; i < document.querySelectorAll('#home-right>ul>li').length; i++)
+//     {
+//         document.querySelectorAll('#home-right>ul>li')[i].classList = "nav-item";
+//     }
+//     this.parentElement.classList = "nav-item active";
+// }
 // ===================================== FORM VALIDATION ============================================
 function validateForm(){  
     var fname = document.myform.fname.value;  
@@ -148,6 +148,17 @@ var slider = tns({
 let sliderButtonLeft = document.querySelectorAll('.tns-controls>button')[0].innerHTML = "<span class=\"pe-7s-angle-left pe-lg\"></i>";
 let sliderButtonRight = document.querySelectorAll('.tns-controls>button')[1].innerHTML = "<span class=\"pe-7s-angle-right pe-lg\"></i>";
  
+// =================================== TYPESCRIPT HOME PAGE =======================================
+document.addEventListener("DOMContentLoaded", function(event) {
+    var typed = new Typed('#typed',{
+        stringsElement: '#typed-strings',
+        backSpeed: 50,
+        typeSpeed: 50,
+        loop: true
+      });
+});
+
+
 // =================================== SCROLL ACTIVE CLASS =-===========================
 
 // let mainNavLinks = document.querySelectorAll("#home-right>ul>li>a");

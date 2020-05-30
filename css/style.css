@@ -13,9 +13,116 @@ html, body {
     box-sizing: content-box;
     width: 100%;
     height: 100%;
+    font-family: "Nunito", sans-serif;
 }
 
 /* START OF HOME PAGE/ START MENU */
+/* home left testing */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left-screen {
+    left: 0;
+    background-image: url('../home_personal.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .right-screen {
+    right: 0;
+    background-image: url('https://nassar.netlify.app/assets/images/dot.png');
+    background-size: 0.6rem;
+    /* background-position: 50% 50%; */
+    background-repeat: repeat;
+    /* background-position: center; */
+    /* min-width: 100%;
+    min-height: 100%; */
+    /* margin-left: -15px; */
+  }
+  .centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+  .centered-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;   
+  }
+  .text-pink {
+      color:#e64980 ;
+  }
+  .text-js {
+    font-weight: 800;
+    font-size: 58px;
+  }
+  .cv-contact-btn {
+    width: 100%;
+    height: 60%;
+    display: table;
+    text-align: center;
+}
+.cv-btn {
+    text-decoration: none;
+    /* border: 2px solid #e64980 !important; */
+    /* border-radius: 0px !important; */
+    background-color: #e64980;
+    color: whitesmoke;
+    padding: 14px 28px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: "Nunito";
+    cursor: pointer;
+    border: 2px solid #e64980;
+    margin-right: 5%;
+}
+.cv-btn:hover {
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    text-decoration: none;
+    background-color: transparent !important;
+    transition: 0.5s;
+}
+.contact-btn {
+    text-decoration: none;
+    /* border: 2px solid #e64980 !important; */
+    /* border-radius: 0px !important; */
+    background-color: transparent;
+    color: whitesmoke;
+    padding: 14px 28px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: "Nunito";
+    cursor: pointer;
+    border: 2px solid whitesmoke;
+    /* margin-right: 10%; */
+}
+.contact-btn:hover {
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    text-decoration: none;
+    background-color: #e64980 !important;
+    transition: 0.5s;
+}
+#home-right a {
+    font-family: "Nunito";
+    font-size: 52.08px;
+    font-weight: 900;
+    line-height: 52.08px;
+}
 /* column */
 #home-left {
     padding: 0px !important;
@@ -33,16 +140,17 @@ html, body {
     height: 100%;
 }
 /* avatar picture and name */
-.display-name-table {
+/* .display-name-table {
     width: inherit;
     height: inherit;
     display: table;
     text-align: center;
 }
+*/
 .display-name-cell {
     display: table-cell;
-    vertical-align: middle;
-}
+    vertical-align: bottom;
+} 
 .img-bg {
     background-image: url('../home_personal.jpg');
     background-repeat: no-repeat;
@@ -74,7 +182,7 @@ html, body {
 }
 .author-img {
     border-radius: 50%;
-    border: 10px solid #eee;
+    border: 5px solid #eee;
     margin-bottom: 0px;
 }
 
@@ -86,7 +194,7 @@ html, body {
     /* background-position: center; */
     min-width: 107%;
     min-height: 100%;
-    margin-left: -15px;
+    /* margin-left: -15px; */
 }
 .pt-menu-right {
     padding-top: 10%;
@@ -94,12 +202,12 @@ html, body {
 .nav-item {
     vertical-align: middle;
 }
-.right {
+.rightt {
     position: absolute;
     right: -521px;
     /* right: -300px; */
 }
-.left {
+.leftt {
     /* position: absolute; */
     right: 14%;
 }
@@ -112,27 +220,31 @@ html, body {
 .padding {
     margin-top: 500px;
 }
-#home-right .navbar-nav li > a:hover,focus {
+/* #home-right .navbar-nav li > a:hover,focus {
     color: rgb(0, 0, 0);
 }
 #home-right .navbar-nav li.active > a {
-	/* background-color: #333; */
 	color: rgb(0, 0, 0);
-}
-#ul-menu a {
-    color: red;
+} */
+/* #ul-menu a {
     display: inline-block;
-    /* position: relative; */
-     font-weight: 900;
-    font-size: 3.0vw; 
     text-transform: uppercase;
-    /* -webkit-text-stroke: 2px #333;
-    transition: all 0.6s;  */
-}
-#ul-menu a:hover {
+    font-weight: 900;
+    font-size: 4.8vw;
+    color: white;
+    -webkit-text-stroke: 1px #333;
+    transition: all 0.6s;
+} */
+/* #ul-menu a:hover {
     color: black;
     transition: all 0.6s;
-}
+} */
+/* #ul-menu a:after {
+    color: #333;
+    clip-path: inset(0px 100% 0px 0px);
+    overflow: hidden;
+    transition: all 0.4s;
+} */
 /* #ul-menu a::after {
     content: attr(data-hover);
     position: absolute;
