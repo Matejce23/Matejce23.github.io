@@ -13,6 +13,7 @@ html, body {
     box-sizing: content-box;
     width: 100%;
     height: 100%;
+    background-color: rgb(236, 240, 241);
     font-family: "Nunito", sans-serif;
 }
 
@@ -27,7 +28,28 @@ html, body {
     overflow-x: hidden;
     padding-top: 20px;
   }
-  
+  .split-js {
+    height: 100%;
+    width: 26%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+  }
+  .right-screen-js {
+    background-color: #fff;
+    /* right: 0; */
+    background-image: url('https://nassar.netlify.app/assets/images/dot.png');
+    background-size: 0.6rem;
+    /* background-position: 50% 50%; */
+    background-repeat: repeat;
+    /* background-position: center; */
+    /* min-width: 100%;
+    min-height: 100%; */
+    /* margin-left: -15px; */  
+  }
   /* Control the left side */
   .left-screen {
     left: 0;
@@ -45,6 +67,15 @@ html, body {
     /* min-width: 100%;
     min-height: 100%; */
     /* margin-left: -15px; */
+  }
+  .linesCorner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.6s;
+    background-color: #fff;
   }
   .centered {
     position: absolute;
@@ -220,52 +251,17 @@ html, body {
 .padding {
     margin-top: 500px;
 }
-/* #home-right .navbar-nav li > a:hover,focus {
+#home-right .navbar-nav li > span > a:hover,focus {
     color: rgb(0, 0, 0);
 }
-#home-right .navbar-nav li.active > a {
+#home-right .navbar-nav li.active > span > a {
 	color: rgb(0, 0, 0);
-} */
-/* #ul-menu a {
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 4.8vw;
-    color: white;
-    -webkit-text-stroke: 1px #333;
-    transition: all 0.6s;
-} */
-/* #ul-menu a:hover {
-    color: black;
-    transition: all 0.6s;
-} */
-/* #ul-menu a:after {
-    color: #333;
-    clip-path: inset(0px 100% 0px 0px);
-    overflow: hidden;
-    transition: all 0.4s;
-} */
-/* #ul-menu a::after {
-    content: attr(data-hover);
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-text-stroke: 0;
-    color: #333;
-    height: auto;
-    clip-path: inset(0px 100% 0px 0px);
-    overflow: hidden;
-    transition: all 0.4s;
-} */
+} 
 /* END OF HOME PAGE/ START MENU */
 
 /* =====================START ABOUT SECTION============== */
 /* START INTRODUCTION */
 .about-page {
-    /* width: 100%; */
-    /* height: 50%;
-    min-height: 40%; */
-    /* position: absolute; */
     top: 0;
     left: 0;
     visibility: visible;
@@ -282,10 +278,15 @@ html, body {
 }
 #about {
     background-color: #ffffff;
-    padding: 20px;
-    margin-left: 25%;
-    /* width: 60%; */
-    /* height: 50%; */
+    /* padding: 20px; */
+    margin-left: 33%;
+    padding: 0 50px;
+    overflow-y: scroll;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    max-width: 995px;
+    margin-top: 50px;
+    overflow: hidden;
     
 }
 .author-about {
@@ -488,10 +489,105 @@ span {
 /* ============================================ RESUME ================================================ */
 #resume {
     background-color: #ffffff;
-    padding: 20px;
-    margin-left: 25%;
-    /* height: 20%; */
+    /* padding: 20px; */
+    margin-left: 33%;
+    padding: 0 50px;
+    overflow-y: scroll;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    max-width: 995px;
+    margin-top: 50px;
+    overflow: hidden;
 }
+/* NEW VERSION */
+/* left side (EDUCATION) */
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: '';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li > .date:before {
+    content: ' ';
+    background: #e64980;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+    opacity: 0.20;
+}
+ul.timeline li > .date:after {
+    content: "";
+    position: absolute;
+    left: 27px;
+    width: 6px;
+    height: 6px;
+    background-color: #e64980;
+    border-radius: 50%;
+    z-index: 999;
+    margin-top: 7px;
+} 
+ul.timeline li > .date > span:before {
+    content: "";
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border: 8px solid transparent;
+    position: absolute;
+    border-right-color: #e64980;
+    top: 9px;
+    left: -15px;
+    z-index: 1;
+    opacity: 0.3;
+}
+ul.timeline li > .date > span:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    z-index: -1;
+    background-color: #e64980;
+    /* width: 100%; */
+    height: calc(100% + 3px);
+    opacity: 0.1;
+    border-radius: 2px;
+}
+ul.timeline > li > h5 {
+    font-weight: bold;
+    padding-top: 20px;
+}
+ul.timeline > li > p {
+    width: 70%;
+}
+ul.timeline > li > .date > span {
+    position: relative;
+    text-align: center;
+    color:#e64980 !important;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+    background: rgba(230, 73, 128, 0.2);
+    padding: 9px;
+    width: 150px;
+    opacity: 0.63;
+}
+/* RIGHT SIDE (Experience) */
+/* old version */
 #resume p {
     color: #9b9b9b;
     font-size: 14px;
@@ -517,9 +613,15 @@ span {
 /* =================================================== SERVICES =========================================== */
 #services {
     background-color: #ffffff;
-    padding: 20px;
-    margin-left: 25%;
-    /* height: 20%; */
+    /* padding: 20px; */
+    margin-left: 33%;
+    padding: 0 50px;
+    overflow-y: scroll;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    max-width: 995px;
+    margin-top: 50px;
+    overflow: hidden;
 }
 #services p {
     color: #9b9b9b;
@@ -546,9 +648,75 @@ span {
 /* ========================================================= WORKS =================================== */
 #works {
     background-color: #ffffff;
-    padding: 20px;
-    margin-left: 25%;
+    /* padding: 20px; */
+    margin-left: 33%;
+    padding: 0 50px;
+    overflow-y: scroll;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    max-width: 995px;
+    margin-top: 50px;
+    overflow: hidden;
 }
+.works-container {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.works {
+    display: inline-block;
+    flex: 0 31 50%;
+    margin-bottom: 20px;
+}
+.work-1 {
+    position: relative;
+}
+.work-2 {
+    position: relative;
+}
+.work-3 {
+    position: relative;
+}
+.work-4 {
+    position: relative;
+}
+.work-5 {
+    position: relative;
+}
+.work-6 {
+    position: relative;
+}
+.image {
+    display: block;
+    width: 94%;
+    height: 100%;
+}
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 18px;
+    top: 15px;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    width: 25%;
+    height: 0;
+    transition: .5s ease;
+} 
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 #row1 {
     max-width: 800px !important;
 }
@@ -559,7 +727,7 @@ span {
     max-width: 800px !important;
 }
 .show {
-    display: block !important;
+    display: inline-block !important;
 }
 
 .hide {
@@ -617,8 +785,15 @@ span {
 /* ===================================================== MY BLOG ======================================= */
 #news {
     background-color: #ffffff;
-    padding: 20px;
-    margin-left: 25%;
+    /* padding: 20px; */
+    margin-left: 33%;
+    padding: 0 50px;
+    overflow-y: scroll;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    max-width: 995px;
+    margin-top: 50px;
+    overflow: hidden;
 }
 .blog-post img {
     min-width: 50%;
@@ -681,8 +856,15 @@ span {
 /* ============================== CONTACT ME ====================================== */
 #contact {
     background-color: #ffffff;
-    padding: 20px;
-    margin-left: 25%;
+    /* padding: 20px; */
+    margin-left: 33%;
+    padding: 0 50px;
+    overflow-y: scroll;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    max-width: 995px;
+    margin-top: 50px;
+    overflow: hidden;
 }
 #row-contact {
     max-width: 1000px;
