@@ -40,15 +40,10 @@ html, body {
   }
   .right-screen-js {
     background-color: #fff;
-    /* right: 0; */
     background-image: url('https://nassar.netlify.app/assets/images/dot.png');
     background-size: 0.6rem;
-    /* background-position: 50% 50%; */
     background-repeat: repeat;
-    /* background-position: center; */
-    /* min-width: 100%;
-    min-height: 100%; */
-    /* margin-left: -15px; */  
+ 
   }
   /* Control the left side */
   .left-screen {
@@ -61,12 +56,7 @@ html, body {
     right: 0;
     background-image: url('https://nassar.netlify.app/assets/images/dot.png');
     background-size: 0.6rem;
-    /* background-position: 50% 50%; */
     background-repeat: repeat;
-    /* background-position: center; */
-    /* min-width: 100%;
-    min-height: 100%; */
-    /* margin-left: -15px; */
   }
   .linesCorner {
     width: 100%;
@@ -108,8 +98,6 @@ html, body {
 }
 .cv-btn {
     text-decoration: none;
-    /* border: 2px solid #e64980 !important; */
-    /* border-radius: 0px !important; */
     background-color: #e64980;
     color: whitesmoke;
     padding: 14px 28px;
@@ -129,8 +117,6 @@ html, body {
 }
 .contact-btn {
     text-decoration: none;
-    /* border: 2px solid #e64980 !important; */
-    /* border-radius: 0px !important; */
     background-color: transparent;
     color: whitesmoke;
     padding: 14px 28px;
@@ -139,7 +125,6 @@ html, body {
     font-family: "Nunito";
     cursor: pointer;
     border: 2px solid whitesmoke;
-    /* margin-right: 10%; */
 }
 .contact-btn:hover {
     border: 2px solid whitesmoke;
@@ -171,14 +156,6 @@ html, body {
     width: 100%;
     height: 100%;
 }
-/* avatar picture and name */
-/* .display-name-table {
-    width: inherit;
-    height: inherit;
-    display: table;
-    text-align: center;
-}
-*/
 .display-name-cell {
     display: table-cell;
     vertical-align: bottom;
@@ -187,14 +164,12 @@ html, body {
     background-image: url('../home_personal.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    /* padding-bottom: 16.2%; */
     overflow: hidden; 
 }
 .pt-half {
     padding-top: 50%;
 }
 .display-table {
-    /* height: 100vh; */
     display: block;
     margin: auto;
     height: 800px;
@@ -203,14 +178,10 @@ html, body {
 .display-table-cell {
     display: table;
     vertical-align: middle;
-    /* position: relative; */
-    /* text-a5ign: center; */
     padding: 150px 0;
     margin:auto; 
     width: 100%;
     height: 100%;
-    /* left: 70%; */
-    /* z-index: 10; */
 }
 .author-img {
     border-radius: 50%;
@@ -221,12 +192,9 @@ html, body {
 .bg-right {
     background-image: url('https://nassar.netlify.app/assets/images/dot.png');
     background-size: 0.6rem;
-    /* background-position: 50% 50%; */
     background-repeat: repeat;
-    /* background-position: center; */
     min-width: 107%;
     min-height: 100%;
-    /* margin-left: -15px; */
 }
 .pt-menu-right {
     padding-top: 10%;
@@ -237,10 +205,8 @@ html, body {
 .rightt {
     position: absolute;
     right: -521px;
-    /* right: -300px; */
 }
 .leftt {
-    /* position: absolute; */
     right: 14%;
 }
 .top {
@@ -279,7 +245,6 @@ html, body {
 }
 #about {
     background-color: #ffffff;
-    /* padding: 20px; */
     margin-left: 33%;
     padding: 0 50px;
     overflow-y: scroll;
@@ -410,7 +375,6 @@ span {
     float: right;
 }
 .tns-controls button {
-    /* float: right; */
     font-size: 24px;
     outline: none;
     color: #333;
@@ -430,7 +394,6 @@ span {
     margin-left: 4px;
     float: left;
     margin-right: 4px;
-    /* box-shadow: 0 10px rgba(0, 0, 0, 0.11);  */
 }
 #testimonial-1 {
     margin-top: 1.5rem;
@@ -447,9 +410,6 @@ span {
 /* END OF TESTIMONIALS */
 /* FUN FACTS */
 .fun-facts .item {
-    /* display: block; */
-    /* width: 370px;
-    height: 170px;   */
     text-align: center;
     padding: 25px 0;
     margin-bottom: 25px;
@@ -460,7 +420,6 @@ span {
     color: rgba(230, 73, 128, 0.9);
 }
 .fa-briefcase {
-    /* color: #e64980; */
     color: rgba(230, 73, 128, 0.9);
 }
 .fa-medal {
@@ -490,7 +449,6 @@ span {
 /* ============================================ RESUME ================================================ */
 #resume {
     background-color: #ffffff;
-    /* padding: 20px; */
     margin-left: 33%;
     padding: 0 50px;
     overflow-y: scroll;
@@ -563,7 +521,6 @@ ul.timeline li > .date > span:after {
     left: 0;
     z-index: -1;
     background-color: #e64980;
-    /* width: 100%; */
     height: calc(100% + 3px);
     opacity: 0.1;
     border-radius: 2px;
@@ -590,7 +547,6 @@ ul.timeline > li > .date > span {
 /* =================================================== SERVICES =========================================== */
 #services {
     background-color: #ffffff;
-    /* padding: 20px; */
     margin-left: 33%;
     padding: 0 50px;
     overflow-y: scroll;
@@ -625,7 +581,6 @@ ul.timeline > li > .date > span {
 /* ========================================================= WORKS =================================== */
 #works {
     background-color: #ffffff;
-    /* padding: 20px; */
     margin-left: 33%;
     padding: 0 50px;
     overflow-y: scroll;
@@ -743,10 +698,6 @@ ul.timeline > li > .date > span {
 .portfolio-ul li.active > a {
     color: rgba(230, 73, 128, 0.9);
 }
-/* #cate-ul .navbar-nav li.active > a {
-	/* background-color: #333; */
-	/* color: rgb(0, 0, 0);
-} */ 
 .img-design {
     width: 330px;
     height: 256px;
@@ -762,7 +713,6 @@ ul.timeline > li > .date > span {
 /* ===================================================== MY BLOG ======================================= */
 #news {
     background-color: #ffffff;
-    /* padding: 20px; */
     margin-left: 33%;
     padding: 0 50px;
     overflow-y: scroll;
@@ -788,7 +738,6 @@ ul.timeline > li > .date > span {
     border-radius: 10px;
     background: rgba(230, 73, 128, 0.2);
     padding: 5px;
-    /* margin-left: 30%; */
     width: 150px;
 }
 .blog-post a {
@@ -833,7 +782,6 @@ ul.timeline > li > .date > span {
 /* ============================== CONTACT ME ====================================== */
 #contact {
     background-color: #ffffff;
-    /* padding: 20px; */
     margin-left: 33%;
     padding: 0 50px;
     overflow-y: scroll;
