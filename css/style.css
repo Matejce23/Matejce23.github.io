@@ -572,7 +572,7 @@ ul.timeline > li > h5 {
     padding-top: 20px;
 }
 ul.timeline > li > p {
-    width: 70%;
+    width: 100%;
 }
 ul.timeline > li > .date > span {
     position: relative;
