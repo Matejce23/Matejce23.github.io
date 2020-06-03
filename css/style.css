@@ -153,6 +153,7 @@ html, body {
     font-size: 52.08px;
     font-weight: 900;
     line-height: 52.08px;
+    text-transform: uppercase;
 }
 /* column */
 #home-left {
