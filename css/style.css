@@ -588,7 +588,7 @@ ul.timeline > li > .date > span {
 }
 /* RIGHT SIDE (Experience) */
 /* old version */
-#resume p {
+/* #resume p {
     color: #9b9b9b;
     font-size: 14px;
     line-height: 24px;
@@ -609,7 +609,7 @@ ul.timeline > li > .date > span {
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
-}
+} */
 /* =================================================== SERVICES =========================================== */
 #services {
     background-color: #ffffff;
