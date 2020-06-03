@@ -184,6 +184,9 @@
     height: 83%;
     width: 80%;
 }
+.contact h4 {
+    padding-top: 4rem;
+}
 }
 
 /* // Large devices (desktops, 992px and up) */
@@ -284,6 +287,9 @@
     .work-6:hover .overlay {
         height: 86%;
         width: 83%;
+    }
+    .contact h4 {
+        padding-top: 0;
     }
 }
 /* // Extra large devices (large desktops, 1200px and up) */
