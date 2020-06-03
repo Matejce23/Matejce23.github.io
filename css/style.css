@@ -586,30 +586,6 @@ ul.timeline > li > .date > span {
     width: 150px;
     opacity: 0.63;
 }
-/* RIGHT SIDE (Experience) */
-/* old version */
-/* #resume p {
-    color: #9b9b9b;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 400;
-    font-family: 'Poppins', sans-serif;
-}
-.my-resume {
-    top: 0;
-    left: 0;
-    visibility: visible;
-    overflow: hidden;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-} */
 /* =================================================== SERVICES =========================================== */
 #services {
     background-color: #ffffff;
