@@ -51,12 +51,6 @@ function setActiveLi() {
     this.parentElement.parentElement.classList = "nav-item active";
 }
 // ================================== DISPALY/HIDE PAGES WHEN CLICKED ON MENU ============================
-// add event listeners to all the sections
-// const sections = document.querySelectorAll('section');
-// for(let i = 0;i < sections.length;i++) {
-//   sections[i].addEventListener('click',dispalyPages);
-// }
-// the fucntion
 function dispalyPages(c) {
   let sections = document.querySelectorAll('section');
   let leftMenu = document.getElementById('left-menu');
