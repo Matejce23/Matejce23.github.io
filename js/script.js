@@ -150,17 +150,7 @@ function dispalyPages(c) {
         document.getElementById('about').classList.remove("d-block");
         document.getElementById('about').classList.add("d-none");
     }
-      // else if(item.getAttribute("category") == c)
-      // {
-      //     item.classList.remove("d-none");
-      //     item.classList.add("d-block");
-      // }
-      // else {
-      //     item.classList.remove("d-none");
-      //     item.classList.add("d-block");
-      // }
   }
-
 }
 // ===================================== FORM VALIDATION ============================================
 
