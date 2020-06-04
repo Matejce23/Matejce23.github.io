@@ -2,41 +2,80 @@
 // ako collapse-menu pomine 992px izbrisi go ako e pod 992px neka stoj
 // za desno menu ako e na 992px display normalno ako ne dodadi go vo top collapse menu
 // ============================= Fucntion for top fixed menu to show/hide at 992px===========================
-// function hideTopMenu(x) {
-//     if (x.matches) { 
-//       menu.classList.add("bottom");
-//       menu.classList.remove("top");
-//     } else {
-//         menu.classList.add("top");
-//         menu.classList.remove("bottom");
-//     }
-//   }
-//   var menu = document.getElementById('collapse-menu');
-//   var x = window.matchMedia("(max-width: 992px)")
-//   hideTopMenu(x) 
-//   x.addListener(hideTopMenu) 
+function hideTopMenu(x) {
+    if (x.matches) { 
+      menu.classList.add("d-block");
+      menu.classList.remove("d-none");
+    } else {
+        menu.classList.add("d-none");
+        menu.classList.remove("d-block");
+    }
+  }
+  var menu = document.getElementById('collapse-menu');
+  var x = window.matchMedia("(max-width: 992px)")
+  hideTopMenu(x) 
+  x.addListener(hideTopMenu) 
 
   // ========================== Function for right side menu to show hide also ===============================
-//   function hideRightMenu(i) {
-//     if (i.matches) { // If media query matches
-//         rightMenu.classList.add("right");
-//         rightMenu.classList.remove("left");
-//     } else {
-//         rightMenu.classList.remove("right");
-//         rightMenu.classList.add("left");
+  function hideRightMenu(i) {
+    if (i.matches) { // If media query matches
+        rightMenu.classList.add("d-none");
+        rightMenu.classList.remove("d-block");
+        leftScreen.classList.remove("split","left-screen");
+        leftScreen.classList.add("split-query","left-screen");
+    } else {
+        rightMenu.classList.remove("d-none");
+        rightMenu.classList.add("d-block");
+        leftScreen.classList.remove("split-query","left-screen");
+        leftScreen.classList.add("split","left-screen");
         
-//     }
-//   }
-//   var rightMenu = document.getElementById('home-right');
-//   var i = window.matchMedia("(max-width: 991px)")
-//   hideRightMenu(i) // Call listener function at run time
-//   i.addListener(hideRightMenu) // Attach listener function on state changes
+    }
+  }
+  var leftScreen = document.getElementById('left-menu');
+  var rightMenu = document.getElementById('right-menu');
+  var i = window.matchMedia("(max-width: 991px)")
+  hideRightMenu(i) // Call listener function at run time
+  i.addListener(hideRightMenu) // Attach listener function on state changes
 
-//   function removeRightClass() {
-//       rightMenu.classList.remove("right");
-//       rightMenu.classList.add("left");
-//   }
-
+  function removeRightClass() {
+      rightMenu.classList.remove("right");
+      rightMenu.classList.add("left");
+  }
+// ========================== SECTION PAGES WIDTH RESPONSIVE(BELOW 992PX) ======================
+function hideRightMenuBelow992px(i) {
+  if (i.matches) { // If media query matches
+      $("#about").removeClass("about-page");
+      $("#about").addClass("about-page-js");
+      $("#resume").removeClass("resume-page");
+      $("#resume").addClass("resume-page-js");
+      $("#services").removeClass("services-page");
+      $("#services").addClass("services-page-js");
+      $("#works").removeClass("works-page");
+      $("#works").addClass("works-page-js");
+      $("#news").removeClass("blog-page");
+      $("#news").addClass("blog-page-js");
+      $("#contact").removeClass("contact-page");
+      $("#contact").addClass("contact-page-js");
+  } else {
+      $("#about").removeClass("about-page-js");
+      $("#about").addClass("about-page");
+      $("#resume").removeClass("resume-page-js");
+      $("#resume").addClass("resume-page");
+      $("#services").removeClass("services-page-js");
+      $("#services").addClass("services-page");
+      $("#works").removeClass("works-page-js");
+      $("#works").addClass("works-page");
+      $("#news").removeClass("blog-page-js");
+      $("#news").addClass("blog-page");
+      $("#contact").removeClass("contact-page-js");
+      $("#contact").addClass("contact-page");
+  }
+}
+var leftScreen = document.getElementById('left-menu');
+var rightMenu = document.getElementById('right-menu');
+var i = window.matchMedia("(max-width: 991px)")
+hideRightMenuBelow992px(i) // Call listener function at run time
+i.addListener(hideRightMenuBelow992px) // Attach listener function on state changes
 // ==================================== RIGHT MENU ACTIVE CLASS ================================
 let arr2 = document.querySelectorAll('#home-right>ul>li>span>a');
 for(let i = 0; i < arr2.length;i++) {
@@ -58,8 +97,30 @@ function dispalyPages(c) {
   let rightMenu = document.getElementById('right-menu');
   rightMenu.classList.remove("split","right-screen");
   rightMenu.classList.add("split-js","right-screen-js");
+  let homePage = document.getElementById("homePage");
+  homePage.classList = "d-block";
 
   for(item of sections){
+      if (c == "home")  {
+        leftMenu.classList = "split left-screen";
+        rightMenu.classList.remove("split-js","right-screen-js");
+        rightMenu.classList.add("split","right-screen");
+        document.getElementById('home').classList.remove("d-none");
+        document.getElementById('home').classList.add("d-block");
+        //remove other classes
+        document.getElementById('about').classList.remove("d-block");
+        document.getElementById('about').classList.add("d-none");
+        document.getElementById('resume').classList.remove("d-block");
+        document.getElementById('resume').classList.add("d-none");
+        document.getElementById('services').classList.remove("d-block");
+        document.getElementById('services').classList.add("d-none");
+        document.getElementById('works').classList.remove("d-block");
+        document.getElementById('works').classList.add("d-none");
+        document.getElementById('news').classList.remove("d-block");
+        document.getElementById('news').classList.add("d-none");
+        document.getElementById('contact').classList.remove("d-block");
+        document.getElementById('contact').classList.add("d-none");
+      }
       if (c == "about")  {
         document.getElementById('about').classList.remove("d-none");
         document.getElementById('about').classList.add("d-block");
@@ -232,7 +293,6 @@ for(let i = 0;i < element.length;i++) {
 }
 
 // =========================  ANIMATING PAGES =========================
-
 const pageAbout = document.querySelector('#about');
     pageAbout.classList.add('animate__animated', 'animate__backInRight');
 const pageResume = document.querySelector('#resume');
@@ -263,7 +323,8 @@ var slider = tns({
   //  ============  Add icons to buttons =============
 let sliderButtonLeft = document.querySelectorAll('.tns-controls>button')[0].innerHTML = "<span class=\"pe-7s-angle-left pe-lg\"></i>";
 let sliderButtonRight = document.querySelectorAll('.tns-controls>button')[1].innerHTML = "<span class=\"pe-7s-angle-right pe-lg\"></i>";
- 
+//  ============== Add home after selecting secton ========
+
 // =================================== TYPESCRIPT HOME PAGE =======================================
 document.addEventListener("DOMContentLoaded", function(event) {
     var typed = new Typed('#typed',{

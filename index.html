@@ -33,7 +33,8 @@
 
     <body>
         <!-- ============== HOME SCREEN ================= -->
-        <div id="home" class="site">
+        <!-- <div id="home" class="site"> -->
+        <section id="home">
                 <div class="container-fluid">
                     <!-- LEFT SCREEN -->
                     <!-- <div class="row"> -->
@@ -46,7 +47,7 @@
                                         <b>
                                             <div id="typed-strings" class="text-js text-pink">
                                                 <p>Matej Gjosev</p>
-                                                <p>Developer</p>
+                                                <p>Web Developer</p>
                                                 <p>From Macedonia</p>
                                             </div>
                                             <span id="typed" class="text-js text-pink"></span>
@@ -63,111 +64,81 @@
                           </div>
                           <!-- RIGHT SCREEN (NAVIGATION) -->
 
-                          <div class="split right-screen" id="right-menu">
-                            <div class="centered-2">
-                              <div class="right-menu" id="home-right">
-                                  <!-- <div class="home-lines">
-
-                                  </div>
-                                  <div class="linesCorner">
-                                      <span class="home-line"></span>
-                                  </div> -->
-                                <ul class="nav navbar-nav  flex-column" id="ul-menu">
-                                    <li class="nav-item active">
-                                        <span>
-                                            <a class="nav-link" href="#home">home</a>
-                                        </span>
-                                      </li>
-                                    <li class="nav-item">
-                                        <span>
-                                            <a class="nav-link" href="#about" onclick="dispalyPages('about')">about</a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item">
-                                        <span>
-                                            <a class="nav-link" href="#resume" onclick="dispalyPages('resume')">resume</a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item">
-                                        <span>
-                                            <a class="nav-link" href="#services" onclick="dispalyPages('services')">services</a>
-                                        </span>
-                                      </li>
-                                    <li class="nav-item">
-                                        <span>
-                                            <a class="nav-link" href="#works" onclick="dispalyPages('works')">works</a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item">
-                                        <span>
-                                            <a class="nav-link" href="#news" onclick="dispalyPages('news')">news</a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item">
-                                        <span>
-                                            <a class="nav-link" href="#contact" onclick="dispalyPages('contact')">contact</a>
-                                        </span>
-                                      </li>
-                                  </ul>
-                            </div> 
+                            <div class="split right-screen" id="right-menu">
+                                <div class="centered-2">
+                                    <div class="right-menu" id="home-right">
+                                        <ul class="nav navbar-nav  flex-column" id="ul-menu">
+                                            <li class="nav-item active">
+                                                <span class="d-none" id="homePage">
+                                                    <a class="nav-link" href="#home" onclick="dispalyPages('home')">home</a>
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span>
+                                                    <a class="nav-link" href="#about" onclick="dispalyPages('about')">about</a>
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span>
+                                                    <a class="nav-link" href="#resume" onclick="dispalyPages('resume')">resume</a>
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span>
+                                                    <a class="nav-link" href="#services" onclick="dispalyPages('services')">services</a>
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span>
+                                                    <a class="nav-link" href="#works" onclick="dispalyPages('works')">works</a>
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span>
+                                                    <a class="nav-link" href="#news" onclick="dispalyPages('news')">news</a>
+                                                </span>
+                                            </li>
+                                            <li class="nav-item">
+                                                <span>
+                                                    <a class="nav-link" href="#contact" onclick="dispalyPages('contact')">contact</a>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div> 
+                                </div>
                             </div>
-                          </div>
-                        <!-- <div class="col-6 col-lg-6 col-xl-6" id="home-left">
-                                <div class="img-box">
-                                    <img src="home_personal.jpg" class="left-background" alt="home-menu">
-                                    
-                                    <div class="display-name-table text-white">
-                                        
-                                        <div class="display-name-cell">
-                                            <img src="./img/home/me.jpg" class="author-img" alt="me"> 
-                                            <div class="text-js">
-                                                <div>
-                                                    I Am 
-                                                    <b>
-                                                        <div id="typed-strings" style="display: none;">
-                                                            <p>John Doe</p>
-                                                            <p>Developer</p>
-                                                            <p>From UK</p>
-                                                        </div>
-                                                        <span id="typed">Designer</span><span class="typed-cursor typed-cursor--blink">|</span>
-                                                    </b>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                        </div> -->
-                            
-                      <!-- ================================== RIGHT MENU =================================================== -->
+                            <!-- ======================COLLAPSE MENU========================== -->
 
-
-                      <!-- <div class="col-6 col-lg-6 col-xl-6 border border-primary">
-                        <div class="right-menu  border bg-right border-primary" id="home-right">
-                            <ul class="nav navbar-nav  flex-column pt-menu-right ml-auto  text-center" id="ul-menu">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#home">home</a>
-                                  </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="#about">about</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="#resume">resume</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#services">services</a>
-                                  </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="#works">works</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="#news">news</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#contact">contact</a>
-                                  </li>
-                              </ul>
-                        </div> -->
-
+                              <div class="fixed-top" id="collapse-menu">
+                                <div class="collapse" id="navbarToggleExternalContent">
+                                  <div class="bg-dark p-4">
+                                    <!-- <div class="right-menu" id="home-right">
+                                        <ul class="nav navbar-nav flex-column pt-menu-right ml-auto bg-right text-center">
+                                            <li class="nav-item">
+                                              <a class="nav-link" href="#about">about</a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" href="#resume">resume</a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" href="#services">works</a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" href="#news">news</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#contact">contact</a>
+                                              </li>
+                                          </ul>
+                                    </div> -->
+                                  </div>
+                                </div>
+                                        <!-- TOGGLE BUTTON REMOVE CLASS(TOP NAVIGATION) -->
+                                            <nav class="navbar navbar-light bg-light">
+                                                <button class="navbar-toggler" type="button" onclick="removeRightClass()" data-toggle="collapse" data-target="#right-menu" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                            </nav>
                               <!-- ======================COLLAPSE MENU========================== -->
 
                               <!-- <div class="fixed-top" id="collapse-menu">
@@ -204,7 +175,8 @@
                       <!-- </div>  END OF COLUMN 2 (RIGHT MENU)                         -->
                     <!-- </div>  -->
                 </div>
-        </div>
+        </section>
+            <!-- </div> -->
                   <!-- ============== END OF HOME SCREEN ================= -->
 
                 <!-- ============== START ABOUT SECTION ================= -->
@@ -405,7 +377,7 @@
                 <!-- ============== END ABOUT SECTION ================= -->
 
                 <!-- Start Resume Section -->
-                <section id="resume" class="d-none pt-5" category="resume">
+                <section id="resume" class="resume-page d-none pt-5" category="resume">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12">
@@ -497,7 +469,7 @@
                 <!--  ======================= End Resume Section ================================ -->
 
                 <!-- ======================== Start Services Section ============================ -->
-                <section id="services" class="d-none pt-5" category="services">
+                <section id="services" class="services-page d-none pt-5" category="services">
                     <div class="container-fluid">
                         <!-- TITLE -->
                         <div class="row">
@@ -584,7 +556,7 @@
                 <!-- End Services Section -->
 
                 <!-- Start Works Section -->
-                <section id="works" class="d-none pt-5" category="works">
+                <section id="works" class="works-page d-none pt-5" category="works">
                     <div class="container-fluid">
                         <!-- Title -->
                         <div class="row">
@@ -673,7 +645,7 @@
                 <!-- End Works Section -->
 
                 <!-- Start News Section -->
-                <section id="news" class="d-none" category="news">
+                <section id="news" class="blog-page d-none" category="news">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12">
@@ -738,7 +710,7 @@
                 <!-- End News Section -->
 
                 <!-- Start Contact Section -->
-                <section id="contact" class="d-none" category="contact">
+                <section id="contact" class="contact-page d-none" category="contact">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12">

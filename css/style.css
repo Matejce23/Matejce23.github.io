@@ -27,6 +27,7 @@ html, body {
     top: 0;
     overflow-x: hidden;
     padding-top: 20px;
+    transition: all 0.6s;
   }
   .split-js {
     height: 100%;
@@ -36,7 +37,7 @@ html, body {
     top: 0;
     overflow-x: hidden;
     padding-top: 20px;
-
+    transition: all 0.6s;
   }
   .right-screen-js {
     background-color: #fff;
@@ -52,8 +53,19 @@ html, body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
+  .split-query {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;   
+    transition: all 0.6s;
+  }
   .right-screen {
     right: 0;
+    background-color: #fff;
     background-image: url('https://nassar.netlify.app/assets/images/dot.png');
     background-size: 0.6rem;
     background-repeat: repeat;
@@ -134,10 +146,27 @@ html, body {
     transition: 0.5s;
 }
 #home-right a {
-    font-family: "Nunito";
-    font-size: 52.08px;
+    font-family: "Nunito-Black";
+    color: white;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 1.5px;
+    font-size: 79.08px;
     font-weight: 900;
+    padding-bottom: 30px;
     line-height: 52.08px;
+    transition: all 0.6s;
+    text-transform: uppercase;
+}
+.right-screen-js > .centered-2 > #home-right a {
+    font-family: "Nunito-Black";
+    color: white;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 1.5px;
+    font-size: 66.08px;
+    font-weight: 900;
+    padding-bottom: 10px;
+    line-height: 52.08px;
+    transition: all 0.6s;
     text-transform: uppercase;
 }
 /* column */
@@ -229,21 +258,6 @@ html, body {
 /* =====================START ABOUT SECTION============== */
 /* START INTRODUCTION */
 .about-page {
-    top: 0;
-    left: 0;
-    visibility: visible;
-    overflow: hidden;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-}
-#about {
     background-color: #ffffff;
     margin-left: 33%;
     padding: 0 50px;
@@ -253,7 +267,17 @@ html, body {
     max-width: 995px;
     margin-top: 50px;
     overflow: hidden;
-    
+}
+.about-page-js {
+    background-color: #ffffff;
+    margin-left: 0%;
+    padding: 0 50px;
+    overflow-y: scroll;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    max-width: 995px;
+    margin-top: 50px;
+    overflow: hidden; 
 }
 .author-about {
     display: block;
@@ -447,9 +471,20 @@ span {
 /* END OF FUN FACTS */
 /* END ABOUT SECTION */
 /* ============================================ RESUME ================================================ */
-#resume {
+.resume-page {
     background-color: #ffffff;
     margin-left: 33%;
+    padding: 0 50px;
+    overflow-y: scroll;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    max-width: 995px;
+    margin-top: 50px;
+    overflow: hidden;  
+}
+.resume-page-js {
+    background-color: #ffffff;
+    margin-left: 0%;
     padding: 0 50px;
     overflow-y: scroll;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
@@ -545,7 +580,7 @@ ul.timeline > li > .date > span {
     opacity: 0.63;
 }
 /* =================================================== SERVICES =========================================== */
-#services {
+.services-page {
     background-color: #ffffff;
     margin-left: 33%;
     padding: 0 50px;
@@ -554,7 +589,18 @@ ul.timeline > li > .date > span {
     background: #fff;
     max-width: 995px;
     margin-top: 50px;
-    overflow: hidden;
+    overflow: hidden; 
+}
+.services-page-js {
+    background-color: #ffffff;
+    margin-left: 0%;
+    padding: 0 50px;
+    overflow-y: scroll;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    max-width: 995px;
+    margin-top: 50px;
+    overflow: hidden;  
 }
 #services p {
     color: #9b9b9b;
@@ -579,9 +625,20 @@ ul.timeline > li > .date > span {
     transform-style: preserve-3d;
 }
 /* ========================================================= WORKS =================================== */
-#works {
+.works-page {
     background-color: #ffffff;
     margin-left: 33%;
+    padding: 0 50px;
+    overflow-y: scroll;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    max-width: 995px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.works-page-js {
+    background-color: #ffffff;
+    margin-left: 0%;
     padding: 0 50px;
     overflow-y: scroll;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
@@ -711,7 +768,7 @@ ul.timeline > li > .date > span {
     min-height: 250%;
 }
 /* ===================================================== MY BLOG ======================================= */
-#news {
+.blog-page {
     background-color: #ffffff;
     margin-left: 33%;
     padding: 0 50px;
@@ -720,7 +777,18 @@ ul.timeline > li > .date > span {
     background: #fff;
     max-width: 995px;
     margin-top: 50px;
-    overflow: hidden;
+    overflow: hidden; 
+}
+.blog-page-js {
+    background-color: #ffffff;
+    margin-left: 0%;
+    padding: 0 50px;
+    overflow-y: scroll;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    max-width: 995px;
+    margin-top: 50px;
+    overflow: hidden; 
 }
 .blog-post img {
     min-width: 50%;
@@ -780,7 +848,7 @@ ul.timeline > li > .date > span {
     transition: 0.5s;
 }
 /* ============================== CONTACT ME ====================================== */
-#contact {
+.contact-page {
     background-color: #ffffff;
     margin-left: 33%;
     padding: 0 50px;
@@ -789,7 +857,18 @@ ul.timeline > li > .date > span {
     background: #fff;
     max-width: 995px;
     margin-top: 50px;
-    overflow: hidden;
+    overflow: hidden; 
+}
+.contact-page-js {
+    background-color: #ffffff;
+    margin-left: 0%;
+    padding: 0 50px;
+    overflow-y: scroll;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    max-width: 995px;
+    margin-top: 50px;
+    overflow: hidden; 
 }
 #row-contact {
     max-width: 1000px;

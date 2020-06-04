@@ -18,6 +18,9 @@
         font-size: 14px;
         padding-right: 26px;
     }
+    .text-js {
+        font-size: 30px !important;
+    }
 }
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
@@ -191,6 +194,13 @@
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .text-js {
+        font-size: 48px !important;
+    }
+    .right-screen-js > .centered-2 > #home-right a {
+        font-size: 50px !important;
+        padding-bottom: 0px !important;
+    }
     .nav-item a {
         bottom: 80px;
         left: 20px;
@@ -294,6 +304,10 @@
 }
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
+.right-screen-js > .centered-2 > #home-right a {
+    font-size: 66px !important;
+    padding-bottom: 10px !important;
+}
 .nav-item a {
     /* font-size: 350%; */
     top: -125px;
