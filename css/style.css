@@ -1,7 +1,6 @@
 
 /* import fonts from fonts.css file */
 @import url(./fonts.css);
-@import url(./_globals.css);
 @import url(./bootstrap.min.css);
 @import url(./media-query.css);
 /* @import url(./contact.scss); */
