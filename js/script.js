@@ -308,7 +308,7 @@ const pageWorks = document.querySelector('#works');
 const pageNews = document.querySelector('#news');
   pageNews.classList.add('animate__animated', 'animate__slideInRight');
 const pageContact = document.querySelector('#contact');
-  pageContact.classList.add('animate__animated', 'animate__backInRight');
+  pageContact.classList.add('animate__animated', 'animate__slideInRight');
 // ================== RESTART ANIMATION (DELETE CLASSES) ================
 
 // ====================TINY SLIDER ====================
