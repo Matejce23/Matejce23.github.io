@@ -325,8 +325,10 @@ var slider = tns({
 let sliderButtonLeft = document.querySelectorAll('.tns-controls>button')[0].innerHTML = "<span class=\"pe-7s-angle-left pe-lg\"></i>";
 let sliderButtonRight = document.querySelectorAll('.tns-controls>button')[1].innerHTML = "<span class=\"pe-7s-angle-right pe-lg\"></i>";
 $(".tns-controls").css("display", "block");
-//  ============== Add home after selecting secton ========
-
+//  ============== Hide menu after click on menu item ========
+$("#ul-menu > li").click(function() {
+  $("#right-menu").removeClass("show");
+});
 // =================================== TYPESCRIPT HOME PAGE =======================================
 document.addEventListener("DOMContentLoaded", function(event) {
     var typed = new Typed('#typed',{
