@@ -76,6 +76,7 @@ var rightMenu = document.getElementById('right-menu');
 var i = window.matchMedia("(max-width: 991px)")
 hideRightMenuBelow992px(i) // Call listener function at run time
 i.addListener(hideRightMenuBelow992px) // Attach listener function on state changes
+
 // ==================================== RIGHT MENU ACTIVE CLASS ================================
 let arr2 = document.querySelectorAll('#home-right>ul>li>span>a');
 for(let i = 0; i < arr2.length;i++) {
@@ -89,6 +90,7 @@ function setActiveLi() {
     }
     this.parentElement.parentElement.classList = "nav-item active";
 }
+
 // ================================== DISPALY/HIDE PAGES WHEN CLICKED ON MENU ============================
 function dispalyPages(c) {
   let sections = document.querySelectorAll('section');
