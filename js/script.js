@@ -331,6 +331,10 @@ $(".tns-controls").css("display", "block");
 //  ============== Hide menu after click on menu item ========
 $("#ul-menu > li").click(function() {
   $("#right-menu").removeClass("show");
+  $("#homePage > a").click(function() {
+    $("#left-menu").removeClass("split");
+    $("#left-menu").addClass("split-query");
+  })
 });
 // =================================== TYPESCRIPT HOME PAGE =======================================
 document.addEventListener("DOMContentLoaded", function(event) {
