@@ -334,3 +334,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         loop: true
       });
 });
+
+// ================================= OVERLAY IMAGE WORKS ===========================================
+  /* Demo purposes only */
+  $(".hover").mouseleave(
+    function () {
+      $(this).removeClass("hover");
+    }
+  );

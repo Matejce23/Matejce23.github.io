@@ -107,6 +107,10 @@
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+.right-screen-js > .centered-2 > #home-right a {
+    font-size: 47px !important;
+    padding-bottom: 0px !important;
+}
 .about-me h3 {
     font-size: 35px;
     width: 430px;

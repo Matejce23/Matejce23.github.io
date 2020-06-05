@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Nassar Portfolio</title>
+        <title>Matej Gjosev</title>
 
      
         <!-- Bootstrap css file -->
@@ -32,152 +32,99 @@
     </head>
 
     <body>
-        <!-- ============== HOME SCREEN ================= -->
-        <!-- <div id="home" class="site"> -->
-        <section id="home">
-                <div class="container-fluid">
-                    <!-- LEFT SCREEN -->
-                    <!-- <div class="row"> -->
-                        <div class="split left-screen" id="left-menu">
-                            <div class="centered mb-5">
-                                <img src="./img/home/me.jpg" class="author-img" alt="me"> 
-                                <div class="text-js text-white">
-                                    <div>
-                                        I'm 
-                                        <b>
-                                            <div id="typed-strings" class="text-js text-pink">
-                                                <p>Matej Gjosev</p>
-                                                <p>Web Developer</p>
-                                                <p>From Macedonia</p>
+                <!-- ================= HOME SCREEN ================= -->
+        
+                <section id="home">
+                        <div class="container-fluid">
+                            <!-- LEFT SCREEN -->
+                            <!-- <div class="row"> -->
+                                <div class="split left-screen" id="left-menu">
+                                    <div class="centered mb-5">
+                                        <img src="./img/home/me.jpg" class="author-img" alt="me"> 
+                                        <div class="text-js text-white">
+                                            <div>
+                                                I'm 
+                                                <b>
+                                                    <div id="typed-strings" class="text-js text-pink">
+                                                        <p>Matej Gjosev</p>
+                                                        <p>Web Developer</p>
+                                                        <p>From Macedonia</p>
+                                                    </div>
+                                                    <span id="typed" class="text-js text-pink"></span>
+                                                </b>
                                             </div>
-                                            <span id="typed" class="text-js text-pink"></span>
-                                        </b>
+                                        </div>                              
                                     </div>
-                                </div>                              
-                            </div>
-                            <div class="cv-contact-btn">
-                                <div class="display-name-cell">
-                                    <a href="#" class="cv-btn">Download CV</a>
-                                    <a href="#contact" class="contact-btn">Contact Me</a>
-                                </div>
-                            </div>
-                          </div>
-                          <!-- RIGHT SCREEN (NAVIGATION) -->
-
-                            <div class="split right-screen" id="right-menu">
-                                <div class="centered-2">
-                                    <div class="right-menu" id="home-right">
-                                        <ul class="nav navbar-nav  flex-column" id="ul-menu">
-                                            <li class="nav-item active">
-                                                <span class="d-none" id="homePage">
-                                                    <a class="nav-link" href="#home" onclick="dispalyPages('home')">home</a>
-                                                </span>
-                                            </li>
-                                            <li class="nav-item">
-                                                <span>
-                                                    <a class="nav-link" href="#about" onclick="dispalyPages('about')">about</a>
-                                                </span>
-                                            </li>
-                                            <li class="nav-item">
-                                                <span>
-                                                    <a class="nav-link" href="#resume" onclick="dispalyPages('resume')">resume</a>
-                                                </span>
-                                            </li>
-                                            <li class="nav-item">
-                                                <span>
-                                                    <a class="nav-link" href="#services" onclick="dispalyPages('services')">services</a>
-                                                </span>
-                                            </li>
-                                            <li class="nav-item">
-                                                <span>
-                                                    <a class="nav-link" href="#works" onclick="dispalyPages('works')">works</a>
-                                                </span>
-                                            </li>
-                                            <li class="nav-item">
-                                                <span>
-                                                    <a class="nav-link" href="#news" onclick="dispalyPages('news')">news</a>
-                                                </span>
-                                            </li>
-                                            <li class="nav-item">
-                                                <span>
-                                                    <a class="nav-link" href="#contact" onclick="dispalyPages('contact')">contact</a>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div> 
-                                </div>
-                            </div>
-                            <!-- ======================COLLAPSE MENU========================== -->
-
-                              <div class="fixed-top" id="collapse-menu">
-                                <div class="collapse" id="navbarToggleExternalContent">
-                                  <div class="bg-dark p-4">
-                                    <!-- <div class="right-menu" id="home-right">
-                                        <ul class="nav navbar-nav flex-column pt-menu-right ml-auto bg-right text-center">
-                                            <li class="nav-item">
-                                              <a class="nav-link" href="#about">about</a>
-                                            </li>
-                                            <li class="nav-item">
-                                              <a class="nav-link" href="#resume">resume</a>
-                                            </li>
-                                            <li class="nav-item">
-                                              <a class="nav-link" href="#services">works</a>
-                                            </li>
-                                            <li class="nav-item">
-                                              <a class="nav-link" href="#news">news</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#contact">contact</a>
-                                              </li>
-                                          </ul>
-                                    </div> -->
-                                  </div>
-                                </div>
-                                        <!-- TOGGLE BUTTON REMOVE CLASS(TOP NAVIGATION) -->
-                                            <nav class="navbar navbar-light bg-light">
-                                                <button class="navbar-toggler" type="button" onclick="removeRightClass()" data-toggle="collapse" data-target="#right-menu" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                                                    <span class="navbar-toggler-icon"></span>
-                                                </button>
-                                            </nav>
-                              <!-- ======================COLLAPSE MENU========================== -->
-
-                              <!-- <div class="fixed-top" id="collapse-menu">
-                                <div class="collapse" id="navbarToggleExternalContent">
-                                  <div class="bg-dark p-4">
-                                    <div class="right-menu" id="home-right">
-                                        <ul class="nav navbar-nav flex-column pt-menu-right ml-auto bg-right text-center">
-                                            <li class="nav-item">
-                                              <a class="nav-link" href="#about">about</a>
-                                            </li>
-                                            <li class="nav-item">
-                                              <a class="nav-link" href="#resume">resume</a>
-                                            </li>
-                                            <li class="nav-item">
-                                              <a class="nav-link" href="#services">works</a>
-                                            </li>
-                                            <li class="nav-item">
-                                              <a class="nav-link" href="#news">news</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#contact">contact</a>
-                                              </li>
-                                          </ul>
+                                    <div class="cv-contact-btn">
+                                        <div class="display-name-cell">
+                                            <a href="#" class="cv-btn">Download CV</a>
+                                            <a href="#contact" class="contact-btn">Contact Me</a>
+                                        </div>
                                     </div>
-                                  </div>
-                                </div> -->
-                                        <!-- TOGGLE BUTTON REMOVE CLASS(TOP NAVIGATION) -->
-                                            <!-- <nav class="navbar navbar-light bg-light">
-                                                <button class="navbar-toggler" type="button" onclick="removeRightClass()" data-toggle="collapse" data-target="#home-right" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                                                    <span class="navbar-toggler-icon"></span>
-                                                </button>
-                                            </nav>
-                            </div> -->
-                      <!-- </div>  END OF COLUMN 2 (RIGHT MENU)                         -->
-                    <!-- </div>  -->
-                </div>
-        </section>
-            <!-- </div> -->
-                  <!-- ============== END OF HOME SCREEN ================= -->
+                                </div>
+                                <!-- RIGHT SCREEN (NAVIGATION) -->
+
+                                    <div class="split right-screen" id="right-menu">
+                                        <div class="centered-2">
+                                            <div class="right-menu" id="home-right">
+                                                <ul class="nav navbar-nav  flex-column" id="ul-menu">
+                                                    <li class="nav-item active">
+                                                        <span class="d-none" id="homePage">
+                                                            <a class="nav-link" href="#home" onclick="dispalyPages('home')">home</a>
+                                                        </span>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <span>
+                                                            <a class="nav-link" href="#about" onclick="dispalyPages('about')">about</a>
+                                                        </span>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <span>
+                                                            <a class="nav-link" href="#resume" onclick="dispalyPages('resume')">resume</a>
+                                                        </span>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <span>
+                                                            <a class="nav-link" href="#services" onclick="dispalyPages('services')">services</a>
+                                                        </span>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <span>
+                                                            <a class="nav-link" href="#works" onclick="dispalyPages('works')">works</a>
+                                                        </span>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <span>
+                                                            <a class="nav-link" href="#news" onclick="dispalyPages('news')">news</a>
+                                                        </span>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <span>
+                                                            <a class="nav-link" href="#contact" onclick="dispalyPages('contact')">contact</a>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <!-- ======================COLLAPSE MENU========================== -->
+
+                                    <div class="fixed-top" id="collapse-menu">
+                                        <div class="collapse" id="navbarToggleExternalContent">
+                                            <div class="bg-dark p-4">
+                                            </div>
+                                        </div>
+                                    
+                                    <!-- TOGGLE BUTTON REMOVE CLASS(TOP NAVIGATION) -->
+                                        <nav class="navbar navbar-light bg-light">
+                                            <button class="navbar-toggler" type="button" onclick="removeRightClass()" data-toggle="collapse" data-target="#right-menu" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                        </nav>
+                                    </div>
+                        </div>
+                </section>
+                <!-- ============== END OF HOME SCREEN ================== -->
 
                 <!-- ============== START ABOUT SECTION ================= -->
                 <section class="about-page d-none pt-5" id="about" category="about">
@@ -207,17 +154,17 @@
                                     <br>
                                     <span class="mb-5">Photoshop</span>
                                     <span class="text-percentage">90 %</span>
-                                    <div class="progress" style="height: 6px;">
+                                    <div class="progress" style="height: 10px;">
                                         <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <span>Illustrator</span>
                                     <span class="text-percentage">82 %</span>
-                                    <div class="progress" style="height: 6px;">
+                                    <div class="progress" style="height: 10px;">
                                         <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <span>Jquery</span>
                                     <span class="text-percentage">77 %</span>
-                                    <div class="progress" style="height: 6px;">
+                                    <div class="progress" style="height: 10px;">
                                         <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
@@ -228,17 +175,17 @@
                                  
                                  <span class="mb-5">English</span>
                                  <span class="text-percentage">93 %</span>
-                                 <div class="progress" style="height: 6px;">
+                                 <div class="progress" style="height: 10px;">
                                      <div class="progress-bar" role="progressbar" style="width: 93%;" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
                                  </div>
                                  <span>Spanish</span>
                                  <span class="text-percentage">86 %</span>
-                                 <div class="progress" style="height: 6px;">
+                                 <div class="progress" style="height: 10px;">
                                      <div class="progress-bar" role="progressbar" style="width: 86%;" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"></div>
                                  </div>
                                  <span>Italian</span>
                                  <span class="text-percentage">72 %</span>
-                                 <div class="progress" style="height: 6px;">
+                                 <div class="progress" style="height: 10px;">
                                      <div class="progress-bar" role="progressbar" style="width: 72%;" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
                                  </div>
                              </div>
@@ -374,9 +321,9 @@
                     <!-- ============END OF FUN FACTS================ -->
                     </div> <!--CONTAINER DIV-->
                 </section>
-                <!-- ============== END ABOUT SECTION ================= -->
+                <!-- =============== END ABOUT SECTION ================== -->
 
-                <!-- Start Resume Section -->
+                <!-- ============== Start Resume Section ================ -->
                 <section id="resume" class="resume-page d-none pt-5" category="resume">
                     <div class="container-fluid">
                         <div class="row">
@@ -466,9 +413,9 @@
                         </div>
                     </div>
                 </section>
-                <!--  ======================= End Resume Section ================================ -->
+                <!--  ============= End Resume Section ================== -->
 
-                <!-- ======================== Start Services Section ============================ -->
+                <!-- ============= Start Services Section =============== -->
                 <section id="services" class="services-page d-none pt-5" category="services">
                     <div class="container-fluid">
                         <!-- TITLE -->
@@ -553,9 +500,9 @@
                         </div>
                     </div>
                 </section>
-                <!-- End Services Section -->
+                <!-- ============  End Services Section ================= -->
 
-                <!-- Start Works Section -->
+                <!-- ============== Start Works Section ================= -->
                 <section id="works" class="works-page d-none pt-5" category="works">
                     <div class="container-fluid">
                         <!-- Title -->
@@ -589,62 +536,86 @@
                                         <!-- picture 1 -->
                                         <div class="works" category ="design">
                                             <div class="work-1">
-                                                <img src="https://nassar.netlify.app/assets/images/works/work-1.jpg" class="image" >
-                                                <div class="overlay">
-                                                    <div class="text">Hello World</div>
-                                                </div>
+                                                <figure class="snip1206">
+                                                    <img src="https://nassar.netlify.app/assets/images/works/work-1.jpg" class="image" alt="sample74"/>
+                                                        <figcaption>
+                                                            <h2>Project Name</h2>
+                                                            <p>Just makes people try to do everything at once.</p>
+                                                        </figcaption>
+                                                        <a href="#"></a>
+                                                </figure>
                                             </div>
                                         </div>
                                         <!-- picture 2 -->
                                         <div class="works" category ="coding">
                                             <div class="work-2">
-                                                <img src="https://nassar.netlify.app/assets/images/works/work-2.jpg" class="image" >
-                                                <div class="overlay">
-                                                    <div class="text">Hello World</div>
-                                                </div>
+                                                <figure class="snip1206">
+                                                    <img src="https://nassar.netlify.app/assets/images/works/work-2.jpg" class="image" alt="sample74"/>
+                                                        <figcaption>
+                                                            <h2>Project Name</h2>
+                                                            <p>Just makes people try to do everything at once.</p>
+                                                        </figcaption>
+                                                        <a href="#"></a>
+                                                </figure>
                                             </div>
                                         </div>
                                         <!-- picture 3 -->
                                         <div class="works" category ="design">
                                             <div class="work-3">
-                                                <img src="https://nassar.netlify.app/assets/images/works/work-3.jpg" class="image" >
-                                                <div class="overlay">
-                                                    <div class="text">Hello World</div>
-                                                </div>
+                                                <figure class="snip1206">
+                                                    <img src="https://nassar.netlify.app/assets/images/works/work-3.jpg" class="image" alt="sample74"/>
+                                                        <figcaption>
+                                                            <h2>Project Name</h2>
+                                                            <p>Just makes people try to do everything at once.</p>
+                                                        </figcaption>
+                                                        <a href="#"></a>
+                                                </figure>
                                             </div>
                                         </div>
                                         <!-- picture 4 -->
                                         <div class="works" category ="logo">
                                             <div class="work-4">
-                                                <img src="https://nassar.netlify.app/assets/images/works/work-4.jpg" class="image" >
-                                                <div class="overlay">
-                                                    <div class="text">Hello World</div>
-                                                </div>
+                                                <figure class="snip1206">
+                                                    <img src="https://nassar.netlify.app/assets/images/works/work-4.jpg" class="image" alt="sample74"/>
+                                                        <figcaption>
+                                                            <h2>Project Name</h2>
+                                                            <p>Just makes people try to do everything at once.</p>
+                                                        </figcaption>
+                                                        <a href="#"></a>
+                                                </figure>
                                             </div>
                                         </div>
                                         <!-- picture 5 -->
                                         <div class="works" category ="coding">
                                             <div class="work-5">
-                                                <img src="https://nassar.netlify.app/assets/images/works/work-6.jpg" class="image" >
-                                                <div class="overlay">
-                                                    <div class="text">Hello World</div>
-                                                </div>
+                                                <figure class="snip1206">
+                                                    <img src="https://nassar.netlify.app/assets/images/works/work-6.jpg" class="image" alt="sample74"/>
+                                                        <figcaption>
+                                                            <h2>Project Name</h2>
+                                                            <p>Just makes people try to do everything at once.</p>
+                                                        </figcaption>
+                                                        <a href="#"></a>
+                                                </figure>
                                             </div>
                                         </div>
                                         <!-- picture 6 -->
                                         <div class="works" category ="logo">
                                             <div class="work-6">
-                                                <img src="https://nassar.netlify.app/assets/images/works/work-5.jpg" class="image" >
-                                                <div class="overlay">
-                                                    <div class="text">Hello World</div>
-                                                </div>
+                                                <figure class="snip1206">
+                                                    <img src="https://nassar.netlify.app/assets/images/works/work-5.jpg" class="image" alt="sample74"/>
+                                                        <figcaption>
+                                                            <h2>Project Name</h2>
+                                                            <p>Just makes people try to do everything at once.</p>
+                                                        </figcaption>
+                                                        <a href="#"></a>
+                                                </figure>
                                             </div>
                                         </div>
                                 </div>
                 </section>
-                <!-- End Works Section -->
+                <!-- =============== End Works Section ================== -->
 
-                <!-- Start News Section -->
+                <!-- =============== Start News Section ================= -->
                 <section id="news" class="blog-page d-none" category="news">
                     <div class="container-fluid">
                         <div class="row">
@@ -658,9 +629,14 @@
                                 <div class="blog-post pb-5">
                                     <div class="blog-img">
                                         <img src="https://nassar.netlify.app/assets/images/blog/1.jpg" class="" alt="top10-books">
+                                        <div class="overlay">
+                                            <a href="#" class="icon" title="Blog">
+                                                <i class="fas fa-blog fa-2x"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="blog-title text-center">
-                                        <span class="border border-primary">September 1, 2019</span>
+                                        <span>September 1, 2019</span>
                                         <a href="#" class="pb-5 pt-3">The top 10 books in the world</a>
                                     </div> 
                                 </div> 
@@ -669,6 +645,11 @@
                                 <div class="blog-post border border-light">
                                     <div class="blog-img">
                                         <img src="https://nassar.netlify.app/assets/images/blog/2.jpg" class="" alt="100-ways-to-be-happy">
+                                        <div class="overlay">
+                                            <a href="#" class="icon" title="Blog">
+                                                <i class="fas fa-blog fa-2x"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="blog-title">
                                         <span>August 23, 2019</span>
@@ -683,6 +664,11 @@
                                 <div class="blog-post pb-5 border border-light">
                                     <div class="blog-img">
                                         <img src="https://nassar.netlify.app/assets/images/blog/3.jpg" class="" alt="100-ways-to-be-happy">
+                                        <div class="overlay">
+                                            <a href="#" class="icon" title="Blog">
+                                                <i class="fas fa-blog fa-2x"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="blog-title">
                                         <span>August 22, 2019</span>
@@ -694,6 +680,11 @@
                                 <div class="blog-post border border-light">
                                     <div class="blog-img">
                                         <img src="https://nassar.netlify.app/assets/images/blog/4.jpg" class="" alt="100-ways-to-be-happy">
+                                        <div class="overlay">
+                                            <a href="#" class="icon" title="Blog">
+                                                <i class="fas fa-blog fa-2x"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="blog-title">
                                         <span>August 23, 2019</span>
@@ -702,14 +693,14 @@
                                 </div> 
                             </div>
                         </div>
-                            <div class="load-more text-center pt-5">
+                            <div class="load-more text-center pt-5 pb-5">
                                 <button class="btn btn-danger">Load More</button>
                             </div>
                     </div>
                 </section>
-                <!-- End News Section -->
+                <!-- =============== End News Section =================== -->
 
-                <!-- Start Contact Section -->
+                <!-- =============== Start Contact Section ============== -->
                 <section id="contact" class="contact-page d-none" category="contact">
                     <div class="container-fluid">
                         <div class="row">
@@ -765,7 +756,7 @@
                         
                     </div>
                 </section>
-                <!-- End Contact Section -->
+                <!-- =============== End Contact Section ================ -->
             </div>
         </div>
         <!-- Jquery js file -->
