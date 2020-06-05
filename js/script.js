@@ -295,16 +295,18 @@ for(let i = 0;i < element.length;i++) {
 }
 
 // =========================  ANIMATING PAGES =========================
+const menuRight = document.querySelector("#right-menu");
+    menuRight.classList.add('animate__animated', 'animate__slideInRight');
 const pageAbout = document.querySelector('#about');
-    pageAbout.classList.add('animate__animated', 'animate__backInRight');
+    pageAbout.classList.add('animate__animated', 'animate__slideInRight');
 const pageResume = document.querySelector('#resume');
-    pageResume.classList.add('animate__animated', 'animate__backInRight');
+    pageResume.classList.add('animate__animated', 'animate__slideInRight');
 const pageServices = document.querySelector('#services');
-  pageServices.classList.add('animate__animated', 'animate__backInRight');
+  pageServices.classList.add('animate__animated', 'animate__slideInRight');
 const pageWorks = document.querySelector('#works');
-  pageWorks.classList.add('animate__animated', 'animate__backInRight');
+  pageWorks.classList.add('animate__animated', 'animate__slideInRight');
 const pageNews = document.querySelector('#news');
-  pageNews.classList.add('animate__animated', 'animate__backInRight');
+  pageNews.classList.add('animate__animated', 'animate__slideInRight');
 const pageContact = document.querySelector('#contact');
   pageContact.classList.add('animate__animated', 'animate__backInRight');
 
