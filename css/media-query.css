@@ -194,6 +194,18 @@
 .contact h4 {
     padding-top: 4rem;
 }
+.right-menu a {
+    font-family: "Nunito-Black";
+    color: white;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 1.5px;
+    font-size: 40.08px;
+    font-weight: 900;
+    padding-bottom: 0px;
+    line-height: 58.08px;
+    transition: all 0.6s;
+    text-transform: uppercase;
+}
 }
 
 /* // Large devices (desktops, 992px and up) */
@@ -333,9 +345,6 @@
     font-size: 15px;
     width: 70%;
 }
-/* .tns-controls {
-    max-width: 33%;
-} */
 .work-design img {
     width: 100%;
     height: 100%;
