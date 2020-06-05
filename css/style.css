@@ -440,6 +440,8 @@ span {
     top: -80px;
     right: 0;
     float: right;
+    width: 25%;
+    margin: 0;
 }
 .tns-controls button {
     font-size: 24px;
