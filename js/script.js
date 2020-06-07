@@ -43,32 +43,15 @@ function hideTopMenu(x) {
   }
 // ========================== SECTION PAGES WIDTH RESPONSIVE(BELOW 992PX) ======================
 function hideRightMenuBelow992px(i) {
-  if (i.matches) { // If media query matches
-      $("#about").removeClass("about-page");
-      $("#about").addClass("about-page-js");
-      $("#resume").removeClass("resume-page");
-      $("#resume").addClass("resume-page-js");
-      $("#services").removeClass("services-page");
-      $("#services").addClass("services-page-js");
-      $("#works").removeClass("works-page");
-      $("#works").addClass("works-page-js");
-      $("#news").removeClass("blog-page");
-      $("#news").addClass("blog-page-js");
-      $("#contact").removeClass("contact-page");
-      $("#contact").addClass("contact-page-js");
-  } else {
-      $("#about").removeClass("about-page-js");
-      $("#about").addClass("about-page");
-      $("#resume").removeClass("resume-page-js");
-      $("#resume").addClass("resume-page");
-      $("#services").removeClass("services-page-js");
-      $("#services").addClass("services-page");
-      $("#works").removeClass("works-page-js");
-      $("#works").addClass("works-page");
-      $("#news").removeClass("blog-page-js");
-      $("#news").addClass("blog-page");
-      $("#contact").removeClass("contact-page-js");
-      $("#contact").addClass("contact-page");
+  let sections = document.querySelectorAll("section");
+  for(item of sections) {
+      if (i.matches) { // If media query matches
+        item.classList.remove("sections");
+        item.classList.add("sections-js");
+    } else {
+        item.classList.remove("sections-js");
+        item.classList.add("sections");
+    }
   }
 }
 var leftScreen = document.getElementById('left-menu');
@@ -212,18 +195,11 @@ for(let i = 0;i < element.length;i++) {
 // =========================  ANIMATING PAGES =========================
 const menuRight = document.querySelector("#right-menu");
     menuRight.classList.add('animate__animated', 'animate__slideInRight');
-const pageAbout = document.querySelector('#about');
-    pageAbout.classList.add('animate__animated', 'animate__slideInRight');
-const pageResume = document.querySelector('#resume');
-    pageResume.classList.add('animate__animated', 'animate__slideInRight');
-const pageServices = document.querySelector('#services');
-  pageServices.classList.add('animate__animated', 'animate__slideInRight');
-const pageWorks = document.querySelector('#works');
-  pageWorks.classList.add('animate__animated', 'animate__slideInRight');
-const pageNews = document.querySelector('#news');
-  pageNews.classList.add('animate__animated', 'animate__slideInRight');
-const pageContact = document.querySelector('#contact');
-  pageContact.classList.add('animate__animated', 'animate__slideInRight');
+let sectionsAnimate = document.querySelectorAll("section");
+
+for(let i = 0;i < sectionsAnimate.length;i++){
+    sectionsAnimate[i].classList.add('animate__animated', 'animate__slideInRight');
+}
 // ================== RESTART ANIMATION (DELETE CLASSES) ================
 
 // ====================TINY SLIDER ====================
