@@ -92,8 +92,10 @@ function setActiveLi() {
 }
 
 // ================================== DISPALY/HIDE PAGES WHEN CLICKED ON MENU ============================
-function dispalyPages(c) {
-  let sections = document.querySelectorAll('section');
+// ======= NEW VERSION =========
+function displayPagesv2(c) {
+  let sectionPages = document.querySelectorAll("section");
+  let home = document.getElementById("home");
   let leftMenu = document.getElementById('left-menu');
   leftMenu.classList += " d-none";
   let rightMenu = document.getElementById('right-menu');
@@ -102,119 +104,32 @@ function dispalyPages(c) {
   let homePage = document.getElementById("homePage");
   homePage.classList = "d-block";
 
-  for(item of sections){
-      if (c == "home")  {
-        leftMenu.classList = "split left-screen";
-        rightMenu.classList.remove("split-js","right-screen-js");
-        rightMenu.classList.add("split","right-screen");
-        document.getElementById('home').classList.remove("d-none");
-        document.getElementById('home').classList.add("d-block");
-        //remove other classes
-        document.getElementById('about').classList.remove("d-block");
-        document.getElementById('about').classList.add("d-none");
-        document.getElementById('resume').classList.remove("d-block");
-        document.getElementById('resume').classList.add("d-none");
-        document.getElementById('services').classList.remove("d-block");
-        document.getElementById('services').classList.add("d-none");
-        document.getElementById('works').classList.remove("d-block");
-        document.getElementById('works').classList.add("d-none");
-        document.getElementById('news').classList.remove("d-block");
-        document.getElementById('news').classList.add("d-none");
-        document.getElementById('contact').classList.remove("d-block");
-        document.getElementById('contact').classList.add("d-none");
-      }
-      if (c == "about")  {
-        document.getElementById('about').classList.remove("d-none");
-        document.getElementById('about').classList.add("d-block");
-        //remove other classes
-        document.getElementById('resume').classList.remove("d-block");
-        document.getElementById('resume').classList.add("d-none");
-        document.getElementById('services').classList.remove("d-block");
-        document.getElementById('services').classList.add("d-none");
-        document.getElementById('works').classList.remove("d-block");
-        document.getElementById('works').classList.add("d-none");
-        document.getElementById('news').classList.remove("d-block");
-        document.getElementById('news').classList.add("d-none");
-        document.getElementById('contact').classList.remove("d-block");
-        document.getElementById('contact').classList.add("d-none");
-      }
-      if (c == "resume")  {
-        document.getElementById('resume').classList.remove("d-none");
-        document.getElementById('resume').classList.add("d-block");
-        //remove other classes
-        document.getElementById('about').classList.remove("d-block");
-        document.getElementById('about').classList.add("d-none");
-        document.getElementById('services').classList.remove("d-block");
-        document.getElementById('services').classList.add("d-none");
-        document.getElementById('works').classList.remove("d-block");
-        document.getElementById('works').classList.add("d-none");
-        document.getElementById('news').classList.remove("d-block");
-        document.getElementById('news').classList.add("d-none");
-        document.getElementById('contact').classList.remove("d-block");
-        document.getElementById('contact').classList.add("d-none");
-      }
-      if (c == "services")  {
-        document.getElementById('services').classList.remove("d-none");
-        document.getElementById('services').classList.add("d-block");
-        //remove other classes
-        document.getElementById('resume').classList.remove("d-block");
-        document.getElementById('resume').classList.add("d-none");
-        document.getElementById('about').classList.remove("d-block");
-        document.getElementById('about').classList.add("d-none");
-        document.getElementById('works').classList.remove("d-block");
-        document.getElementById('works').classList.add("d-none");
-        document.getElementById('news').classList.remove("d-block");
-        document.getElementById('news').classList.add("d-none");
-        document.getElementById('contact').classList.remove("d-block");
-        document.getElementById('contact').classList.add("d-none");
-      }
-      if (c == "works")  {
-        document.getElementById('works').classList.remove("d-none");
-        document.getElementById('works').classList.add("d-block");
-        //remove classes 
-        document.getElementById('resume').classList.remove("d-block");
-        document.getElementById('resume').classList.add("d-none");
-        document.getElementById('services').classList.remove("d-block");
-        document.getElementById('services').classList.add("d-none");
-        document.getElementById('about').classList.remove("d-block");
-        document.getElementById('about').classList.add("d-none");
-        document.getElementById('news').classList.remove("d-block");
-        document.getElementById('news').classList.add("d-none");
-        document.getElementById('contact').classList.remove("d-block");
-        document.getElementById('contact').classList.add("d-none");
-      }
-      if (c == "news")  {
-        document.getElementById('news').classList.remove("d-none");
-        document.getElementById('news').classList.add("d-block");
-        //remove classes
-        document.getElementById('resume').classList.remove("d-block");
-        document.getElementById('resume').classList.add("d-none");
-        document.getElementById('services').classList.remove("d-block");
-        document.getElementById('services').classList.add("d-none");
-        document.getElementById('works').classList.remove("d-block");
-        document.getElementById('works').classList.add("d-none");
-        document.getElementById('about').classList.remove("d-block");
-        document.getElementById('about').classList.add("d-none");
-        document.getElementById('contact').classList.remove("d-block");
-        document.getElementById('contact').classList.add("d-none");
-      }
-      if (c == "contact")  {
-        document.getElementById('contact').classList.remove("d-none");
-        document.getElementById('contact').classList.add("d-block");
-        //remove classes
-        document.getElementById('resume').classList.remove("d-block");
-        document.getElementById('resume').classList.add("d-none");
-        document.getElementById('services').classList.remove("d-block");
-        document.getElementById('services').classList.add("d-none");
-        document.getElementById('works').classList.remove("d-block");
-        document.getElementById('works').classList.add("d-none");
-        document.getElementById('news').classList.remove("d-block");
-        document.getElementById('news').classList.add("d-none");
-        document.getElementById('about').classList.remove("d-block");
-        document.getElementById('about').classList.add("d-none");
+    if (c == "home")  {
+      leftMenu.classList = "split left-screen";
+      rightMenu.classList.remove("split-js","right-screen-js");
+      rightMenu.classList.add("split","right-screen");
+      home.classList.remove("d-none");
+      home.classList.add("d-block");
     }
-  }
+    else {
+      home.classList.add("d-block");
+    }
+
+    for(item of sectionPages) {
+     
+      if(item.getAttribute("category") == c)
+      {
+          item.classList.remove("d-none");
+          item.classList.add("d-block");
+      }
+      else {
+          item.classList.remove("d-block");
+          item.classList.add("d-none");
+      }
+    }
 }
+// ======= OLD VERSION (WORKING) ======
+
 // ===================================== FORM VALIDATION ============================================
 
 function validateForm(){  
