@@ -291,28 +291,6 @@ html, body {
     margin-top: 50px;
     overflow: hidden; 
 }
-.about-page {
-    background-color: #ffffff;
-    margin-left: 33%;
-    padding: 0 50px;
-    overflow-y: scroll;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
-    background: #fff;
-    max-width: 995px;
-    margin-top: 50px;
-    overflow: hidden;
-}
-.about-page-js {
-    background-color: #ffffff;
-    margin-left: 0%;
-    padding: 0 50px;
-    overflow-y: scroll;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
-    background: #fff;
-    max-width: 995px;
-    margin-top: 50px;
-    overflow: hidden; 
-}
 .author-about {
     display: block;
     border: 10px solid #eee;
@@ -525,28 +503,6 @@ span {
 /* ========= END OF FUN FACTS ========== */
 /* ======================== END ABOUT SECTION ================== */
 /* ============================================ RESUME ================================================ */
-.resume-page {
-    background-color: #ffffff;
-    margin-left: 33%;
-    padding: 0 50px;
-    overflow-y: scroll;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
-    background: #fff;
-    max-width: 995px;
-    margin-top: 50px;
-    overflow: hidden;  
-}
-.resume-page-js {
-    background-color: #ffffff;
-    margin-left: 0%;
-    padding: 0 50px;
-    overflow-y: scroll;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
-    background: #fff;
-    max-width: 995px;
-    margin-top: 50px;
-    overflow: hidden;
-}
 /* NEW VERSION */
 /* left side (EDUCATION) */
 ul.timeline {
@@ -662,28 +618,6 @@ ul.timeline > li > .date > span {
     opacity: 0.63;
 }
 /* =================================================== SERVICES =========================================== */
-.services-page {
-    background-color: #ffffff;
-    margin-left: 33%;
-    padding: 0 50px;
-    overflow-y: scroll;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
-    background: #fff;
-    max-width: 995px;
-    margin-top: 50px;
-    overflow: hidden; 
-}
-.services-page-js {
-    background-color: #ffffff;
-    margin-left: 0%;
-    padding: 0 50px;
-    overflow-y: scroll;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
-    background: #fff;
-    max-width: 995px;
-    margin-top: 50px;
-    overflow: hidden;  
-}
 #services p {
     color: #9b9b9b;
     font-size: 14px;
@@ -707,28 +641,6 @@ ul.timeline > li > .date > span {
     transform-style: preserve-3d;
 }
 /* ========================================================= WORKS =================================== */
-.works-page {
-    background-color: #ffffff;
-    margin-left: 33%;
-    padding: 0 50px;
-    overflow-y: scroll;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
-    background: #fff;
-    max-width: 995px;
-    margin-top: 50px;
-    overflow: hidden;
-}
-.works-page-js {
-    background-color: #ffffff;
-    margin-left: 0%;
-    padding: 0 50px;
-    overflow-y: scroll;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
-    background: #fff;
-    max-width: 995px;
-    margin-top: 50px;
-    overflow: hidden;
-}
 .works-container {
     position: relative;
     margin: 0 auto;
@@ -932,28 +844,6 @@ figure.snip1206.hover figcaption p {
   opacity: 0.7;
 }
 /* ===================================================== MY BLOG ======================================= */
-.blog-page {
-    background-color: #ffffff;
-    margin-left: 33%;
-    padding: 0 50px;
-    overflow-y: scroll;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
-    background: #fff;
-    max-width: 995px;
-    margin-top: 50px;
-    overflow: hidden; 
-}
-.blog-page-js {
-    background-color: #ffffff;
-    margin-left: 0%;
-    padding: 0 50px;
-    overflow-y: scroll;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
-    background: #fff;
-    max-width: 995px;
-    margin-top: 50px;
-    overflow: hidden; 
-}
 .blog-post img {
     min-width: 50%;
     max-width: 100%;
@@ -1065,28 +955,6 @@ figure.snip1206.hover figcaption p {
     text-align: center;
   }
 /* ============================== CONTACT ME ====================================== */
-.contact-page {
-    background-color: #ffffff;
-    margin-left: 33%;
-    padding: 0 50px;
-    overflow-y: scroll;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
-    background: #fff;
-    max-width: 995px;
-    margin-top: 50px;
-    overflow: hidden; 
-}
-.contact-page-js {
-    background-color: #ffffff;
-    margin-left: 0%;
-    padding: 0 50px;
-    overflow-y: scroll;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
-    background: #fff;
-    max-width: 995px;
-    margin-top: 50px;
-    overflow: hidden; 
-}
 #row-contact {
     max-width: 1000px;
 }

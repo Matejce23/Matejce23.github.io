@@ -111,8 +111,6 @@ function displayPagesv2(c) {
       }
     }
 }
-// ======= OLD VERSION (WORKING) ======
-
 // ===================================== FORM VALIDATION ============================================
 
 function validateForm(){  
