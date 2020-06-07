@@ -241,6 +241,10 @@ $("#ul-menu > li").click(function() {
       $("#left-menu").addClass("split-query");
     })
   }
+  else {
+      $("#left-menu").removeClass("split-query");
+      $("#left-menu").addClass("split");
+  }
  
 });
 var media = window.matchMedia("(max-width: 991px)")
