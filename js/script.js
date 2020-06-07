@@ -200,23 +200,19 @@ for(let i = 0;i < sectionsAnimate.length;i++){
 }
 // ======================== BUG WHEN ON SMALLER RES WIDTH IS TO HIGH BECAUSE OF ANIMATION ===================
 function disableAnimationBelow992px(i) {
-  let sectionsDisableAnim = document.querySelectorAll("section");
-
-  for(let i = 0;i < sectionsDisableAnim.length;i++) {
-      if (i.matches) { // If media query matches
-        sectionsDisableAnim[i].classList.remove('animate__animated', 'animate__slideInRight');
-    } 
-    else {
-        sectionsDisableAnim[i].classList.add('animate__animated', 'animate__slideInRight');
-        
-    }
-  }
+      for(item of sectionsDisableAnim) {
+            if (i.matches) {
+                item.classList.remove('animate__animated', 'animate__slideInRight');
+            }
+            else {
+                item.classList.add('animate__animated', 'animate__slideInRight');
+            }
+      }
 }
-var leftScreen = document.getElementById('left-menu');
-var rightMenu = document.getElementById('right-menu');
+var sectionsDisableAnim = document.querySelectorAll("section");
 var i = window.matchMedia("(max-width: 991px)")
-hideRightMenu(i) // Call listener function at run time
-i.addListener(hideRightMenu) // Attach listener function on state changes
+disableAnimationBelow992px(i) // Call listener function at run time
+i.addListener(disableAnimationBelow992px) // Attach listener function on state changes
 // ================== RESTART ANIMATION (DELETE CLASSES) ================
 
 // ====================TINY SLIDER ====================
