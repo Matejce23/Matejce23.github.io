@@ -968,7 +968,7 @@ figure.snip1206.hover figcaption p {
     padding-top: 50px;
 }
 .blog-title a:hover {
-    color:#e64980 !important;
+    color:rgba(33,147,176,1) !important;
 }
 .load-more {
     width: 100%;
