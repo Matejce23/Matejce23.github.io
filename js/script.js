@@ -214,20 +214,20 @@ i.addListener(disableAnimationBelow992px) // Attach listener function on state c
 
 // ====================TINY SLIDER ====================
 
-var slider = tns({
-  container: '.my-slider',
-  items: 2,
-  mouseDrag: true,
-  slideBy: "page",
-  nav: false,
-  swipeAngle: false,
-  speed: 800,
-  gutter: 10,
-  fixedWidth: 400
-  });
+// var slider = tns({
+//   container: '.my-slider',
+//   items: 2,
+//   mouseDrag: true,
+//   slideBy: "page",
+//   nav: false,
+//   swipeAngle: false,
+//   speed: 800,
+//   gutter: 10,
+//   fixedWidth: 400
+//   });
   //  ============  Add icons to buttons =============
-let sliderButtonLeft = document.querySelectorAll('.tns-controls>button')[0].innerHTML = "<span class=\"pe-7s-angle-left pe-lg\"></i>";
-let sliderButtonRight = document.querySelectorAll('.tns-controls>button')[1].innerHTML = "<span class=\"pe-7s-angle-right pe-lg\"></i>";
+// let sliderButtonLeft = document.querySelectorAll('.tns-controls>button')[0].innerHTML = "<span class=\"pe-7s-angle-left pe-lg\"></i>";
+// let sliderButtonRight = document.querySelectorAll('.tns-controls>button')[1].innerHTML = "<span class=\"pe-7s-angle-right pe-lg\"></i>";
 $(".tns-controls").css("display", "block");
 //  ============== Hide menu after click on menu item ========
 $("#ul-menu > li").click(function() {
