@@ -353,7 +353,7 @@ span {
   .border{
     width: 160px;
     height: 5px;
-    background: #6ab04c;
+    background: rgba(33,147,176,1);
     margin: 26px auto;
   }
   
