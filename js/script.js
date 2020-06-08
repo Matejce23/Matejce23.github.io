@@ -1,6 +1,3 @@
-// najdi go id collapse-menu 
-// ako collapse-menu pomine 992px izbrisi go ako e pod 992px neka stoj
-// za desno menu ako e na 992px display normalno ako ne dodadi go vo top collapse menu
 // ============================= Fucntion for top fixed menu to show/hide at 992px===========================
 function hideTopMenu(x) {
     if (x.matches) { 

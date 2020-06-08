@@ -3,7 +3,6 @@
 @import url(./fonts.css);
 @import url(./bootstrap.min.css);
 @import url(./media-query.css);
-/* @import url(./contact.scss); */
 
 
 body {
@@ -97,7 +96,6 @@ body {
     width: 100%;   
   }
   .text-blue {
-      /* color:#e64980 ; */
       color: rgba(33,147,176,1);
       color: -moz-linear-gradient(left, rgba(33,147,176,1) 0%, rgba(33,147,176,1) 0%, rgba(33,147,176,1) 11%, rgba(33,147,176,1) 19%, rgba(123,108,235,1) 72%, rgba(123,108,235,1) 100%);
       color: -webkit-gradient(left top, right top, color-stop(0%, rgba(33,147,176,1)), color-stop(0%, rgba(33,147,176,1)), color-stop(11%, rgba(33,147,176,1)), color-stop(19%, rgba(33,147,176,1)), color-stop(72%, rgba(123,108,235,1)), color-stop(100%, rgba(123,108,235,1)));
@@ -127,7 +125,6 @@ body {
     background-color: -ms-linear-gradient(left, rgba(33,147,176,1) 0%, rgba(33,147,176,1) 0%, rgba(33,147,176,1) 11%, rgba(33,147,176,1) 19%, rgba(109,213,237,1) 100%) !important;
     background-color: linear-gradient(to right, rgba(33,147,176,1) 0%, rgba(33,147,176,1) 0%, rgba(33,147,176,1) 11%, rgba(33,147,176,1) 19%, rgba(109,213,237,1) 100%) !important;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2193b0', endColorstr='#6dd5ed', GradientType=1 ) !important;  
-    /* background-color: #e64980; */
     color: whitesmoke;
     padding: 14px 28px;
     font-size: 13px;
@@ -281,11 +278,9 @@ body {
 .sections-js {
     background-color: #ffffff;
     margin-left: 0%;
-    /* padding: 0 50px; */
     overflow-y: scroll;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.08);
     background: #fff;
-    /* max-width: 995px; */
     margin-top: 50px;
     overflow: hidden; 
 }
@@ -515,7 +510,6 @@ ul.timeline:before {
     left: 29px;
     width: 2px;
     height: 100%;
-    /* z-index: 0; */
 }
 ul.timeline > li {
     margin: 20px 0;
@@ -537,7 +531,6 @@ ul.timeline > li > .date:before {
     left: 20px;
     width: 20px;
     height: 20px;
-    /* z-index: 400; */
     opacity: 0.20;
 }
 ul.timeline li > .date:after {
@@ -555,7 +548,6 @@ ul.timeline li > .date:after {
     background-color: linear-gradient(to right, rgba(33,147,176,1) 0%, rgba(33,147,176,1) 0%, rgba(33,147,176,1) 11%, rgba(33,147,176,1) 19%, rgba(109,213,237,1) 100%) !important;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2193b0', endColorstr='#6dd5ed', GradientType=1 ) !important;
     border-radius: 50%;
-    /* z-index: 999; */
     margin-top: 7px;
 } 
 ul.timeline li > .date > span:before {
@@ -696,7 +688,6 @@ ul.timeline > li > .date > span {
 .column {
     float: left;
     width: 33.33%;
-    /* display: none; Hide columns by default */
   }
   
   /* Clear floats after rows */
