@@ -383,7 +383,7 @@ span {
     margin: 20px 0;
   }
   .stars{
-    color: #6ab04c;
+    color: rgba(33,147,176,1);
     margin-bottom: 20px;
   }
   .text-contain-testi {
@@ -391,6 +391,10 @@ span {
       padding-bottom: 10px;
       text-align: left;
   }
+  .fa, .fas {
+    font-weight: 900;
+    color: rgba(33,147,176,1);
+}
 /* OLD */
 .text-break {
     padding-left: 10px;
