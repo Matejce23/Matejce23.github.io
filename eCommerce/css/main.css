@@ -1,0 +1,103 @@
+@import url(./fonts.css);
+@import url(./media-query.css);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+/* Header start */
+.top-bar-sale {
+  background-color: #00CEEF;
+  padding: 10px 10px;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.top-bar-sale h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+}
+header .container-fluid {
+  padding: 0;
+}
+.header {
+  width: 85%;
+}
+.currency-dropdown {
+  position: relative;
+  width: 200px;
+}
+/*hide original SELECT element: */
+.currency-dropdown select {
+  display: none; 
+}
+.select-selected {
+  background-color: white;
+}
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: 21px;
+  width: 0px;
+  height: 0;
+  border: solid black;
+  border-width: 0px 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: 21px;
+  width: 0px;
+  height: 0;
+  border: solid black;
+  border-width: 0px 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #000;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.currency-dropdown > select > option.usd:before {
+  content: "";
+  display: block;
+  background-image: url(/icons/usd.png);
+  background-size: 50% 50%;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+}
