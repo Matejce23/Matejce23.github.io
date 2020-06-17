@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Poppins;
+    overflow-x: hidden;
 }
 /* Header start */
 .top-bar-sale {
@@ -92,12 +93,87 @@ header .container-fluid {
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.currency-dropdown > select > option.usd:before {
+.usd {
+  width: 50px;
+  height: 50px;
+}
+.usd:before {
   content: "";
-  display: block;
+  /* display: block; */
   background-image: url(/icons/usd.png);
   background-size: 50% 50%;
   position: absolute;
   top: 5px;
   left: 0px;
+}
+.promotion {
+  width: 82%;
+}
+.shop-wish-acc {
+  width: 80%;
+}
+.feature-title {
+  text-align: center;
+}
+.feature-title h3 {
+  text-transform: uppercase;
+}
+.products {
+  width: 100%;
+}
+.btn-feature-products {
+  text-align: center;
+}
+.title h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.categories {
+  position: relative;
+    margin: 0 auto;
+    display: flex;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    width: 100%;
+}
+.cate-img {
+  width: 475px;
+  height: 480px;
+  display: inline-block;
+  flex: 0 31 50%;
+  margin-bottom: 20px;
+}
+.img-banner {
+  width: 100%;
+  height: 270px;
+}
+.img-zigzag-one {
+  width: 100%;
+  height: 77.354%;
+}
+.img-zigzag-two {
+  width: 100%;
+  height: 77.354%;
+}
+.img-zigzag-one img {
+  width: 50.05%;
+  height: 100%;
+  float: left;
+}
+.zigzag-text h3 {
+  text-transform: uppercase;
+}
+.img-zigzag-two img {
+  width: 50.05%;
+  height: 100%;
+  float: right;
+}
+.zigzag-text {
+  display: table;
+  height: 100%;
+  padding-left: 20px;
+}
+.align-text {
+  display: table-cell;
+  vertical-align: middle;
 }
