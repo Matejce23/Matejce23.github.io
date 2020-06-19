@@ -28,6 +28,7 @@ header .container-fluid {
 .header {
   width: 85%;
 }
+/* CURRENCY DROPDOWN (CONVERTER) */
 .currency-dropdown {
   position: relative;
   width: 200px;
@@ -99,7 +100,6 @@ header .container-fluid {
 }
 .usd:before {
   content: "";
-  /* display: block; */
   background-image: url(/icons/usd.png);
   background-size: 50% 50%;
   position: absolute;
@@ -112,6 +112,7 @@ header .container-fluid {
 .shop-wish-acc {
   width: 80%;
 }
+/* FEATURED PRODUCTS */
 .feature-title {
   text-align: center;
 }
@@ -132,21 +133,22 @@ header .container-fluid {
   position: relative;
     margin: 0 auto;
     display: flex;
-    /* justify-content: space-around; */
     flex-wrap: wrap;
     width: 100%;
 }
 .cate-img {
-  width: 475px;
+  width: 470px;
   height: 480px;
   display: inline-block;
   flex: 0 31 50%;
   margin-bottom: 20px;
 }
+/* IMG BANNER */
 .img-banner {
   width: 100%;
   height: 270px;
 }
+/* ZIG ZAG INFO */
 .img-zigzag-one {
   width: 100%;
   height: 77.354%;
@@ -177,3 +179,63 @@ header .container-fluid {
   display: table-cell;
   vertical-align: middle;
 }
+/* Testimonials */
+.testimonials{
+  padding: 31px 0;
+  background: #f1f1f1;
+  color: #434343;
+  text-align: center;
+}
+.inner{
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 30px;
+}
+
+.border{
+  width: 160px;
+  height: 5px;
+  background: rgba(33,147,176,1);
+  margin: 26px auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col{
+  flex: 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.testimonial{
+  background: #fff;
+  padding: 0px;
+}
+.testimonial img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name{
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.stars{
+  color: rgba(33,147,176,1);
+  margin-bottom: 20px;
+}
+.text-contain-testi {
+    padding-left: 15px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+.fa, .fas {
+  font-weight: 900;
+  color: rgba(33,147,176,1);
+}
+/* Subscribe To our news letter */
