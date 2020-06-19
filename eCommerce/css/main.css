@@ -288,7 +288,7 @@ header .container-fluid {
   background-color: #232323;
 }
 .logo-footer {
-  margin-top: 150px;
+  margin-top: 10rem;
   padding-left: 25%;
 }
 .logo-footer h2 {
@@ -296,7 +296,7 @@ header .container-fluid {
   text-transform: uppercase;
 }
 .shop-footer {
-  margin-top: 100px;
+  margin-top: 6rem;
 }
 .shop-footer a {
   color: white;
@@ -314,7 +314,7 @@ header .container-fluid {
   text-transform: uppercase;
 }
 .information-footer {
-  margin-top: 100px;
+  margin-top: 6rem;
 }
 .information-footer a {
   color: white;
@@ -332,11 +332,23 @@ header .container-fluid {
   text-transform: uppercase;
 }
 .social-media-footer {
-  margin-top: 100px;
+  margin-top: 6rem;
+  position: relative;
 }
 .social-media-footer h4 {
   color: #fff;
   text-transform: uppercase;
+}
+.stay-connected {
+  position: absolute;
+  left: 230px;
+  top: -8px;
+}
+.social-media-icons {
+  width: 50px;
+  height: 50px;
+  margin-top: 40px;
+  margin-right: 40px;
 }
 .hr-footer hr {
   background-color: #fff;
