@@ -181,7 +181,7 @@ header .container-fluid {
 }
 /* Testimonials */
 .testimonials{
-  padding: 31px 0;
+  padding: 150px 0;
   background: #f1f1f1;
   color: #434343;
   text-align: center;
@@ -239,3 +239,16 @@ header .container-fluid {
   color: rgba(33,147,176,1);
 }
 /* Subscribe To our news letter */
+.sub-to-our-news {
+  position: relative;
+}
+.sub-newslatter {
+  position: relative;
+  width: 100%;
+  height: 800px;
+}
+/* FOOTER */
+.footer {
+  background-color: #232323;
+  position: relative;
+}
