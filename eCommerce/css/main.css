@@ -137,7 +137,7 @@ header .container-fluid {
     width: 100%;
 }
 .cate-img {
-  width: 470px;
+  width: 475px;
   height: 480px;
   display: inline-block;
   flex: 0 31 50%;
@@ -246,6 +246,18 @@ header .container-fluid {
   position: relative;
   width: 100%;
   height: 800px;
+}
+.title-sub {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: wheat;
+}
+.title-sub > h1 {
+  padding-bottom: 30px;
+  text-transform: uppercase;
 }
 /* FOOTER */
 .footer {
