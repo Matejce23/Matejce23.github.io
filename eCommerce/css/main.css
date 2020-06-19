@@ -110,7 +110,50 @@ header .container-fluid {
   width: 82%;
 }
 .shop-wish-acc {
-  width: 80%;
+  width: 84.5%;
+}
+.shopping-cart {
+  position: relative;
+  margin-right: 5rem;
+}
+.shopping-cart:before {
+  content: url(../icons/shopping-cart.png);
+  position: absolute;
+  left: -50px;
+  top: -13;
+}
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  background: #00EFD1;
+  position: absolute;
+  top: -8px;
+  right: -50px;
+}
+.wish-list {
+  position: relative;
+  margin-left: 5rem;
+}
+.wish-list:before {
+  content: url(../icons/wish-list.png);
+  position: absolute;
+  left: -54px;
+  top: -5px;
+}
+.acc-sign {
+  position: relative;
+  margin-left: 5rem;
+}
+.acc-sign:before {
+  content: url(../icons/acc.png);
+  position: absolute;
+  left: -54px;
+  top: -8px;
 }
 /* FEATURED PRODUCTS */
 .feature-title {
