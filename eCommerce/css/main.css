@@ -100,17 +100,71 @@ header .container-fluid {
   height: 50px;
 }
 .usd:before {
-  content: url(../icons/currency/usd.png);
-  position: absolute;
-  top: 5px;
-  left: 0px;
-}
-.select-selected:before {
   content: url(../icons/currency/usd-icon.png);
   position: absolute;
   top: 11px;
   left: 0px;
 }
+.eur {
+  width: 50px;
+  height: 50px;
+}
+.eur:before {
+  content: url(../icons/currency/eur-icon2.png);
+  position: absolute;
+  top: 11px;
+  left: 0px;
+}
+.gbp {
+  width: 50px;
+  height: 50px;
+}
+.gbp:before {
+  content: url(../icons/currency/gbp-icon.png);
+  position: absolute;
+  top: 11px;
+  left: 0px;
+}
+/* on dropdown list icons */ 
+.usd-js {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.usd-js:before {
+  content: url(../icons/currency/usd-icon.png);
+  position: absolute;
+  top: 11px;
+  left: 0px;
+}
+.eur-js {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.eur-js:before {
+  content: url(../icons/currency/eur-icon2.png);
+  position: absolute;
+  top: 11px;
+  left: 0px;
+}
+.gbp-js {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.gbp-js:before {
+  content: url(../icons/currency/gbp-icon.png);
+  position: absolute;
+  top: 11px;
+  left: 0px;
+}
+/* .select-selected:before {
+  content: url(../icons/currency/usd-icon.png);
+  position: absolute;
+  top: 11px;
+  left: 0px;
+} */
 /* ======================= SEARCH ====================== */
 .search {
   margin-top: 0.2rem;

@@ -97,59 +97,59 @@ then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
 
 // ================= currency add icon ================
-  
+function addIconCurrency() {
+  let selectedItems = document.getElementsByClassName("select-selected");
+    for(let i = 0;i < selectedItems.length;i++) {
+      if(selectedItems[i].innerHTML.includes("EUR")) {
+        selectedItems[i].classList.add("eur");
+        selectedItems[i].classList.remove("usd");
+        selectedItems[i].classList.remove("gbp");
+      }
+      else {
+        selectedItems[i].classList.remove("eur");
+      }
+      if(selectedItems[i].innerHTML.includes("USD")) {
+        selectedItems[i].classList.add("usd");
+        selectedItems[i].classList.remove("eur");
+        selectedItems[i].classList.remove("gbp");
+      }
+      else {
+        selectedItems[i].classList.remove("usd");
+      }
+      if(selectedItems[i].innerHTML.includes("GBP")) {
+        selectedItems[i].classList.add("gbp");
+        selectedItems[i].classList.remove("usd");
+        selectedItems[i].classList.remove("eur");
+      }
+      else {
+        selectedItems[i].classList.remove("gbp");
+      }
+    }
+addIconCurrencyStart(); 
+}
+addIconCurrency();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // let request = new XMLHttpRequest();
-// let rates = new Array;
-
-// request.onreadystatechange = function() {
-//     if(this.readyState === 4 && this.status === 200) {
-        
-//          console.log(JSON.parse(this.response));
-//          console.log(JSON.parse(this.response).data);
-
-//         rates = JSON.parse(this.response);
-//         rates.base = "USD"
-//         rates.rates.USD = 1
-
-//         fx.rates += {"EUR" : 1}
-        
-//         eurRate = {"EUR": 1}
-//         rates.rates.push(eurRate)
-//         console.log(rates);
-
-        
-//     }
-// };
-
-
-// request.open("GET", "https://api.exchangeratesapi.io/latest");
-// request.send();
+function addIconCurrencyStart() {
+  let selectItems = document.body.children[0].children[1].children[0].children[0].children[0].children[2].children;
+    for(let i = 0;i < selectItems.length;i++) {
+      if(selectItems[i].innerHTML.includes("EUR")) {
+        selectItems[i].classList.add("eur-js");
+      }
+      else {
+        //selectItems[i].classList.remove("eur");
+      }
+      if(selectItems[i].innerHTML.includes("USD")) {
+        selectItems[i].classList.add("usd-js");
+      }
+      else {
+        //selectItems[i].classList.remove("usd");
+      }
+      if(selectItems[i].innerHTML.includes("GBP")) {
+        selectItems[i].classList.add("gbp-js");
+      }
+      else {
+        //selectItems[i].classList.remove("gbp");
+      }
+    } 
+}
+addIconCurrencyStart();
