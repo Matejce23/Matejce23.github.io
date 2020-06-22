@@ -166,12 +166,6 @@ header .container-fluid {
   top: 11px;
   left: 0px;
 }
-/* .select-selected:before {
-  content: url(../icons/currency/usd-icon.png);
-  position: absolute;
-  top: 11px;
-  left: 0px;
-} */
 /* ======================= SEARCH ====================== */
 .search {
   margin-top: 0.2rem;
@@ -217,12 +211,12 @@ input.search-field {
   flex-shrink: 0;
   flex-basis: auto;
   align-self: center;
-  height: 40px;
+  height: 45px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 input.search-submit {
-  height: 40px;
+  height: 45px;
   margin: 0;
   padding: 0.5rem 1.0rem;
   border-top-left-radius: 0;
@@ -257,8 +251,8 @@ input.search-submit {
 }
 .button:hover, .button:active, .button:focus {
   cursor: pointer;
-  background: #d4b743;
-  color: #292826;
+  background: #43dde6;
+  color: #364f6b;
   outline: 0;
 }
 /* ========================== H4 PROMOTION AND SHOPPING CART/WISH LIST/SIGN IN DIV ============= */ 
@@ -267,6 +261,7 @@ input.search-submit {
 }
 .promotion h4 {
   font-size: 1.2rem;
+  font-family: "Poppins-Bold";
 }
 .shop-wish-acc {
   width: 84.5%;
@@ -345,19 +340,80 @@ input.search-submit {
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 60px !important;
 }
-/* FEATURED PRODUCTS */
+/* =============== FEATURED PRODUCTS ============== */
 .feature-title {
   text-align: center;
 }
 .feature-title h3 {
   text-transform: uppercase;
 }
-.products {
-  width: 100%;
+.card {
+  border: none !important;
+  text-align: center !important;
+}
+.card-img-top {
+  position: relative;
+}
+.card-body h5 {
+  color: #676767 !important;
+}
+.card-text {
+  font-family: "Poppins-SemiBold";
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+.img-card {
+  position: relative;
+}
+.best-seller {
+  width: 80px;
+  height: 40px;
+  font-size: 13px;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  background: #000;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-transform: capitalize;
+  font-family: "Poppins-Light";
+}
+.new-product {
+  width: 80px;
+  height: 40px;
+  font-size: 13px;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  background: #000;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-transform: uppercase;
+  font-family: "Poppins-Light";  
+}
+.discount {
+  width: 80px;
+  height: 40px;
+  font-size: 13px;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  background: #364f6b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-transform: capitalize;
+  font-family: "Poppins-Light";
+}
+#discount {
+  color: #2193B0;
 }
 .btn-feature-products {
   text-align: center;
 }
+/* ============= CATEGORIES ============ */
 .title h3 {
   text-align: center;
   text-transform: uppercase;
@@ -376,7 +432,7 @@ input.search-submit {
   flex: 0 31 50%;
   margin-bottom: 20px;
 }
-/* IMG BANNER */
+/* ================ IMG BANNER */
 .img-banner {
   width: 100%;
   height: 270px;

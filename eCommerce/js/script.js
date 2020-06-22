@@ -153,3 +153,5 @@ function addIconCurrencyStart() {
     } 
 }
 addIconCurrencyStart();
+
+// ============== FEATURED PRODUCTS =====================
