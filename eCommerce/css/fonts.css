@@ -22,3 +22,7 @@
     font-family: "Nunito-Black";
     src: url(../fonts/Nunito/Nunito-Black.ttf);
 }
+@font-face {
+    font-family: "Kalam";
+    src: url(../fonts/Kalam/Kalam-Regular.ttf);
+}
