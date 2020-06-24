@@ -1,0 +1,31 @@
+{
+    "featured-products" : [
+      {
+          "id": "1",
+          "product.title": "Smart Watch",
+          "product.price": 19.99,
+          "product.discount": false,
+          "product.discount-price": ""
+      },
+      {
+         "id": "2",
+         "product.title": "2020 Minimalist Ultra Thin Watch",
+         "product.price": 29.99,
+         "product.discount": true,
+         "product.discount-price": 19.99
+      },
+      {
+        "id": "3",
+        "product.title": "CRRJU Fashion Mens Watches",
+        "product.price": 19.99,
+        "product.discount": false,
+        "product.discount-price": ""
+      },
+      {
+        "id": "4",
+        "product.title": "SKMEI Fashion Outdoor Sport Watch",
+        "product.price": 29.99,
+        "product.discount": false,
+        "product.discount-price": ""
+      }]
+  }

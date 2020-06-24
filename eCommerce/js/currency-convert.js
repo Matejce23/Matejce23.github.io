@@ -1,16 +1,60 @@
-// ============= CONVERT CURRENCY FROM API ==================
-function convertUsdToEur() {
-    let price = document.getElementById("currency-value").value;
+// ============= CONVERT CURRENCY FROM JSON ==================
+var currencyRates = {
+  "rates" : [
+    {
+      "USD": 1,
+      "EUR": 0.89,
+      "GBP": 0.80
 
+    }
+  ]
 }
-function convertUsdToGbp() {
-    
+console.log(currencyRates);
+var featuredProducts = {
+  "featured-products" : [
+    {
+        "id": "1",
+        "product.title": "Smart Watch",
+        "product.price": 19.99,
+        "product.discount": false,
+        "product.discount-price": ""
+    },
+    {
+       "id": "2",
+       "product.title": "2020 Minimalist Ultra Thin Watch",
+       "product.price": 29.99,
+       "product.discount": true,
+       "product.discount-price": 19.99
+    },
+    {
+      "id": "3",
+      "product.title": "CRRJU Fashion Mens Watches",
+      "product.price": 19.99,
+      "product.discount": false,
+      "product.discount-price": ""
+    },
+    {
+      "id": "4",
+      "product.title": "SKMEI Fashion Outdoor Sport Watch",
+      "product.price": 29.99,
+      "product.discount": false,
+      "product.discount-price": ""
+    }]
 }
-fetch("http://localhost:60821/api/currency")
-  .then((resp) => resp.json())
-  .then((data) => currency = console.log(data.currency))
-  .then(convertUsdToEur())
-  .then(convertUsdToGbp())
+//var feaProductObject = JSON.parse(featuredProducts);
+console.log(featuredProducts);
+// function convertUsdToEur() {
+//     var price = document.getElementById("currency-value").innerHTML;
+//     price = Number;
+//     var convert = (price * currencyRates.rates[0].EUR);
+//     price.innerHTML = (convert);
+// }
+
+// fetch("http://localhost:60821/api/currency")
+//   .then((resp) => resp.json())
+//   .then((data) => currency = console.log(data.currency))
+//   .then(convertUsdToEur())
+//   .then(convertUsdToGbp())
 
 // ================= API CALL FOR CURRENCY CONVERT =================
 
@@ -144,7 +188,7 @@ addIconCurrencyStart();
 addIconCurrency();
 
 function addIconCurrencyStart() {
-  let selectItems = document.body.children[0].children[1].children[0].children[0].children[0].children[2].children;
+  var selectItems = document.body.children[0].children[1].children[0].children[0].children[0].children[2].children;
     for(let i = 0;i < selectItems.length;i++) {
       if(selectItems[i].innerHTML.includes("EUR")) {
         selectItems[i].classList.add("eur-js");
@@ -167,3 +211,67 @@ function addIconCurrencyStart() {
     } 
 }
 addIconCurrencyStart();
+// ================ convert dollar to euro (sign and price) ================
+
+var dropdownEuro = document.body.children[0].children[1].children[0].children[0].children[0].children[2].children[0];
+
+dropdownEuro.addEventListener("click", function(){
+  
+  var price = Number(document.getElementById("currency-value").innerHTML);
+  var priceDiv = document.getElementById("currency-value");
+  var currencySign = document.getElementById("currency-sign").innerHTML;
+  var currencySpan = document.getElementById("currency-sign");
+  if(currencySign.includes("$") || (currencySign.includes("&pound;"))) {
+    // var euroSign = currencySign.replace("&euro; ");
+    currencySpan.innerHTML = "&euro; ";
+    parseFloat(price).toFixed(2);
+    var convert = parseFloat(price * currencyRates.rates[0].EUR).toFixed(2);
+    priceDiv.innerHTML = convert;
+  }
+  else if(currencySign.includes("&euro;")) {
+    return 0;
+  }
+  
+});
+// ================ convert dollar to gbp (sign and price) ================/ 
+var dropdownGbp = document.body.children[0].children[1].children[0].children[0].children[0].children[2].children[1];
+
+dropdownGbp.addEventListener("click", function(){
+  
+  var price = Number(document.getElementById("currency-value").innerHTML);
+  var priceDiv = document.getElementById("currency-value");
+  var currencySign = document.getElementById("currency-sign").innerHTML;
+  var currencySpan = document.getElementById("currency-sign");
+  if(currencySign.includes("$") || (currencySign.includes("&euro;"))) {
+    // var euroSign = currencySign.replace("&euro; ");
+    currencySpan.innerHTML = "&pound; ";
+    parseFloat(price).toFixed(2);
+    var convert = parseFloat(price * currencyRates.rates[0].GBP).toFixed(2);
+    priceDiv.innerHTML = convert;
+  }
+  else if(currencySign.includes("&pound;")) {
+    return 0;
+  }
+  
+});
+// convert usd to another value 
+var dropdownUsd = document.body.children[0].children[1].children[0].children[0].children[0].children[2].children[2];
+
+dropdownUsd.addEventListener("click", function(){
+  
+  var priceUsd = Number(document.getElementById("currency-value").innerHTML);
+  var priceUsdDiv = document.getElementById("currency-value");
+  var currencySign = document.getElementById("currency-sign").innerHTML;
+  var currencySpan = document.getElementById("currency-sign");
+  if(currencySign.includes("€ ") || (currencySign.includes("£"))) {
+    // var euroSign = currencySign.replace("&euro; ");
+    currencySpan.innerHTML = "$ ";
+    parseFloat(priceUsd).toFixed(2);
+    var convert = parseFloat(19.99).toFixed(2)//(priceUsd * currencyRates.rates[0].USD).toFixed(2);
+    priceUsdDiv.innerHTML = convert;
+  }
+  else if(currencySign.includes("$")) {
+    return 0;
+  }
+  
+});
