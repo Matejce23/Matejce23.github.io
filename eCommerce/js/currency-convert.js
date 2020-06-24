@@ -211,67 +211,239 @@ function addIconCurrencyStart() {
     } 
 }
 addIconCurrencyStart();
-// ================ convert dollar to euro (sign and price) ================
-
+// ======================  CONVERTING PRODUCT PRICE ==================
 var dropdownEuro = document.body.children[0].children[1].children[0].children[0].children[0].children[2].children[0];
-
-dropdownEuro.addEventListener("click", function(){
-  
-  var price = Number(document.getElementById("currency-value").innerHTML);
-  var priceDiv = document.getElementById("currency-value");
-  var currencySign = document.getElementById("currency-sign").innerHTML;
-  var currencySpan = document.getElementById("currency-sign");
-  if(currencySign.includes("$") || (currencySign.includes("&pound;"))) {
-    // var euroSign = currencySign.replace("&euro; ");
-    currencySpan.innerHTML = "&euro; ";
-    parseFloat(price).toFixed(2);
-    var convert = parseFloat(price * currencyRates.rates[0].EUR).toFixed(2);
-    priceDiv.innerHTML = convert;
-  }
-  else if(currencySign.includes("&euro;")) {
-    return 0;
-  }
-  
-});
-// ================ convert dollar to gbp (sign and price) ================/ 
 var dropdownGbp = document.body.children[0].children[1].children[0].children[0].children[0].children[2].children[1];
-
-dropdownGbp.addEventListener("click", function(){
-  
+var dropdownUsd = document.body.children[0].children[1].children[0].children[0].children[0].children[2].children[2];
+// ===========================
+// USD TO EURO and GBP TO EURO
+const convertUsdToEur = () => {
+  var productPrice = 19.99;
   var price = Number(document.getElementById("currency-value").innerHTML);
   var priceDiv = document.getElementById("currency-value");
   var currencySign = document.getElementById("currency-sign").innerHTML;
   var currencySpan = document.getElementById("currency-sign");
-  if(currencySign.includes("$") || (currencySign.includes("&euro;"))) {
-    // var euroSign = currencySign.replace("&euro; ");
-    currencySpan.innerHTML = "&pound; ";
+
+  if(currencySign.includes("$")) {
+    currencySpan.innerHTML = "€ ";
     parseFloat(price).toFixed(2);
-    var convert = parseFloat(price * currencyRates.rates[0].GBP).toFixed(2);
-    priceDiv.innerHTML = convert;
+    var convertedUsdToEur = parseFloat(price * currencyRates.rates[0].EUR).toFixed(2);
+    priceDiv.innerHTML = convertedUsdToEur;
   }
-  else if(currencySign.includes("&pound;")) {
+  // preventing when u convert usd to eur, so it euro can't convert again on the same button(div)
+  else if(currencySign.includes("€")) {
     return 0;
   }
-  
-});
-// convert usd to another value 
-var dropdownUsd = document.body.children[0].children[1].children[0].children[0].children[0].children[2].children[2];
-
-dropdownUsd.addEventListener("click", function(){
-  
-  var priceUsd = Number(document.getElementById("currency-value").innerHTML);
-  var priceUsdDiv = document.getElementById("currency-value");
+}
+const convertGbpToEur = () => {
+  var productPrice = 19.99;
+  var price = Number(document.getElementById("currency-value").innerHTML);
+  var priceDiv = document.getElementById("currency-value");
   var currencySign = document.getElementById("currency-sign").innerHTML;
   var currencySpan = document.getElementById("currency-sign");
-  if(currencySign.includes("€ ") || (currencySign.includes("£"))) {
-    // var euroSign = currencySign.replace("&euro; ");
-    currencySpan.innerHTML = "$ ";
-    parseFloat(priceUsd).toFixed(2);
-    var convert = parseFloat(19.99).toFixed(2)//(priceUsd * currencyRates.rates[0].USD).toFixed(2);
-    priceUsdDiv.innerHTML = convert;
+
+  if(currencySign.includes("£")) {
+    currencySpan.innerHTML = "€ ";
+    parseFloat(price).toFixed(2);
+    var convertedGbpToEur = parseFloat(productPrice * currencyRates.rates[0].EUR).toFixed(2);
+    priceDiv.innerHTML = convertedGbpToEur;
+  }
+  // preventing when u convert usd to eur, so it euro can't convert again on the same button(div)
+  else if(currencySign.includes("€")) {
+    return 0;
+  }
+} 
+
+dropdownEuro.addEventListener('click',() => {    
+    convertUsdToEur();
+    convertGbpToEur();    
+});
+// ==========================
+// EURO TO GBP and USD TO GBP
+const convertEurToGbp = () => {
+  var productPrice = 19.99;
+  var price = Number(document.getElementById("currency-value").innerHTML);
+  var priceDiv = document.getElementById("currency-value");
+  var currencySign = document.getElementById("currency-sign").innerHTML;
+  var currencySpan = document.getElementById("currency-sign");
+
+  if(currencySign.includes("€")) {
+    currencySpan.innerHTML = "£ ";
+    parseFloat(price).toFixed(2);
+    var convertedEurToGbp = parseFloat(productPrice * currencyRates.rates[0].GBP).toFixed(2);
+    priceDiv.innerHTML = convertedEurToGbp;
+  }
+  // preventing when u convert eur to gbp, so it gbp can't convert again on the same button(div)
+  else if(currencySign.includes("£")) {
+    return 0;
+  }
+}
+const convertUsdToGbp = () => {
+  var productPrice = 19.99;
+  var price = Number(document.getElementById("currency-value").innerHTML);
+  var priceDiv = document.getElementById("currency-value");
+  var currencySign = document.getElementById("currency-sign").innerHTML;
+  var currencySpan = document.getElementById("currency-sign");
+
+  if(currencySign.includes("$")) {
+    currencySpan.innerHTML = "£ ";
+    parseFloat(price).toFixed(2);
+    var convertedUsdToGbp = parseFloat(productPrice).toFixed(2);
+    priceDiv.innerHTML = convertedUsdToGbp;
+  }
+  // preventing when u convert eur to gbp, so it gbp can't convert again on the same button(div)
+  else if(currencySign.includes("£")) {
+    return 0;
+  }
+}
+dropdownGbp.addEventListener('click',() => {    
+  convertEurToGbp();
+  convertUsdToGbp();    
+});
+// gbp to euro
+
+// gbp to usd
+const convertGbpToUsd = () => {
+  var productPrice = 19.99;
+  var price = Number(document.getElementById("currency-value").innerHTML);
+  var priceDiv = document.getElementById("currency-value");
+  var currencySign = document.getElementById("currency-sign").innerHTML;
+  var currencySpan = document.getElementById("currency-sign");
+
+  if(currencySign.includes("£")) {
+    currencySpan.innerHTML= "$ ";
+    parseFloat(price).toFixed(2);
+    var convertedGbpToUsd = parseFloat(productPrice).toFixed(2);
+    priceDiv.innerHTML = convertedGbpToUsd;
   }
   else if(currencySign.includes("$")) {
     return 0;
   }
-  
+}
+// eur to usd
+const convertEurToUsd = () => {
+  var productPrice = 19.99;
+  var price = Number(document.getElementById("currency-value").innerHTML);
+  var priceDiv = document.getElementById("currency-value");
+  var currencySign = document.getElementById("currency-sign").innerHTML;
+  var currencySpan = document.getElementById("currency-sign");
+
+  if(currencySign.includes("€")) {
+    currencySpan.innerHTML= "$ ";
+    parseFloat(price).toFixed(2);
+    var convertedEurToUsd = parseFloat(productPrice).toFixed(2);
+    priceDiv.innerHTML = convertedEurToUsd;
+  }
+  else if(currencySign.includes("$")) {
+    return 0;
+  }
+} 
+
+dropdownUsd.addEventListener('click',() => {    
+    convertGbpToUsd();
+    convertEurToUsd();    
 });
+
+// dropdownUsd.addEventListener("click",convertGbpToUsd())
+
+// function convertGbpToUsd() {
+//   if(currencySign.includes("£")) {
+//     currencySpan.innerHTML("$");
+//     parseFloat(price).toFixed(2);
+//     var convertedGbpToUsd = parseFloat(productPrice).toFixed(2);
+//     priceDiv.innerHTML = convertedGbpToUsd;
+//   }
+//   else if(currencySign.includes("$")) {
+//     return 0;
+//   }
+// }
+// // eur to usd 
+// function convertEurToUsd() {
+//   if(currencySign.includes("€")) {
+//     currencySpan.innerHTML("$");
+//     parseFloat(price).toFixed(2);
+//     var convertedEurToUsd = parseFloat(productPrice).toFixed(2);
+//     priceDiv.innerHTML = convertedEurToUsd;
+//   }
+//   else if(currencySign.includes("$")) {
+//     return 0;
+//   }
+// }
+// ================ convert dollar to euro (sign and price) ================
+
+// var dropdownEuro = document.body.children[0].children[1].children[0].children[0].children[0].children[2].children[0];
+
+// dropdownEuro.addEventListener("click", function(){
+  
+//   var price = Number(document.getElementById("currency-value").innerHTML);
+//   var priceDiv = document.getElementById("currency-value");
+//   var currencySign = document.getElementById("currency-sign").innerHTML;
+//   var currencySpan = document.getElementById("currency-sign");
+//   if(currencySign.includes("$") || (currencySign.includes("£"))) {
+//     currencySpan.innerHTML = "€ ";
+//     parseFloat(price).toFixed(2);
+//     var convert = parseFloat(price * currencyRates.rates[0].EUR).toFixed(2);
+//     priceDiv.innerHTML = convert;
+//   }
+//   else if(currencySign.includes("€")) {
+//     return 0;
+//   }
+  
+// });
+// ================ convert dollar to gbp (sign and price) ================/ 
+// var dropdownGbp = document.body.children[0].children[1].children[0].children[0].children[0].children[2].children[1];
+
+// dropdownGbp.addEventListener("click", function(){
+  
+//   var price = Number(document.getElementById("currency-value").innerHTML);
+//   var priceDiv = document.getElementById("currency-value");
+//   var currencySign = document.getElementById("currency-sign").innerHTML;
+//   var currencySpan = document.getElementById("currency-sign");
+//   if(currencySign.includes("$") || (currencySign.includes("€"))) {
+//     currencySpan.innerHTML = "£ ";
+//     parseFloat(price).toFixed(2);
+//     var convert = parseFloat(price * currencyRates.rates[0].GBP).toFixed(2);
+//     priceDiv.innerHTML = convert;
+//   }
+//   else if(currencySign.includes("£")) {
+//     return 0;
+//   }
+  
+// });
+// convert euro or pound to usd
+// var dropdownUsd = document.body.children[0].children[1].children[0].children[0].children[0].children[2].children[2];
+
+// dropdownUsd.addEventListener("click", function(){
+  
+//   var priceUsd = Number(document.getElementById("currency-value").innerHTML);
+//   var priceUsdDiv = document.getElementById("currency-value");
+//   var currencySign = document.getElementById("currency-sign").innerHTML;
+//   var currencySpan = document.getElementById("currency-sign");
+//   if(currencySign.includes("€ ") || (currencySign.includes("£"))) {
+//     currencySpan.innerHTML = "$ ";
+//     parseFloat(priceUsd).toFixed(2);
+//     var convert = parseFloat(19.99).toFixed(2)
+//     priceUsdDiv.innerHTML = convert;
+//   }
+//   else if(currencySign.includes("$")) {
+//     return 0;
+//   }
+  
+// });
+// convert gbp to euro 
+// dropdownGbp.addEventListener("click", function(){
+//   var priceGbp = Number(document.getElementById("currency-value").innerHTML);
+//   var priceDiv = document.getElementById("currency-value");
+//   var currencySign = document.getElementById("currency-sign").innerHTML;
+//   var currencySpan = document.getElementById("currency-sign");
+//   if(currencySign.includes("€")) {
+//     currencySpan.innerHTML = "£ ";
+//     parseFloat(priceGbp).toFixed(2);
+//     var convert = parseFloat(productPrice * currencyRates.rates[0].EUR).toFixed(2);
+//     priceDiv.innerHTML = convert;
+//   }
+//   else if(currencySign.includes("£")) {
+
+//   }
+  
+// });
