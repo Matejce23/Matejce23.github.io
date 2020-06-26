@@ -35,9 +35,7 @@ var featuredProducts = [{
     featuredRowOne.appendChild(createProduct(featuredProducts[i]));
     featuredRowTwo.appendChild(createProduct(featuredProducts[i]));
   }
-//   featuredProducts.forEach(function(featured) {
-//     createProduct(featured);
-//   });
+
 function createProduct(featured) {
     
     let divCol = document.createElement('div');
@@ -142,8 +140,5 @@ function createProduct(featured) {
     }
 }
 
-//featuredRowOne.appendChild(createProduct());
-// featuredRowOne.appendChild(createProduct());
-// featuredRowOne.appendChild(createProduct());
-// featuredRowOne.appendChild(createProduct());
+
 
