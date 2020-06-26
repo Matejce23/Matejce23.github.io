@@ -8,41 +8,10 @@ var currencyRates = {
 
     }
   ]
-}
+} 
 console.log(currencyRates);
-var featuredProducts = {
-  "featured-products" : [
-    {
-        "id": "1",
-        "product.title": "Smart Watch",
-        "product.price": 19.99,
-        "product.discount": false,
-        "product.discount-price": ""
-    },
-    {
-       "id": "2",
-       "product.title": "2020 Minimalist Ultra Thin Watch",
-       "product.price": 29.99,
-       "product.discount": true,
-       "product.discount-price": 19.99
-    },
-    {
-      "id": "3",
-      "product.title": "CRRJU Fashion Mens Watches",
-      "product.price": 19.99,
-      "product.discount": false,
-      "product.discount-price": ""
-    },
-    {
-      "id": "4",
-      "product.title": "SKMEI Fashion Outdoor Sport Watch",
-      "product.price": 29.99,
-      "product.discount": false,
-      "product.discount-price": ""
-    }]
-}
+
 //var feaProductObject = JSON.parse(featuredProducts);
-console.log(featuredProducts);
 // function convertUsdToEur() {
 //     var price = document.getElementById("currency-value").innerHTML;
 //     price = Number;
@@ -217,6 +186,7 @@ var dropdownGbp = document.body.children[0].children[1].children[0].children[0].
 var dropdownUsd = document.body.children[0].children[1].children[0].children[0].children[0].children[2].children[2];
 // ===========================
 // USD TO EURO and GBP TO EURO
+
 const convertUsdToEur = () => {
   var productPrice = 19.99;
   var price = Number(document.getElementById("currency-value").innerHTML);
