@@ -1,5 +1,5 @@
 let featuredRowOne = document.body.children[3].children[1].children[0];
-let featuredRowTwo = document.getElementById("featured-row-two");
+let featuredRowTwo = document.body.children[3].children[1].children[1];
 
 var featuredProducts = [{
           id: "1",
@@ -32,8 +32,8 @@ var featuredProducts = [{
       }
   ]
   for(let i = 0; i < featuredProducts.length;i++) {
-    //createProduct(featuredProducts[i]);
     featuredRowOne.appendChild(createProduct(featuredProducts[i]));
+    featuredRowTwo.appendChild(createProduct(featuredProducts[i]));
   }
 //   featuredProducts.forEach(function(featured) {
 //     createProduct(featured);
