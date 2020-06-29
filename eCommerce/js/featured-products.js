@@ -67,7 +67,7 @@ function createProduct(featured) {
     bestSeller.innerHTML = "<span>best seller</span>";
     newIn.innerHTML = "<span>new in</span>";
     cardTitle.innerText = featured.product_title;
-    cardText.innerHTML = "<span id=\"currency\">$ </span> "+ featured.product_price;
+    cardText.innerHTML = "<span class=\"currency-sign\">$ </span> "+ "<span class=\"currency-value\">" + featured.product_price + "</span>";
     //cardText.innerText = featured.product_price;
     viewProductBtn.innerText = "view product";
     viewProductBtn.href = "#";
@@ -81,6 +81,8 @@ function createProduct(featured) {
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardText);
     cardBody.appendChild(viewProductBtn);
+
+
     if(featured.product_discount === false) {
         return divCol;
     }
@@ -119,8 +121,8 @@ function createProduct(featured) {
     bestSeller.innerHTML = "<span>best seller</span>";
     newIn.innerHTML = "<span>new in</span>";
     cardTitle.innerText = featured.product_title;
-    cardText.innerHTML = "<span id=\"currency\">$ </span> "+ featured.product_price +
-    " - " +"<span id=\"currency\">$ </span> " + featured.product_discount_price;
+    cardText.innerHTML = "<span id=\"currency-sign\">$ </span> "+ "<span id=\"currency-value\">" + featured.product_price + "</span>" +
+    " - " +"<span id=\"currency-sign\">$ </span>" + "<span id=\"currency-value\">" + featured.product_discount_price + "</span>";
 
     viewProductBtn.innerText = "view product";
     viewProductBtn.href = "#";
