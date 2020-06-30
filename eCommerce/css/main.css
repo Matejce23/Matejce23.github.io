@@ -37,7 +37,9 @@ header .container-fluid {
 }
 /* ================= CURRENCY DROPDOWN (CONVERTER) =============== */
 .currency-dropdown {
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
   width: 140px;
 }
 /*hide original SELECT element: */
@@ -346,6 +348,19 @@ input.search-submit {
 }
 .feature-title h3 {
   text-transform: uppercase;
+}
+.items-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  margin: auto;
+}
+.item-wrap {
+  flex: 1 0 21%; /* explanation below */
+  margin: 27px;
+  margin-top: 15px;
 }
 .card {
   border: none !important;

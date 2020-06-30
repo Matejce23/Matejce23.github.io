@@ -187,46 +187,98 @@ var dropdownUsd = document.body.children[0].children[1].children[0].children[0].
 // ===========================
 // USD TO EURO and GBP TO EURO
 
-const convertUsdToEur = () => {
-    var productPrice = 19.99; 
+const convertUsdToEur = () => { 
     var price = document.getElementsByClassName("currency-value");
-    //var priceDiv = document.getElementsByClassName("currency-value");
+    var productPrice = featuredProducts;
+    var productsWithNoDiscount = productsNoDiscount;
     var currencySign = document.getElementsByClassName("currency-sign");
-    //var currencySpan = document.getElementsByClassName("currency-sign"); 
-    for (var i = 0;( (i < price.length) && (i < currencySign.length) ); i++){
+    for (var i = 0;( (i < price.length) && (i < currencySign.length) && (productsWithNoDiscount.length) ); i++){
     
     if(currencySign[i].innerHTML.includes("$")) {
-      currencySign[i].innerHTML = "€ ";
-      parseFloat(price[i].innerHTML).toFixed(2);
-      var convertedUsdToEur = parseFloat(price[i].innerHTML * currencyRates.rates[0].EUR).toFixed(2);
-      price[i].innerHTML = convertedUsdToEur;
+      if(productsWithNoDiscount[i].product_discount === false) {
+        currencySign[i].innerHTML = "€ ";
+        parseFloat(price[i].innerHTML).toFixed(2);
+        var convertedUsdToEur = parseFloat(productsWithNoDiscount[i].product_price * currencyRates.rates[0].EUR).toFixed(2);
+        price[i].innerHTML = convertedUsdToEur;
+      }
     }
-    // preventing when u convert usd to eur, so it euro can't convert again on the same button(div)
     else if(currencySign[i].innerHTML.includes("€")) {
-      return 0;
+      return console.log('btn clicked twice');
     }
+  }
+    // checking product discount if its true to convert both original price and discount price(without this it will convert random value/from another products)
+    var originalPrice = document.getElementsByClassName("original-price");
+    var discountPrice = document.getElementsByClassName("discount-price");
+    var productsWithDiscount = productsDiscount;
+    var currencySignDiscount = document.getElementsByClassName("currency-sign-discount");
+    
+    for(let i = 0;i < currencySignDiscount.length;i++ ) {
+
+      if(currencySignDiscount[i].innerHTML.includes("$")) {       
+            currencySignDiscount[i].innerHTML = "€ ";
+            
+
+            for(let i = 0;( (i < originalPrice.length) && (i < discountPrice.length) && (i < productsWithDiscount.length) );i++) {
+              parseFloat(originalPrice[i].innerHTML).toFixed(2);
+              parseFloat(discountPrice[i].innerHTML).toFixed(2);
+              var origPriceConvert = parseFloat(productsWithDiscount[i].product_price * currencyRates.rates[0].EUR).toFixed(2);
+              var discPriceConvert = parseFloat(productsWithDiscount[i].product_discount_price * currencyRates.rates[0].EUR).toFixed(2);
+              originalPrice[i].innerHTML = origPriceConvert;
+              discountPrice[i].innerHTML = discPriceConvert;
+            } 
+        }
+      // preventing when u convert usd to eur, so it euro can't convert again on the same button(div)
+      else if(currencySign[i].innerHTML.includes("€")) {
+        return console.log('btn clicked twice');
+      } 
+    } 
   }
   
-}
 const convertGbpToEur = () => {
-  var productPrice = 19.99;
-  var price = Number(document.getElementsByClassName("currency-value").innerHTML);
-  var priceDiv = document.getElementsByClassName("currency-value");
-  var currencySign = document.getElementsByClassName("currency-sign").innerHTML;
-  var currencySpan = document.getElementsByClassName("currency-sign");
-
-  for(let i = 0;i < currencySpan.lenght;i++) {
-    if(currencySign[i].includes("£")) {
-      currencySpan.innerHTML = "€ ";
-      parseFloat(price).toFixed(2);
-      var convertedGbpToEur = parseFloat(productPrice * currencyRates.rates[0].EUR).toFixed(2);
-      priceDiv.innerHTML = convertedGbpToEur;
-    }
-    // preventing when u convert usd to eur, so it euro can't convert again on the same button(div)
-    else if(currencySign.includes("€")) {
-      return 0;
+  var price = document.getElementsByClassName("currency-value");
+  var productPrice = featuredProducts;
+  var productsWithNoDiscount = productsNoDiscount;
+  var currencySign = document.getElementsByClassName("currency-sign");
+  for (var i = 0;( (i < price.length) && (i < currencySign.length) && (productsWithNoDiscount.length) ); i++){
+  
+  if(currencySign[i].innerHTML.includes("£")) {
+    if(productsWithNoDiscount[i].product_discount === false) {
+      currencySign[i].innerHTML = "€ ";
+      parseFloat(price[i].innerHTML).toFixed(2);
+      var convertedUsdToEur = parseFloat(productsWithNoDiscount[i].product_price * currencyRates.rates[0].EUR).toFixed(2);
+      price[i].innerHTML = convertedUsdToEur;
     }
   }
+  else if(currencySign[i].innerHTML.includes("€")) {
+    return console.log('btn clicked twice');
+  }
+}
+  // checking product discount if its true to convert both original price and discount price(without this it will convert random value/from another products)
+  var originalPrice = document.getElementsByClassName("original-price");
+  var discountPrice = document.getElementsByClassName("discount-price");
+  var productsWithDiscount = productsDiscount;
+  var currencySignDiscount = document.getElementsByClassName("currency-sign-discount");
+  
+  for(let i = 0;i < currencySignDiscount.length;i++ ) {
+
+    if(currencySignDiscount[i].innerHTML.includes("£")) {       
+          currencySignDiscount[i].innerHTML = "€ ";
+          
+
+          for(let i = 0;( (i < originalPrice.length) && (i < discountPrice.length) && (i < productsWithDiscount.length) );i++) {
+            parseFloat(originalPrice[i].innerHTML).toFixed(2);
+            parseFloat(discountPrice[i].innerHTML).toFixed(2);
+            var origPriceConvert = parseFloat(productsWithDiscount[i].product_price * currencyRates.rates[0].EUR).toFixed(2);
+            var discPriceConvert = parseFloat(productsWithDiscount[i].product_discount_price * currencyRates.rates[0].EUR).toFixed(2);
+            originalPrice[i].innerHTML = origPriceConvert;
+            discountPrice[i].innerHTML = discPriceConvert;
+          } 
+      }
+    // preventing when u convert usd to eur, so it euro can't convert again on the same button(div)
+    else if(currencySign[i].innerHTML.includes("€")) {
+      return console.log('btn clicked twice');
+    } 
+  } 
   
 } 
 
@@ -237,44 +289,95 @@ dropdownEuro.addEventListener('click',() => {
 // ==========================
 // EURO TO GBP and USD TO GBP
 const convertEurToGbp = () => {
-  var productPrice = 19.99;
-  var price = Number(document.getElementsByClassName("currency-value").innerHTML);
-  var priceDiv = document.getElementsByClassName("currency-value");
-  var currencySign = document.getElementsByClassName("currency-sign").innerHTML;
-  var currencySpan = document.getElementsByClassName("currency-sign");
-
-  for(let i = 0;i < currencySpan.lenght;i++) {
-    if(currencySign[i].includes("€")) {
-      currencySpan.innerHTML = "£ ";
-      parseFloat(price).toFixed(2);
-      var convertedEurToGbp = parseFloat(productPrice * currencyRates.rates[0].GBP).toFixed(2);
-      priceDiv.innerHTML = convertedEurToGbp;
-    }
-    // preventing when u convert eur to gbp, so it gbp can't convert again on the same button(div)
-    else if(currencySign.includes("£")) {
-      return 0;
+  var price = document.getElementsByClassName("currency-value");
+  var productPrice = featuredProducts;
+  var productsWithNoDiscount = productsNoDiscount;
+  var currencySign = document.getElementsByClassName("currency-sign");
+  for (var i = 0;( (i < price.length) && (i < currencySign.length) && (productsWithNoDiscount.length) ); i++){
+  
+  if(currencySign[i].innerHTML.includes("€")) {
+    if(productsWithNoDiscount[i].product_discount === false) {
+      currencySign[i].innerHTML = "£ ";
+      parseFloat(price[i].innerHTML).toFixed(2);
+      var convertedUsdToEur = parseFloat(productsWithNoDiscount[i].product_price * currencyRates.rates[0].GBP).toFixed(2);
+      price[i].innerHTML = convertedUsdToEur;
     }
   }
+  else if(currencySign[i].innerHTML.includes("£")) {
+    return console.log('btn clicked twice');
+  }
+}
+  // checking product discount if its true to convert both original price and discount price(without this it will convert random value/from another products)
+  var originalPrice = document.getElementsByClassName("original-price");
+  var discountPrice = document.getElementsByClassName("discount-price");
+  var productsWithDiscount = productsDiscount;
+  var currencySignDiscount = document.getElementsByClassName("currency-sign-discount");
   
+  for(let i = 0;i < currencySignDiscount.length;i++ ) {
+
+    if(currencySignDiscount[i].innerHTML.includes("€")) {       
+          currencySignDiscount[i].innerHTML = "£ ";
+          
+
+          for(let i = 0;( (i < originalPrice.length) && (i < discountPrice.length) && (i < productsWithDiscount.length) );i++) {
+            parseFloat(originalPrice[i].innerHTML).toFixed(2);
+            parseFloat(discountPrice[i].innerHTML).toFixed(2);
+            var origPriceConvert = parseFloat(productsWithDiscount[i].product_price * currencyRates.rates[0].GBP).toFixed(2);
+            var discPriceConvert = parseFloat(productsWithDiscount[i].product_discount_price * currencyRates.rates[0].GBP).toFixed(2);
+            originalPrice[i].innerHTML = origPriceConvert;
+            discountPrice[i].innerHTML = discPriceConvert;
+          } 
+      }
+    // preventing when u convert usd to eur, so it euro can't convert again on the same button(div)
+    else if(currencySign[i].innerHTML.includes("£")) {
+      return console.log('btn clicked twice');
+    } 
+  } 
 }
 const convertUsdToGbp = () => {
-  var productPrice = 19.99;
-  var price = Number(document.getElementsByClassName("currency-value").innerHTML);
-  var priceDiv = document.getElementsByClassName("currency-value");
-  var currencySign = document.getElementsByClassName("currency-sign").innerHTML;
-  var currencySpan = document.getElementsByClassName("currency-sign");
+  var price = document.getElementsByClassName("currency-value");
+  var productPrice = featuredProducts;
+  var productsWithNoDiscount = productsNoDiscount;
+  var currencySign = document.getElementsByClassName("currency-sign");
+  for (var i = 0;( (i < price.length) && (i < currencySign.length) && (productsWithNoDiscount.length) ); i++){
+  
+  if(currencySign[i].innerHTML.includes("$")) {
+    if(productsWithNoDiscount[i].product_discount === false) {
+      currencySign[i].innerHTML = "£ ";
+      parseFloat(price[i].innerHTML).toFixed(2);
+      var convertedUsdToEur = parseFloat(productsWithNoDiscount[i].product_price * currencyRates.rates[0].GBP).toFixed(2);
+      price[i].innerHTML = convertedUsdToEur;
+    }
+  }
+  else if(currencySign[i].innerHTML.includes("£")) {
+    return console.log('btn clicked twice');
+  }
+}
+  // checking product discount if its true to convert both original price and discount price(without this it will convert random value/from another products)
+  var originalPrice = document.getElementsByClassName("original-price");
+  var discountPrice = document.getElementsByClassName("discount-price");
+  var productsWithDiscount = productsDiscount;
+  var currencySignDiscount = document.getElementsByClassName("currency-sign-discount");
+  
+  for(let i = 0;i < currencySignDiscount.length;i++ ) {
 
-  for(let i = 0;i < currencySpan.lenght;i++) {
-    if(currencySign[i].includes("$")) {
-      currencySpan.innerHTML = "£ ";
-      parseFloat(price).toFixed(2);
-      var convertedUsdToGbp = parseFloat(productPrice).toFixed(2);
-      priceDiv.innerHTML = convertedUsdToGbp;
-    }
-    // preventing when u convert eur to gbp, so it gbp can't convert again on the same button(div)
-    else if(currencySign.includes("£")) {
-      return 0;
-    }
+    if(currencySignDiscount[i].innerHTML.includes("$")) {       
+          currencySignDiscount[i].innerHTML = "£ ";
+          
+
+          for(let i = 0;( (i < originalPrice.length) && (i < discountPrice.length) && (i < productsWithDiscount.length) );i++) {
+            parseFloat(originalPrice[i].innerHTML).toFixed(2);
+            parseFloat(discountPrice[i].innerHTML).toFixed(2);
+            var origPriceConvert = parseFloat(productsWithDiscount[i].product_price * currencyRates.rates[0].GBP).toFixed(2);
+            var discPriceConvert = parseFloat(productsWithDiscount[i].product_discount_price * currencyRates.rates[0].GBP).toFixed(2);
+            originalPrice[i].innerHTML = origPriceConvert;
+            discountPrice[i].innerHTML = discPriceConvert;
+          } 
+      }
+    // preventing when u convert usd to eur, so it euro can't convert again on the same button(div)
+    else if(currencySign[i].innerHTML.includes("£")) {
+      return console.log('btn clicked twice');
+    } 
   }
 }
 dropdownGbp.addEventListener('click',() => {    
@@ -285,43 +388,95 @@ dropdownGbp.addEventListener('click',() => {
 
 // gbp to usd
 const convertGbpToUsd = () => {
-  var productPrice = 19.99;
-  var price = Number(document.getElementsByClassName("currency-value").innerHTML);
-  var priceDiv = document.getElementsByClassName("currency-value");
-  var currencySign = document.getElementsByClassName("currency-sign").innerHTML;
-  var currencySpan = document.getElementsByClassName("currency-sign");
+  var price = document.getElementsByClassName("currency-value");
+  var productsWithNoDiscount = productsNoDiscount;
+  var currencySign = document.getElementsByClassName("currency-sign");
+  for (var i = 0;( (i < price.length) && (i < currencySign.length) && (productsWithNoDiscount.length) ); i++){
+  
+  if(currencySign[i].innerHTML.includes("£")) {
+    if(productsWithNoDiscount[i].product_discount === false) {
+      currencySign[i].innerHTML = "$ ";
+      parseFloat(price[i].innerHTML).toFixed(2);
+      var convertedUsdToEur = parseFloat(productsWithNoDiscount[i].product_price).toFixed(2);
+      price[i].innerHTML = convertedUsdToEur;
+    }
+  }
+  else if(currencySign[i].innerHTML.includes("$")) {
+    return console.log('btn clicked twice');
+  }
+}
+  // checking product discount if its true to convert both original price and discount price(without this it will convert random value/from another products)
+  var originalPrice = document.getElementsByClassName("original-price");
+  var discountPrice = document.getElementsByClassName("discount-price");
+  var productsWithDiscount = productsDiscount;
+  var currencySignDiscount = document.getElementsByClassName("currency-sign-discount");
+  
+  for(let i = 0;i < currencySignDiscount.length;i++ ) {
 
-  for(let i = 0; i < currencySpan.lenght;i++) {
-    if(currencySign[i].includes("£")) {
-      currencySpan.innerHTML= "$ ";
-      parseFloat(price).toFixed(2);
-      var convertedGbpToUsd = parseFloat(productPrice).toFixed(2);
-      priceDiv.innerHTML = convertedGbpToUsd;
-    }
-    else if(currencySign.includes("$")) {
-      return 0;
-    }
+    if(currencySignDiscount[i].innerHTML.includes("£")) {       
+          currencySignDiscount[i].innerHTML = "$ ";
+          
+
+          for(let i = 0;( (i < originalPrice.length) && (i < discountPrice.length) && (i < productsWithDiscount.length) );i++) {
+            parseFloat(originalPrice[i].innerHTML).toFixed(2);
+            parseFloat(discountPrice[i].innerHTML).toFixed(2);
+            var origPriceConvert = parseFloat(productsWithDiscount[i].product_price).toFixed(2);
+            var discPriceConvert = parseFloat(productsWithDiscount[i].product_discount_price).toFixed(2);
+            originalPrice[i].innerHTML = origPriceConvert;
+            discountPrice[i].innerHTML = discPriceConvert;
+          } 
+      }
+    // preventing when u convert usd to eur, so it euro can't convert again on the same button(div)
+    else if(currencySign[i].innerHTML.includes("£")) {
+      return console.log('btn clicked twice');
+    } 
   }
 }
 // eur to usd
 const convertEurToUsd = () => {
-  var productPrice = 19.99;
-  var price = Number(document.getElementsByClassName("currency-value").innerHTML); 
-  var priceDiv = document.getElementsByClassName("currency-value");
-  var currencySign = document.getElementsByClassName("currency-sign").innerHTML;
-  var currencySpan = document.getElementsByClassName("currency-sign");
+  var price = document.getElementsByClassName("currency-value");
+  var productsWithNoDiscount = productsNoDiscount;
+  var currencySign = document.getElementsByClassName("currency-sign");
+  for (var i = 0;( (i < price.length) && (i < currencySign.length) && (productsWithNoDiscount.length) ); i++){
+  
+  if(currencySign[i].innerHTML.includes("€")) {
+    if(productsWithNoDiscount[i].product_discount === false) {
+      currencySign[i].innerHTML = "$ ";
+      parseFloat(price[i].innerHTML).toFixed(2);
+      var convertedUsdToEur = parseFloat(productsWithNoDiscount[i].product_price).toFixed(2);
+      price[i].innerHTML = convertedUsdToEur;
+    }
+  }
+  else if(currencySign[i].innerHTML.includes("$")) {
+    return console.log('btn clicked twice');
+  }
+}
+  // checking product discount if its true to convert both original price and discount price(without this it will convert random value/from another products)
+  var originalPrice = document.getElementsByClassName("original-price");
+  var discountPrice = document.getElementsByClassName("discount-price");
+  var productsWithDiscount = productsDiscount;
+  var currencySignDiscount = document.getElementsByClassName("currency-sign-discount");
+  
+  for(let i = 0;i < currencySignDiscount.length;i++ ) {
 
-  for(let i = 0; i < currencySpan.lenght; i++) {
-    if(currencySign[i].includes("€")) {
-      currencySpan.innerHTML= "$ ";
-      parseFloat(price).toFixed(2);
-      var convertedEurToUsd = parseFloat(productPrice).toFixed(2);
-      priceDiv.innerHTML = convertedEurToUsd;
-    }
-    else if(currencySign.includes("$")) {
-      return 0;
-    }
-  }  
+    if(currencySignDiscount[i].innerHTML.includes("€")) {       
+          currencySignDiscount[i].innerHTML = "$ ";
+          
+
+          for(let i = 0;( (i < originalPrice.length) && (i < discountPrice.length) && (i < productsWithDiscount.length) );i++) {
+            parseFloat(originalPrice[i].innerHTML).toFixed(2);
+            parseFloat(discountPrice[i].innerHTML).toFixed(2);
+            var origPriceConvert = parseFloat(productsWithDiscount[i].product_price).toFixed(2);
+            var discPriceConvert = parseFloat(productsWithDiscount[i].product_discount_price).toFixed(2);
+            originalPrice[i].innerHTML = origPriceConvert;
+            discountPrice[i].innerHTML = discPriceConvert;
+          } 
+      }
+    // preventing when u convert usd to eur, so it euro can't convert again on the same button(div)
+    else if(currencySign[i].innerHTML.includes("€")) {
+      return console.log('btn clicked twice');
+    } 
+  }
 } 
 
 dropdownUsd.addEventListener('click',() => {    
