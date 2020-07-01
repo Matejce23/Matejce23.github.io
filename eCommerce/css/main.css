@@ -710,3 +710,63 @@ input.search-submit {
 .copyright img {
   padding-right: 1rem;
 }
+
+/* ========================= Prodcut Page =========================== */
+/* Breadcrumb */
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #fff;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+/* =============== categories ================= */
+.product-page-categories-list > ul > li {
+  padding-bottom: 12px;
+}
+/* =============== featured product =============== */
+.product-title-size {
+  font-size: 120%;
+}
+.view-product-btn-product-page {
+  text-decoration: none; 
+  background-color: #fff;
+  color: #000;
+  padding: 14px 54px;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "Nunito";
+  cursor: pointer;
+  border: 2px solid #000;
+  text-transform: uppercase;
+}
+.view-product-btn-product-page:hover {
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+  transition: 0.5s;
+}
