@@ -1,140 +1,7 @@
-const urlParams = new URLSearchParams(window.location.search);
-const myParam = urlParams.get('productName'); //categoryId
-
-
-const myParamId = urlParams.get('productId'); //
-
-
-
-let arrayOfObject = [
-    {
-        id: "1",
-        product_title: "2020 Smart Watch Fashion",
-        product_image: "https://i.imgur.com/gxw0T11.jpg",
-        product_price: 19.99,
-        product_discount: false,
-        product_page_select_image_one: "https://i.imgur.com/vFPOTj8.jpg",
-        product_page_select_image_two: "https://i.imgur.com/ldim4vz.jpg",
-        product_page_select_image_three: "https://i.imgur.com/fJI5xSV.jpg",
-        product_page_select_image_four: "https://i.imgur.com/HbcjMw6.jpg",
-        product_page_select_image_five: "https://i.imgur.com/mWN3HNi.jpg",
-        product_page_select_image_six: "https://i.imgur.com/oVjsOQl.jpg",
-    },
-    {
-       id: "2",
-       product_title: "2020 Minimalist Ultra Thin Watch",
-       product_image: "https://i.imgur.com/2qD4rv6.png",
-       product_price: 29.99,
-       product_discount: true,
-       product_discount_price: 19.99,
-       product_page_select_image_one: "https://i.imgur.com/478hBB7.png",
-       product_page_select_image_two: "https://i.imgur.com/Oe1R1l5.png",
-       product_page_select_image_three: "https://i.imgur.com/JrEdSwo.png",
-       product_page_select_image_four: "https://i.imgur.com/4o0G5SW.png",
-       product_page_select_image_five: "https://i.imgur.com/ytk7lCC.png",
-       product_page_select_image_six: "https://i.imgur.com/zfjbpEQ.png",
-    },
-    {
-      id: "3",
-      product_title: "CRRJU Fashion Mens Watches",
-      product_image: "https://i.imgur.com/bySU9rl.png",
-      product_price: 19.99,
-      product_discount: false,
-      product_page_select_image_one: "https://i.imgur.com/6YC74oK.png",
-      product_page_select_image_two: "https://i.imgur.com/1saAjFA.png",
-      product_page_select_image_three: "https://i.imgur.com/V2eusuj.png",
-      product_page_select_image_four: "https://i.imgur.com/EZIlfts.png",
-      product_page_select_image_five: "https://i.imgur.com/ytk7lCC.png",
-      product_page_select_image_six: "https://i.imgur.com/zfjbpEQ.png",
-      product_page_video: "https://streamable.com/jmx7jt",
-    },
-    {
-      id: "4",
-      product_title: "SKMEI Fashion Outdoor Sport Watch",
-      product_image: "https://i.imgur.com/z0vgi3P.jpg",
-      product_price: 29.99,
-      product_discount: false,
-      product_page_select_image_one: "https://i.imgur.com/Ee92lcE.png",
-      product_page_select_image_two: "https://i.imgur.com/Uw8JpHn.png",
-      product_page_select_image_three: "https://i.imgur.com/V2eusuj.png",
-      product_page_select_image_four: "https://i.imgur.com/EZIlfts.png",
-      product_page_select_image_five: "https://i.imgur.com/ytk7lCC.png",
-      product_page_select_image_six: "https://i.imgur.com/zfjbpEQ.png",
-    },
-    {
-      id: "5",
-      product_title: "Test Js",
-      product_image: "https://i.imgur.com/gxw0T11.jpg",
-      product_price: 19.99,
-      product_discount: false,
-      product_page_select_image_one: "https://i.imgur.com/vFPOTj8.jpg",
-      product_page_select_image_two: "https://i.imgur.com/ldim4vz.jpg",
-      product_page_select_image_three: "https://i.imgur.com/fJI5xSV.jpg",
-      product_page_select_image_four: "https://i.imgur.com/HbcjMw6.jpg",
-      product_page_select_image_five: "https://i.imgur.com/mWN3HNi.jpg",
-      product_page_select_image_six: "https://i.imgur.com/oVjsOQl.jpg",
-  },
-  {
-     id: "6",
-      product_title: "Test Js",
-      product_image: "https://i.imgur.com/2qD4rv6.png",
-      product_price: 29.99,
-      product_discount: true,
-      product_discount_price: 19.99,
-      product_page_select_image_one: "https://i.imgur.com/478hBB7.png",
-      product_page_select_image_two: "https://i.imgur.com/Oe1R1l5.png",
-      product_page_select_image_three: "https://i.imgur.com/JrEdSwo.png",
-      product_page_select_image_four: "https://i.imgur.com/4o0G5SW.png",
-      product_page_select_image_five: "https://i.imgur.com/ytk7lCC.png",
-      product_page_select_image_six: "https://i.imgur.com/zfjbpEQ.png",
-  },
-  {
-      id: "7",
-      product_title: "Test Js",
-      product_image: "https://i.imgur.com/bySU9rl.png",
-      product_price: 19.99,
-      product_discount: false,
-      product_page_select_image_one: "https://i.imgur.com/6YC74oK.png",
-      product_page_select_image_two: "https://i.imgur.com/1saAjFA.png",
-      product_page_select_image_three: "https://i.imgur.com/V2eusuj.png",
-      product_page_select_image_four: "https://i.imgur.com/EZIlfts.png",
-      product_page_select_image_five: "https://i.imgur.com/ytk7lCC.png",
-      product_page_select_image_six: "https://i.imgur.com/zfjbpEQ.png",
-      product_page_video: "https://streamable.com/jmx7jt",
-  },
-  {
-      id: "8",
-      product_title: "Test Js",
-      product_image: "https://i.imgur.com/z0vgi3P.jpg",
-      product_price: 29.99,
-      product_discount: false,
-      product_page_select_image_one: "https://i.imgur.com/Ee92lcE.png",
-      product_page_select_image_two: "https://i.imgur.com/Uw8JpHn.png",
-      product_page_select_image_three: "https://i.imgur.com/V2eusuj.png",
-      product_page_select_image_four: "https://i.imgur.com/EZIlfts.png",
-      product_page_select_image_five: "https://i.imgur.com/ytk7lCC.png",
-      product_page_select_image_six: "https://i.imgur.com/zfjbpEQ.png",
-  },
-]
-
-let currentPageItems = arrayOfObject.find(x => x.product_title === myParam);
-
-
-if(currentPageItems !== undefined)
-document.getElementById('product-page-main-image').innerHTML = currentPageItems.product_title;
-
-
-let currentPageItemsId = arrayOfObject.find(x => x.id === myParamId);
-
-
-if(currentPageItemsId !== undefined)
-document.getElementById('product-page-main-image').innerText = currentPageItemsId.product_title + " " + currentPageItemsId.product_title;
-
-
-
 // ================ FEATURED PRODUCT ON PRODUCT PAGE ===============
 var productPageLeftDiv = document.getElementById("product-page-featured");
-
+var productThumbnail = document.getElementById("primary-slider");
+var productSelection = document.getElementById("secondary-slider");
 var productPageFeaturedProduct = [{
   id: "1",
   product_title: "2020 Smart Watch Fashion",
@@ -199,131 +66,59 @@ function productPageFeatured(productPage) {
 }
 // ===================== PRODUCT PAGE IMAGES ========================
 // attach images 
-var productThumbnail = document.getElementById("primary-slider");
-var productSelection = document.getElementById("secondary-slider");
 
 
-if(document.location.href == 'http://127.0.0.1:5500/eCommerce/index.html') {
-  var productButton = document.getElementsByClassName("view-product-btn");
 
-  for (let i = 0;i < productButton.length;i++) {
-    productButton[i].addEventListener("click", viewProductFunction);
-  }
-}
 
-if(document.location.href == 'http://127.0.0.1:5500/eCommerce/product-page.html?productName=featuredProduct') {
-  function viewProductFunction() {
-    for(let i = 0; i < arrayOfObject.length;i++) {
-      if(arrayOfObject[i].product_title.includes("2020 Smart Watch Fashion")) {
-        productThumbnail.appendChild(productSmartWatch(arrayOfObject[i]));
-        productSelection.appendChild(productSmartWatch(arrayOfObject[i]));
-      } 
+//Create and mount the thumbnails slider.
+document.addEventListener( 'DOMContentLoaded', function () {
+	var secondarySlider = new Splide( '#secondary-slider', {
+    fixedWidth  : 100,
+    width       : 540,
+		height      : 100,
+		gap         : 10,
+		cover       : true,
+		isNavigation: true,
+		focus       : 'center',
+		breakpoints : {
+			'600': {
+				fixedWidth: 66,
+				height    : 40,
+			}
+		},
+  } ).mount();
+  
+  var primarySlider = new Splide( '#primary-slider', {
+    type       : 'fade',
+    heightRatio: 0.5,
+    pagination : false,
+    arrows     : false,
+    cover      : true,
+    fixedWidth : 540,
+    fixedHeight: 380,
+  } );
+  
+  primarySlider.sync( secondarySlider ).mount();
+
+} );
+
+
+function viewProductFunction() {
+  var productImageOne = document.getElementsByClassName("p-image-one");
+  var productImageTwo = document.getElementsByClassName("p-image-two");
+  var productImageThree = document.getElementsByClassName("p-image-three");
+  var productImageFour = document.getElementsByClassName("p-image-four");
+  var productImageFive = document.getElementsByClassName("p-image-five");
+
+  for(let i = 0; i < arrayOfObject.length;i++) {
+    if(arrayOfObject[i].product_title.includes("2020 Smart Watch Fashion")) {
+      for(let i = 0;( (i < productImageOne.length) && (i < productImageTwo.length) && (i < productImageThree.length) && (i < productImageFour.length) && (i < productImageFive.length ) );i++) {
+        productImageOne[i].src = arrayOfObject[0].product_page_select_image_one;
+        productImageTwo[i].src = arrayOfObject[0].product_page_select_image_two;
+        productImageThree[i].src = arrayOfObject[0].product_page_select_image_three;
+        productImageFour[i].src = arrayOfObject[0].product_page_select_image_four;
+        productImageFive[i].src = arrayOfObject[0].product_page_select_image_five;
+      }
     } 
-  }
-}
-function productSmartWatch() {
-  let splideTrack = document.createElement('div');
-  splideTrack.classname = "splide__track";
-  
-  let splideList = document.createElement('ul');
-  splideList.classname = "splide_list";
-  
-  let splideSlide = document.createElement('li');
-  splideSlide.classname = "splide__slide";
-  
-  let productImageOne = document.createElement('img');
-  productImageOne.src = arrayOfObject[0].product_page_select_image_one;
-
-  let productImageTwo = document.createElement('img');
-  productImageTwo.src = arrayOfObject[0].product_page_select_image_two;
-
-  let productImageThree = document.createElement('img');
-  productImageThree.src = arrayOfObject[0].product_page_select_image_three;
-
-  let productImageFour = document.createElement('img');
-  productImageFour.src = arrayOfObject[0].product_page_select_image_four;
-
-  let productImageFive = document.createElement('img');
-  productImageFive.src = arrayOfObject[0].product_page_select_image_five;
-
-  let productImageSix = document.createElement('img');
-  productImageSix.src = arrayOfObject[0].product_page_select_image_six;
-
-  splideTrack.appendChild(splideList);
-  splideList.appendChild(splideSlide);
-  splideSlide.appendChild(productImageOne)
-  splideSlide.appendChild(productImageTwo)
-  splideSlide.appendChild(productImageThree)
-  splideSlide.appendChild(productImageFour)
-  splideSlide.appendChild(productImageFive)
-  splideSlide.appendChild(productImageSix)
-
-  return splideTrack;
-}
-// Create and mount the thumbnails slider.
-// document.addEventListener( 'DOMContentLoaded', function () {
-// 	var secondarySlider = new Splide( '#secondary-slider', {
-//     fixedWidth  : 100,
-//     width       : 540,
-// 		height      : 100,
-// 		gap         : 10,
-// 		cover       : true,
-// 		isNavigation: true,
-// 		focus       : 'center',
-// 		breakpoints : {
-// 			'600': {
-// 				fixedWidth: 66,
-// 				height    : 40,
-// 			}
-// 		},
-//   } ).mount();
-  
-//   var primarySlider = new Splide( '#primary-slider', {
-//     type       : 'fade',
-//     heightRatio: 0.5,
-//     pagination : false,
-//     arrows     : false,
-//     cover      : true,
-//     fixedWidth : 540,
-//     fixedHeight: 380,
-//   } );
-  
-//   primarySlider.sync( secondarySlider ).mount();
-
-// } );
-
-
-
-
-function productPageImages(images) {
-  
-  let splideTrack = document.createElement('div');
-  splideTrack.classname = "splide__track";
-  
-  let splideList = document.createElement('ul');
-  splideList.classname = "splide_list";
-  
-  let splideSlide = document.createElement('li');
-  splideSlide.classname = "splide__slide";
-  
-  let productImageOne = document.createElement('img');
-  productImageOne.src = images.product_page_select_image_one;
-
-  let productImageTwo = document.createElement('img');
-  productImageTwo.src = images.product_page_select_image_two;
-
-  let productImageThree = document.createElement('img');
-  productImageThree.src = images.product_page_select_image_three;
-
-  let productImageFour = document.createElement('img');
-  productImageFour.src = images.product_page_select_image_four;
-
-  let productImageFive = document.createElement('img');
-  productImageFive.src = images.product_page_select_image_five;
-
-  let productImageSix = document.createElement('img');
-  productImageSix.src = images.product_page_select_image_six;
-  
-  
-  
+  } 
 }
