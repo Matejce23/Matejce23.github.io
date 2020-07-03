@@ -44,6 +44,8 @@ let arrayOfObject = [
       product_page_select_image_two: "https://i.imgur.com/1saAjFA.png",
       product_page_select_image_three: "https://i.imgur.com/V2eusuj.png",
       product_page_select_image_four: "https://i.imgur.com/EZIlfts.png",
+      product_page_select_image_five: "https://i.imgur.com/ytk7lCC.png",
+      product_page_select_image_six: "https://i.imgur.com/zfjbpEQ.png",
       product_page_video: "https://streamable.com/jmx7jt",
     },
     {
@@ -54,6 +56,10 @@ let arrayOfObject = [
       product_discount: false,
       product_page_select_image_one: "https://i.imgur.com/Ee92lcE.png",
       product_page_select_image_two: "https://i.imgur.com/Uw8JpHn.png",
+      product_page_select_image_three: "https://i.imgur.com/V2eusuj.png",
+      product_page_select_image_four: "https://i.imgur.com/EZIlfts.png",
+      product_page_select_image_five: "https://i.imgur.com/ytk7lCC.png",
+      product_page_select_image_six: "https://i.imgur.com/zfjbpEQ.png",
     },
     {
       id: "5",
@@ -92,6 +98,8 @@ let arrayOfObject = [
       product_page_select_image_two: "https://i.imgur.com/1saAjFA.png",
       product_page_select_image_three: "https://i.imgur.com/V2eusuj.png",
       product_page_select_image_four: "https://i.imgur.com/EZIlfts.png",
+      product_page_select_image_five: "https://i.imgur.com/ytk7lCC.png",
+      product_page_select_image_six: "https://i.imgur.com/zfjbpEQ.png",
       product_page_video: "https://streamable.com/jmx7jt",
   },
   {
@@ -102,6 +110,10 @@ let arrayOfObject = [
       product_discount: false,
       product_page_select_image_one: "https://i.imgur.com/Ee92lcE.png",
       product_page_select_image_two: "https://i.imgur.com/Uw8JpHn.png",
+      product_page_select_image_three: "https://i.imgur.com/V2eusuj.png",
+      product_page_select_image_four: "https://i.imgur.com/EZIlfts.png",
+      product_page_select_image_five: "https://i.imgur.com/ytk7lCC.png",
+      product_page_select_image_six: "https://i.imgur.com/zfjbpEQ.png",
   },
 ]
 
@@ -186,42 +198,132 @@ function productPageFeatured(productPage) {
 }
 }
 // ===================== PRODUCT PAGE IMAGES ========================
-// Create and mount the thumbnails slider.
-document.addEventListener( 'DOMContentLoaded', function () {
-	var secondarySlider = new Splide( '#secondary-slider', {
-    fixedWidth  : 100,
-    width       : 540,
-		height      : 100,
-		gap         : 10,
-		cover       : true,
-		isNavigation: true,
-		focus       : 'center',
-		breakpoints : {
-			'600': {
-				fixedWidth: 66,
-				height    : 40,
-			}
-		},
-  } ).mount();
-  
-  var primarySlider = new Splide( '#primary-slider', {
-    type       : 'fade',
-    heightRatio: 0.5,
-    pagination : false,
-    arrows     : false,
-    cover      : true,
-    fixedWidth : 540,
-    fixedHeight: 380,
-  } );
-  
-  primarySlider.sync( secondarySlider ).mount();
-
-} );
-
-
 // attach images 
-// var productMainImage = document.getElementById("product-page-main-image");
-// var product_page_select_image_five
-// function productPageImages() {
+var productThumbnail = document.getElementById("primary-slider");
+var productSelection = document.getElementById("secondary-slider");
+
+
+if(document.location.href == 'http://127.0.0.1:5500/eCommerce/index.html') {
+  var productButton = document.getElementsByClassName("view-product-btn");
+
+  for (let i = 0;i < productButton.length;i++) {
+    productButton[i].addEventListener("click", viewProductFunction);
+  }
+}
+
+if(document.location.href == 'http://127.0.0.1:5500/eCommerce/product-page.html?productName=featuredProduct') {
+  function viewProductFunction() {
+    for(let i = 0; i < arrayOfObject.length;i++) {
+      if(arrayOfObject[i].product_title.includes("2020 Smart Watch Fashion")) {
+        productThumbnail.appendChild(productSmartWatch(arrayOfObject[i]));
+        productSelection.appendChild(productSmartWatch(arrayOfObject[i]));
+      } 
+    } 
+  }
+}
+function productSmartWatch() {
+  let splideTrack = document.createElement('div');
+  splideTrack.classname = "splide__track";
   
-// }
+  let splideList = document.createElement('ul');
+  splideList.classname = "splide_list";
+  
+  let splideSlide = document.createElement('li');
+  splideSlide.classname = "splide__slide";
+  
+  let productImageOne = document.createElement('img');
+  productImageOne.src = arrayOfObject[0].product_page_select_image_one;
+
+  let productImageTwo = document.createElement('img');
+  productImageTwo.src = arrayOfObject[0].product_page_select_image_two;
+
+  let productImageThree = document.createElement('img');
+  productImageThree.src = arrayOfObject[0].product_page_select_image_three;
+
+  let productImageFour = document.createElement('img');
+  productImageFour.src = arrayOfObject[0].product_page_select_image_four;
+
+  let productImageFive = document.createElement('img');
+  productImageFive.src = arrayOfObject[0].product_page_select_image_five;
+
+  let productImageSix = document.createElement('img');
+  productImageSix.src = arrayOfObject[0].product_page_select_image_six;
+
+  splideTrack.appendChild(splideList);
+  splideList.appendChild(splideSlide);
+  splideSlide.appendChild(productImageOne)
+  splideSlide.appendChild(productImageTwo)
+  splideSlide.appendChild(productImageThree)
+  splideSlide.appendChild(productImageFour)
+  splideSlide.appendChild(productImageFive)
+  splideSlide.appendChild(productImageSix)
+
+  return splideTrack;
+}
+// Create and mount the thumbnails slider.
+// document.addEventListener( 'DOMContentLoaded', function () {
+// 	var secondarySlider = new Splide( '#secondary-slider', {
+//     fixedWidth  : 100,
+//     width       : 540,
+// 		height      : 100,
+// 		gap         : 10,
+// 		cover       : true,
+// 		isNavigation: true,
+// 		focus       : 'center',
+// 		breakpoints : {
+// 			'600': {
+// 				fixedWidth: 66,
+// 				height    : 40,
+// 			}
+// 		},
+//   } ).mount();
+  
+//   var primarySlider = new Splide( '#primary-slider', {
+//     type       : 'fade',
+//     heightRatio: 0.5,
+//     pagination : false,
+//     arrows     : false,
+//     cover      : true,
+//     fixedWidth : 540,
+//     fixedHeight: 380,
+//   } );
+  
+//   primarySlider.sync( secondarySlider ).mount();
+
+// } );
+
+
+
+
+function productPageImages(images) {
+  
+  let splideTrack = document.createElement('div');
+  splideTrack.classname = "splide__track";
+  
+  let splideList = document.createElement('ul');
+  splideList.classname = "splide_list";
+  
+  let splideSlide = document.createElement('li');
+  splideSlide.classname = "splide__slide";
+  
+  let productImageOne = document.createElement('img');
+  productImageOne.src = images.product_page_select_image_one;
+
+  let productImageTwo = document.createElement('img');
+  productImageTwo.src = images.product_page_select_image_two;
+
+  let productImageThree = document.createElement('img');
+  productImageThree.src = images.product_page_select_image_three;
+
+  let productImageFour = document.createElement('img');
+  productImageFour.src = images.product_page_select_image_four;
+
+  let productImageFive = document.createElement('img');
+  productImageFive.src = images.product_page_select_image_five;
+
+  let productImageSix = document.createElement('img');
+  productImageSix.src = images.product_page_select_image_six;
+  
+  
+  
+}
