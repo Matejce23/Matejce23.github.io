@@ -134,6 +134,6 @@ if(document.location.href == 'http://127.0.0.1:5500/eCommerce/index.html') {
   var productButton = document.getElementsByClassName("view-product-btn");
 
   for (let i = 0;i < productButton.length;i++) {
-    productButton[i].addEventListener("click", viewProductFunction);
+    productButton[i].addEventListener("click", viewProductFunction, addSlider);
   }
 }
