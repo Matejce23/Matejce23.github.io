@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>eCommerce Store</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
+        <!-- font awesome icons -->
+        <link rel="stylesheet" href="./css/all.min.css">
+        <!-- STROKE 7 ICONS -->
+        <link rel="stylesheet" href="./icons/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    
+        <!-- Optional - Adds useful class to manipulate icon font display -->
+        <link rel="stylesheet" href="./icons/pe-icon-7-stroke/css/helper.css">
+    
+        <!-- Font Baloo -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+          rel="stylesheet"
+        />
+        <!-- Main CSS -->
+        <link href="./css/main.css" rel="stylesheet" />
+    </head>
+    <body>
+         <!-- =============== START OF HEADER ================== -->
+    <header>
+        <!-- Top Info Bar -->
+        <div class="top-bar-sale">
+          <h3>free shipping + 50% off</h3>
+        </div>
+        <div class="container-fluid">
+          <div class="header mt-3">
+            <div class="currency-search d-flex justify-content-end">
+                <div class="currency-dropdown" onclick="addIconCurrency()">              
+                      <select>
+                        <option value="0" class="usd" id="usd">USD</option>
+                        <option value="1" class="eur" id="eur">EUR</option>
+                        <option value="2" class="gbp" id="gbp">GBP</option>
+                        <option value="3" class="usd" id="usd">USD</option>                    
+                      </select>
+                </div>
+                <div class="search">
+                  <div class="container">
+                    <form role="search" method="get" class="search-form form" action="">
+                      <label>
+                          <span class="screen-reader-text">Search for...</span>
+                          <input type="search" class="search-field" placeholder="Type something..." value="" name="s" title="" />
+                      </label>
+                      <input type="submit" class="search-submit button" value="&#xf002" />
+                  </form>
+                  </div>
+                </div>
+                
+            </div>
+          </div>
+          <div class="promotion d-flex justify-content-end mt-4">
+            <h4>NEW COLLECTION AVAIBLE WITH 50% OFF</h3>
+          </div>
+          <div class="shop-wish-acc d-flex justify-content-end mt-4">
+            <div class="logo-header">
+                <a href="index.html"><h3>my store</h3></a>
+              </div>
+              <div class="shopping-cart">
+                <!-- <i class="fas fa-shopping-bag"></i> -->
+                <p class="pl-2">Shopping Cart</p>
+                <div class="circle">
+                  <span id="shopp-cart-item-count">0</span>
+                </div>
+              </div>
+              <div class="wish-list mr-5">
+                <p>Wish List</p>
+              </div>
+              <div class="acc-sign mr-5">
+                <p><a href="#">Sign in</a> or <a href="#">Create Account</a></p>
+              </div>
+          </div>
+        </div>           
+      </header>
+        <!-- ==================== Navbar ======================= -->
+      <div class="navbar-container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">men's watches</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">women's watches</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">categories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">shop all</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">pages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">blog</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+        <!-- ================= Product Page ==================== -->
+      <section id="product-page">
+        <div class="container-fluid">
+            <div class="product-page-items">
+                 <!-- ============= BREADCRUMB ============= -->
+          <div class="row mb-5 mt-5">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Pictures</a></li>
+                <li><a href="#">Summer 15</a></li>
+                <li>Italy</li>
+              </ul>
+            </div>
+          </div>
+          <!-- ========= Left Navigation (featured product, categories) ========== -->
+          <!-- 1 row for all -->
+          <div class="row">
+            <!-- ============ left div ================= -->
+            <div class="col-md-3">
+              <!-- categories -->
+              <div class="product-page-categories">
+                <h3>categories</h3>
+                <hr>
+                <div class="product-page-categories-list">
+                  <ul>
+                    <li>
+                      <a href="#">Category 1</a>
+                    </li>
+                    <li>
+                      <a href="#">Category 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Category 3</a>
+                    </li>
+                    <li>
+                      <a href="#">Category 4</a>
+                    </li>
+                    <li>
+                      <a href="#">Category 5</a>
+                    </li>
+                    <li>
+                      <a href="#">Category 6</a>
+                    </li>
+                    <li>
+                      <a href="#">Category 7</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- featured product -->
+              <div class="product-page-featured">
+                <h3>featured product</h3>
+                <hr>
+                <div class="product-page-featured text-center" id="product-page-featured">
+  
+                </div>
+              </div>
+            </div>
+            <!-- ================ the product images options etc ========= -->
+            <div class="col-md-9">
+              <div class="product-page-images">
+                <div class="product-page-main-image mb-5" id="product-page-main-image">
+  
+                </div>
+                <div class="product-image-select">
+  
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>   
+        </div>
+      </section>
+
+       <!-- ================ FOOTER ========================= -->
+    <footer id="footer" class="mt-5">
+        <div class="footer">
+          <!-- Top Footer -->
+          <div class="footer-menu-info">
+            <div class="row">
+              <!-- logo -->
+              <div class="col-md-4">
+                <div class="logo-footer">
+                  <h2>MY STORE LOGO</h2>
+                </div>
+              </div>
+              <!-- menu? -->
+              <div class="col-md-2">
+                <div class="shop-footer">
+                  <h4>shop</h4>
+                  <a href="">Men's watches</a>
+                  <a href="">Women's watches</a>
+                  <a href="">Categories</a>
+                  <a href="">Shop All</a>
+                </div>
+              </div>
+              <!-- information -->
+              <div class="col-md-2">
+                <div class="information-footer">
+                  <h4>information</h4>
+                  <a href="">About us</a>
+                  <a href="">Contact us</a>
+                  <a href="">Privacy Policy</a>
+                  <a href="">Shipping & Returns</a>
+                  <a href="">Terms & Conditions</a>
+                  <a href="">Blog</a>
+                </div>
+              </div>
+              <!-- connect -->
+              <div class="col-md-4">
+                <div class="social-media-footer">
+                  <h4>stay connected</h4>
+                  <img src="./img/social-media/stay-connected-after.png" class="stay-connected" alt="">
+                  <a href=""><img src="./img/social-media/facebook.png" class="social-media-icons" alt=""></a>
+                  <a href=""><img src="./img/social-media/instagram.png" class="social-media-icons" alt=""></a>
+                  <a href=""><img src="./img/social-media/twitter.png" class="social-media-icons" alt=""></a>
+                  <a href=""><img src="./img/social-media/youtube.png" class="social-media-youtube" alt=""></a>
+                  <a href=""><img src="./img/social-media/google-plus.png" class="social-media-icons" alt=""></a>
+                  <a href=""><img src="./img/social-media/pinterest.png" class="social-media-icons" alt=""></a>
+                </div>
+              </div>
+            </div>
+            <div class="hr-footer mt-5 mb-5">
+              <hr>
+            </div>
+            <!-- Bottom Footer (copyright) -->
+          <div class="row pt-3 pb-5">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="copyright pl-5">
+                <h5>© 2020 Matej Gjoshev. All Rights Reserved.</h5>
+                <img src="./img/paypal.png" alt="paypal-logo">
+                <img src="./img/visa.png" alt="visa-logo">
+                <img src="./img/master-card.png" alt="">
+              </div>
+            </div> 
+          </div>    
+          </div>
+            
+        </div>
+    </footer>
+      <!-- ============= END OF FOOTER ===================== -->
+  
+      <!-- ============= JavaScript ======================== -->
+  
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/f64de7b412.js" crossorigin="anonymous"></script>
+      <script src="./js/money.min.js"></script>
+      <script src="./js/accounting.min.js"></script>
+      <script src="./js/script.js"></script>
+      <script src="./js/currency-convert.js"></script>
+      <!-- <script src="./js/featured-products.js"></script> -->
+      <script src="./js/product-page.js"></script>
+      <script src="./js/add-to-cart.js"></script>
+    </body>
+</html>

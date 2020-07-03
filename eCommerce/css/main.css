@@ -278,6 +278,14 @@ input.search-submit {
   font-family: Poppins-Bold;
   text-transform: uppercase;
 }
+.logo-header a {
+  text-decoration: none;
+  color: #000;
+}
+.logo-header a:hover {
+  text-decoration: none;
+  color: rgb(126, 124, 124);
+}
 .shopping-cart {
   position: relative;
   margin-right: 5rem;
@@ -712,10 +720,16 @@ input.search-submit {
 }
 
 /* ========================= Prodcut Page =========================== */
+/* wrapper */
+
+.product-page-items {
+  margin-left: 15%;
+}
+
 /* Breadcrumb */
 /* Style the list */
 ul.breadcrumb {
-  padding: 10px 16px;
+  padding: 10px 0px;
   list-style: none;
   background-color: #fff;
 }
@@ -769,4 +783,8 @@ ul.breadcrumb li a:hover {
   background-color: #000;
   color: #fff;
   transition: 0.5s;
+}
+.product-page-main-image {
+  width: 446px;
+  height: 376px;
 }
