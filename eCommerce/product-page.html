@@ -20,6 +20,8 @@
           href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
           rel="stylesheet"
         />
+        <!-- Slider -->
+         <link rel="stylesheet" href="./splide-2.4.4/dist/css/./splide.min.css">
         <!-- Main CSS -->
         <link href="./css/main.css" rel="stylesheet" />
     </head>
@@ -170,11 +172,59 @@
             <!-- ================ the product images options etc ========= -->
             <div class="col-md-9">
               <div class="product-page-images">
+                <!-- main image display -->
                 <div class="product-page-main-image mb-5" id="product-page-main-image">
-  
+                  <div id="primary-slider" class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="./products/watch1/display-images/product-img2.png">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./products/watch1/display-images/product-img3.png">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./products/watch1/display-images/product-img4.png">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./products/watch1/display-images/product-img2.png">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./products/watch1/display-images/product-img3.png">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./products/watch1/display-images/product-img4.png">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
+                <!-- image selection -->
                 <div class="product-image-select">
-  
+                  <div id="secondary-slider" class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="./products/watch1/display-images/product-img2.png">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./products/watch1/display-images/product-img3.png">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./products/watch1/display-images/product-img4.png">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./products/watch1/display-images/product-img2.png">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./products/watch1/display-images/product-img3.png">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./products/watch1/display-images/product-img4.png">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -257,6 +307,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="https://kit.fontawesome.com/f64de7b412.js" crossorigin="anonymous"></script>
+      <script src="./splide-2.4.4/dist/js/splide.min.js"></script>
       <script src="./js/money.min.js"></script>
       <script src="./js/accounting.min.js"></script>
       <script src="./js/script.js"></script>
@@ -264,5 +315,6 @@
       <!-- <script src="./js/featured-products.js"></script> -->
       <script src="./js/product-page.js"></script>
       <script src="./js/add-to-cart.js"></script>
+      
     </body>
 </html>

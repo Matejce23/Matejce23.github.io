@@ -1,3 +1,128 @@
+var featuredProducts = [{
+  id: "1",
+  product_title: "2020 Smart Watch Fashion",
+  product_image: "https://i.imgur.com/gxw0T11.jpg",
+  product_price: 19.99,
+  product_discount: false,
+},
+{
+ id: "2",
+ product_title: "2020 Minimalist Ultra Thin Watch",
+ product_image: "https://i.imgur.com/2qD4rv6.png",
+ product_price: 29.99,
+ product_discount: true,
+ product_discount_price: 19.99,
+ product_page_main_image: "https://i.imgur.com/478hBB7.png",
+ product_page_select_image_one: "https://i.imgur.com/Oe1R1l5.png",
+ product_page_select_image_two: "https://i.imgur.com/JrEdSwo.png",
+ product_page_select_image_three: "https://i.imgur.com/4o0G5SW.png",
+ product_page_select_image_four: "https://i.imgur.com/ytk7lCC.png",
+ product_page_select_image_five: "https://i.imgur.com/zfjbpEQ.png",
+},
+{
+id: "3",
+product_title: "CRRJU Fashion Mens Watches",
+product_image: "https://i.imgur.com/bySU9rl.png",
+product_price: 19.99,
+product_discount: false,
+},
+{
+id: "4",
+product_title: "SKMEI Fashion Outdoor Sport Watch",
+product_image: "https://i.imgur.com/z0vgi3P.jpg",
+product_price: 29.99,
+product_discount: false,
+},
+{
+id: "5",
+product_title: "Test Js",
+product_image: "https://i.imgur.com/gxw0T11.jpg",
+product_price: 19.99,
+product_discount: false,
+},
+{
+id: "6",
+product_title: "Test Js",
+product_image: "https://i.imgur.com/2qD4rv6.png",
+product_price: 29.99,
+product_discount: true,
+product_discount_price: 19.99
+},
+{
+id: "7",
+product_title: "Test Js",
+product_image: "https://i.imgur.com/bySU9rl.png",
+product_price: 19.99,
+product_discount: false,
+},
+{
+id: "8",
+product_title: "Test Js",
+product_image: "https://i.imgur.com/z0vgi3P.jpg",
+product_price: 29.99,
+product_discount: false,
+},
+]
+var productsDiscount = [{
+id: "2",
+product_title: "2020 Minimalist Ultra Thin Watch",
+product_image: "https://i.imgur.com/2qD4rv6.png",
+product_price: 29.99,
+product_discount: true,
+product_discount_price: 19.99
+},
+{
+id: "6",
+product_title: "Test Js",
+product_image: "https://i.imgur.com/2qD4rv6.png",
+product_price: 29.99,
+product_discount: true,
+product_discount_price: 19.99
+},
+]
+var productsNoDiscount = [{
+id: "1",
+product_title: "2020 Smart Watch Fashion",
+product_image: "https://i.imgur.com/gxw0T11.jpg",
+product_price: 19.99,
+product_discount: false,
+},
+{
+id: "3",
+product_title: "CRRJU Fashion Mens Watches",
+product_image: "https://i.imgur.com/bySU9rl.png",
+product_price: 19.99,
+product_discount: false,
+},
+{
+id: "4",
+product_title: "SKMEI Fashion Outdoor Sport Watch",
+product_image: "https://i.imgur.com/z0vgi3P.jpg",
+product_price: 29.99,
+product_discount: false,
+},
+{
+id: "5",
+product_title: "Test Js",
+product_image: "https://i.imgur.com/gxw0T11.jpg",
+product_price: 19.99,
+product_discount: false,
+},
+{
+id: "7",
+product_title: "Test Js",
+product_image: "https://i.imgur.com/bySU9rl.png",
+product_price: 19.99,
+product_discount: false,
+},
+{
+id: "8",
+product_title: "Test Js",
+product_image: "https://i.imgur.com/z0vgi3P.jpg",
+product_price: 29.99,
+product_discount: false,
+},
+]
 // ============= CONVERT CURRENCY FROM JSON ==================
 var currencyRates = {
   "rates" : [

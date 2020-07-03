@@ -13,6 +13,12 @@ let arrayOfObject = [
         product_image: "https://i.imgur.com/gxw0T11.jpg",
         product_price: 19.99,
         product_discount: false,
+        product_page_main_image: "https://i.imgur.com/vFPOTj8.jpg",
+        product_page_select_image_one: "https://i.imgur.com/ldim4vz.jpg",
+        product_page_select_image_two: "https://i.imgur.com/fJI5xSV.jpg",
+        product_page_select_image_three: "https://i.imgur.com/HbcjMw6.jpg",
+        product_page_select_image_four: "https://i.imgur.com/mWN3HNi.jpg",
+        product_page_select_image_five: "https://i.imgur.com/oVjsOQl.jpg",
     },
     {
        id: "2",
@@ -34,6 +40,11 @@ let arrayOfObject = [
       product_image: "https://i.imgur.com/bySU9rl.png",
       product_price: 19.99,
       product_discount: false,
+      product_page_main_image: "https://i.imgur.com/6YC74oK.png",
+      product_page_select_image_one: "https://i.imgur.com/1saAjFA.png",
+      product_page_select_image_two: "https://i.imgur.com/V2eusuj.png",
+      product_page_select_image_three: "https://i.imgur.com/EZIlfts.png",
+      product_page_video: "https://streamable.com/jmx7jt",
     },
     {
       id: "4",
@@ -41,6 +52,8 @@ let arrayOfObject = [
       product_image: "https://i.imgur.com/z0vgi3P.jpg",
       product_price: 29.99,
       product_discount: false,
+      product_page_main_image: "https://i.imgur.com/Ee92lcE.png",
+      product_page_select_image_one: "https://i.imgur.com/Uw8JpHn.png",
     },
     {
       id: "5",
@@ -48,28 +61,47 @@ let arrayOfObject = [
       product_image: "https://i.imgur.com/gxw0T11.jpg",
       product_price: 19.99,
       product_discount: false,
+      product_page_main_image: "https://i.imgur.com/vFPOTj8.jpg",
+      product_page_select_image_one: "https://i.imgur.com/ldim4vz.jpg",
+      product_page_select_image_two: "https://i.imgur.com/fJI5xSV.jpg",
+      product_page_select_image_three: "https://i.imgur.com/HbcjMw6.jpg",
+      product_page_select_image_four: "https://i.imgur.com/mWN3HNi.jpg",
+      product_page_select_image_five: "https://i.imgur.com/oVjsOQl.jpg",
   },
   {
      id: "6",
-     product_title: "Test Js",
-     product_image: "https://i.imgur.com/2qD4rv6.png",
-     product_price: 29.99,
-     product_discount: true,
-     product_discount_price: 19.99
+      product_title: "Test Js",
+      product_image: "https://i.imgur.com/2qD4rv6.png",
+      product_price: 29.99,
+      product_discount: true,
+      product_discount_price: 19.99,
+      product_page_main_image: "https://i.imgur.com/478hBB7.png",
+      product_page_select_image_one: "https://i.imgur.com/Oe1R1l5.png",
+      product_page_select_image_two: "https://i.imgur.com/JrEdSwo.png",
+      product_page_select_image_three: "https://i.imgur.com/4o0G5SW.png",
+      product_page_select_image_four: "https://i.imgur.com/ytk7lCC.png",
+      product_page_select_image_five: "https://i.imgur.com/zfjbpEQ.png",
   },
   {
-    id: "7",
-    product_title: "Test Js",
-    product_image: "https://i.imgur.com/bySU9rl.png",
-    product_price: 19.99,
-    product_discount: false,
+      id: "7",
+      product_title: "Test Js",
+      product_image: "https://i.imgur.com/bySU9rl.png",
+      product_price: 19.99,
+      product_discount: false,
+      product_page_main_image: "https://i.imgur.com/6YC74oK.png",
+      product_page_select_image_one: "https://i.imgur.com/1saAjFA.png",
+      product_page_select_image_two: "https://i.imgur.com/V2eusuj.png",
+      product_page_select_image_three: "https://i.imgur.com/EZIlfts.png",
+      product_page_video: "https://streamable.com/jmx7jt",
   },
   {
-    id: "8",
-    product_title: "Test Js",
-    product_image: "https://i.imgur.com/z0vgi3P.jpg",
-    product_price: 29.99,
-    product_discount: false,
+      id: "8",
+      product_title: "Test Js",
+      product_image: "https://i.imgur.com/z0vgi3P.jpg",
+      product_price: 29.99,
+      product_discount: false,
+      product_page_main_image: "https://i.imgur.com/Ee92lcE.png",
+      product_page_select_image_one: "https://i.imgur.com/Uw8JpHn.png",
   },
 ]
 
@@ -154,6 +186,42 @@ function productPageFeatured(productPage) {
 }
 }
 // ===================== PRODUCT PAGE IMAGES ========================
-function productPageImages() {
+// Create and mount the thumbnails slider.
+document.addEventListener( 'DOMContentLoaded', function () {
+	var secondarySlider = new Splide( '#secondary-slider', {
+    fixedWidth  : 100,
+    width       : 540,
+		height      : 100,
+		gap         : 10,
+		cover       : true,
+		isNavigation: true,
+		focus       : 'center',
+		breakpoints : {
+			'600': {
+				fixedWidth: 66,
+				height    : 40,
+			}
+		},
+  } ).mount();
   
-}
+  var primarySlider = new Splide( '#primary-slider', {
+    type       : 'fade',
+    heightRatio: 0.5,
+    pagination : false,
+    arrows     : false,
+    cover      : true,
+    fixedWidth : 540,
+    fixedHeight: 380,
+  } );
+  
+  primarySlider.sync( secondarySlider ).mount();
+
+} );
+
+
+// attach images 
+// var productMainImage = document.getElementById("product-page-main-image");
+// var product_page_select_image_five
+// function productPageImages() {
+  
+// }

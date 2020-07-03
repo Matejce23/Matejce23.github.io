@@ -784,7 +784,7 @@ ul.breadcrumb li a:hover {
   color: #fff;
   transition: 0.5s;
 }
-.product-page-main-image {
-  width: 446px;
-  height: 376px;
+.splide__slide img {
+	width : 100%;
+	height: auto;
 }
