@@ -30,6 +30,9 @@
     .text-js {
         font-size: 30px !important;
     }
+    .split {
+        width: 75%;
+    }
 }
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -41,6 +44,9 @@
     #home-right a {
         font-size: 57px;
         line-height: 24.08px;
+    }
+    .split {
+        width: 50%;
     }  
     .about-me h3 {
         font-size: 27px;
@@ -133,7 +139,10 @@
 #home-right a {
     font-size: 79.08px;
     line-height: 52.08px;
-} 
+}
+.split {
+    width: 50%;
+}  
 .about-me h3 {
     font-size: 35px;
     width: 430px;
@@ -244,7 +253,10 @@
     #home-right a {
         font-size: 79.08px;
         line-height: 52.08px;
-    } 
+    }
+    .split {
+        width: 50%;
+    }  
     .nav-item a {
         bottom: 80px;
         left: 20px;
@@ -358,6 +370,9 @@
     height: 20%;
     float: left;
 }
+.split {
+    width: 50%;
+} 
 .about-me-text h3 {
     width: 50%;
     display: flex; 
