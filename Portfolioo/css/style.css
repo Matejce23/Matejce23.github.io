@@ -254,10 +254,12 @@ body {
     vertical-align: middle;
 }
 #home-right .navbar-nav li > span > a:hover,focus {
-    color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
+    color: #5fc3e4;
 }
 #home-right .navbar-nav li.active > span > a {
-	color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
+    color: #5fc3e4;
 } 
 /* END OF HOME PAGE/ START MENU */
 
@@ -286,7 +288,7 @@ body {
 }
 .author-about {
     display: block;
-    border: 10px solid #eee;
+    border: 10px solid rgba(95, 195, 228, 0.5);
     margin-bottom: 0px;
     width: 270px;
     height: 300px;
@@ -309,6 +311,15 @@ body {
     padding-left: 10px;
     padding-bottom: 5px;
     margin-top: 0;
+}
+.upwork {
+
+    text-decoration: none;
+    color: #007bff;
+}
+.upwork:hover {
+    color: #37a000;
+    text-decoration: none;
 }
 /* ================END OF INTRODUTION =================== */
 /*=========== PROGRESS/SKILLS ============ */
@@ -397,6 +408,16 @@ span {
 }
 /* OLD */
 .text-break {
+    padding-left: 10px;
+}
+.text-break-span {
+    padding-left: 10px;
+    font-family: "Nunito";
+    font-size: 16px;
+    font-weight: 500;
+    color: grey;
+}
+.text-break-span a {
     padding-left: 10px;
 }
 .text-box {
