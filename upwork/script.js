@@ -15,7 +15,11 @@ function filterSelection(c) {
     let imageVariant = document.getElementsByClassName("product-image");
 
     for(item of imageVariant) {
-        if(item.getAttribute("category") == c)
+        if (c == "all")  {
+            item.classList.remove("hide");
+            item.classList.add("show");
+        }
+        else if(item.getAttribute("category") == c)
         {
             item.classList.remove("hide");
             item.classList.add("show");
