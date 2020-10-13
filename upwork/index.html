@@ -9,76 +9,84 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <div class="products-grid">
-            <div class="product">
-                <div class="product-title">
-                    <h3>Phone Case</h3>
-                </div>
-                <!-- red -->
-                <div class="product-image" category ="red">
-                    <img src="./red1.png" class="img-size" alt="red-variant">
-                </div>
-                <div class="product-image" category ="red">
-                    <img src="./red1.png" class="img-size" alt="red-variant">
-                </div>
-                <div class="product-image" category ="red">
-                    <img src="./red1.png" class="img-size" alt="red-variant">
-                </div>
-                <div class="product-image" category ="red">
-                    <img src="./red1.png" class="img-size" alt="red-variant">
-                </div>
-                <!-- blue -->
-                <div class="product-image" category ="blue">
-                    <img src="./blue1.png" class="img-size" alt="red-variant">
-                </div>
-                <div class="product-image" category ="blue">
-                    <img src="./blue1.png" class="img-size" alt="red-variant">
-                </div>
-                <div class="product-image" category ="blue">
-                    <img src="./blue1.png" class="img-size" alt="red-variant">
-                </div>
-                <div class="product-image" category ="blue">
-                    <img src="./blue1.png" class="img-size" alt="red-variant">
-                </div>
-                <!-- green -->
-                <div class="product-image" category ="green">
-                    <img src="./green.png" class="img-size" alt="red-variant">
-                </div>
-                <div class="product-image" category ="green">
-                    <img src="./green.png" class="img-size" alt="red-variant">
-                </div>
-                <div class="product-image" category ="green">
-                    <img src="./green.png" class="img-size" alt="red-variant">
-                </div>
-                <div class="product-image" category ="green">
-                    <img src="./green.png" class="img-size" alt="red-variant">
-                </div>
-                <!-- product price -->
-                <div class="product-price">
-    
+        <div class="container">
+                    <div class="products-grid">
+                        <div class="product">
+                            <div class="product-title">
+                                <h3>Phone Case</h3>
+                            </div>
+                                <div class="image-container">
+                                    <!-- red -->
+                                    <div class="product-image" category ="red">
+                                        <img src="./red1.png" class="img-size" alt="red-variant">
+                                    </div>
+                                    <div class="product-image" category ="red">
+                                        <img src="./red1.png" class="img-size" alt="red-variant">
+                                    </div>
+                                    <div class="product-image" category ="red">
+                                        <img src="./red1.png" class="img-size" alt="red-variant">
+                                    </div>
+                                    <div class="product-image" category ="red">
+                                        <img src="./red1.png" class="img-size" alt="red-variant">
+                                    </div>
+                                    <!-- blue -->
+                                    <div class="product-image" category ="blue">
+                                        <img src="./blue1.png" class="img-size" alt="red-variant">
+                                    </div>
+                                    <div class="product-image" category ="blue">
+                                        <img src="./blue1.png" class="img-size" alt="red-variant">
+                                    </div>
+                                    <div class="product-image" category ="blue">
+                                        <img src="./blue1.png" class="img-size" alt="red-variant">
+                                    </div>
+                                    <div class="product-image" category ="blue">
+                                        <img src="./blue1.png" class="img-size" alt="red-variant">
+                                    </div>
+                                    <!-- green -->
+                                    <div class="product-image" category ="green">
+                                        <img src="./green.png" class="img-size" alt="red-variant">
+                                    </div>
+                                    <div class="product-image" category ="green">
+                                        <img src="./green.png" class="img-size" alt="red-variant">
+                                    </div>
+                                    <div class="product-image" category ="green">
+                                        <img src="./green.png" class="img-size" alt="red-variant">
+                                    </div>
+                                    <div class="product-image" category ="green">
+                                        <img src="./green.png" class="img-size" alt="red-variant">
+                                    </div>
+                                </div>
+                           
+                            <!-- product price -->
+                            <div class="product-price">
+                
+                            </div>
+                        </div>
+                    </div>
+             
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="phone-variants" id="cate-ul">
+                        <ul class="variants">
+                            <li class="active">
+                                <a href="#all" onclick="filterSelection('all')" class="">All</a>
+                            </li>
+                            <li class="">
+                                <a href="#red" onclick="filterSelection('red')" class="">Red</a>
+                            </li>
+                            <li class="">
+                                <a href="#blue" onclick="filterSelection('blue')" class="">Blue</a>
+                            </li>
+                            <li class="">
+                                <a href="#green" onclick="filterSelection('green')" class="">Green</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="phone-variants" id="cate-ul">
-                    <ul class="variants">
-                        <li class="active">
-                            <a href="#all" onclick="filterSelection('all')" class="">All</a>
-                        </li>
-                        <li class="">
-                            <a href="#red" onclick="filterSelection('red')" class="">Red</a>
-                        </li>
-                        <li class="">
-                            <a href="#blue" onclick="filterSelection('blue')" class="">Blue</a>
-                        </li>
-                        <li class="">
-                            <a href="#green" onclick="filterSelection('green')" class="">Green</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+       
+        
         
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

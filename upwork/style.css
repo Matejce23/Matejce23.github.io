@@ -43,5 +43,13 @@ body {
     display: none !important;
 }
 .show {
-    display: block !important;
+    display: inline-block;
+}
+.image-container {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
 }
