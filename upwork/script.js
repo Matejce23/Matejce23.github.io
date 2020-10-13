@@ -1,0 +1,29 @@
+let arr3 = document.querySelectorAll('#cate-ul>ul>li>a');
+for(let i = 0; i < arr3.length;i++) {
+    arr3[i].addEventListener("click", setActiveCategoryLi);
+}
+
+function setActiveCategoryLi() {
+    for(let i=0; i < document.querySelectorAll('#cate-ul>ul>li').length; i++)
+    {
+        document.querySelectorAll('#cate-ul>ul>li')[i].classList = "nav-item";
+    }
+    this.parentElement.classList = "nav-item active";
+}   
+
+function filterSelection(c) {
+    let imageVariant = document.getElementsByClassName("product-image");
+
+    for(item of imageVariant) {
+        if(item.getAttribute("category") == c)
+        {
+            item.classList.remove("hide");
+            item.classList.add("show");
+        }
+        else {
+            item.classList.remove("show");
+            item.classList.add("hide");
+        }
+    }
+
+  }
