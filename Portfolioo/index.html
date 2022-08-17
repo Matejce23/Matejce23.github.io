@@ -35,36 +35,38 @@
                 <!-- ================= HOME SCREEN ================= -->
         
                 <div id="home">
-                        <div class="container-fluid">
-                            <!-- LEFT SCREEN -->
-                            <!-- <div class="row"> -->
-                                <div class="split left-screen" id="left-menu">
-                                    <div class="centered mb-5">
-                                        <img src="./img/mee.jpg" class="author-img" alt="me"> 
-                                        <div class="text-js text-white">
-                                            <div>
-                                                I'm 
-                                                <b>
-                                                    <div id="typed-strings" class="text-js text-blue">
-                                                        <p>Matej Gjosev</p>
-                                                        <p>Shopify Developer</p>
-                                                        <p>From Macedonia</p>
-                                                    </div>
-                                                    <span id="typed" class="text-js text-blue"></span>
-                                                </b>
+                        <!-- <div class="container-fluid"> -->
+                            <div class="split-container" id="menu-container">
+                                <!-- LEFT SCREEN -->
+                                    <div class="split left-screen" id="left-menu">
+                                    <!--Parent of all elements-->
+                                        <div class="centered mb-5">
+                                            <img src="./img/mee.jpg" class="author-img" alt="me"> 
+                                            <div class="text-js text-white">
+                                                <div>
+                                                    I'm 
+                                                    <b>
+                                                        <div id="typed-strings" class="text-js text-blue" style="display: none;">
+                                                            <p>Matej Gjosev</p>
+                                                            <p>Shopify Developer</p>
+                                                            <p>From Macedonia</p>
+                                                        </div>
+                                                        <span id="typed" class="text-js text-blue">Matej </span><span class="typed-cursor">|</span>
+                                                    </b>
+                                                </div>
+                                            </div>               
+                                            <div class="cv-contact-btn">
+                                                <div>
+                                                    <a href="#" class="cv-btn">Download CV</a>
+                                                    <a href="#contact" class="contact-btn">Contact Me</a>
+                                                </div>
                                             </div>
-                                        </div>                              
                                     </div>
-                                    <div class="cv-contact-btn">
-                                        <div class="display-name-cell">
-                                            <a href="#" class="cv-btn">Download CV</a>
-                                            <a href="#contact" class="contact-btn">Contact Me</a>
-                                        </div>
+                                    
                                     </div>
-                                </div>
                                 <!-- RIGHT SCREEN (NAVIGATION) -->
 
-                                    <div class="split right-screen" id="right-menu">
+                                    <div class="split-right right-screen d-block animate__animated animate__slideInRight" id="right-menu">
                                         <div class="centered-2">
                                             <div class="right-menu" id="home-right">
                                                 <ul class="nav navbar-nav  flex-column" id="ul-menu">
@@ -109,7 +111,7 @@
                                     </div>
                                     <!-- ======================COLLAPSE MENU========================== -->
 
-                                    <div class="fixed-top" id="collapse-menu">
+                                    <div class="fixed-top d-none" id="collapse-menu">
                                         <div class="collapse" id="navbarToggleExternalContent">
                                             <div class="bg-dark p-4">
                                                 <!-- SMALLER MENU FOR RESPONSIVE -->
@@ -125,7 +127,11 @@
                                             </button>
                                         </nav>
                                     </div>
-                        </div>
+
+                                    <!-- ======================END OF COLLAPSE MENU========================== -->
+                            </div>
+                            
+                        <!-- </div> -->
                 </div>
                 <!-- ============== END OF HOME SCREEN ================== -->
 
@@ -143,7 +149,7 @@
                                     <p class="text-break">
                                         I am 19 years old, finished Front End Development Academy 1 year ago, and got interested in the Shopify Platform. Took a bunch of courses for Shopify Development/Liquid, and now I have an understanding of how Shopify's Theme Structure works and it's language. Shopify uses a Ruby-based Language called Liquid, Liquid was developed by Shopify co-founder and CEO Tobias Lütke and is now available as an open-source project on GitHub. Today, it's used in many different software projects, from content management systems to static site generators—and of course, Shopify.
                                     </p>
-                                    <span class="text-break-span">
+                                    <span>
                                         I am currently full-time freelancer on the upwork platform, which you can check at : <a href="https://www.upwork.com/o/profiles/users/~0122660cb4b4b911b2/" class="upwork">Upwork Profile</a>
                                     </span>
                                 </div>

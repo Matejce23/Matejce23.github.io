@@ -83,16 +83,19 @@ function displayPagesv2(c) {
   rightMenu.classList.add("split-js","right-screen-js");
   let homePage = document.getElementById("homePage");
   homePage.classList = "d-block";
+  let splitContainer = document.getElementById("menu-container");
 
     if (c == "home")  {
       leftMenu.classList = "split left-screen";
       rightMenu.classList.remove("split-js","right-screen-js");
-      rightMenu.classList.add("split","right-screen");
+      // rightMenu.classList.add("split","right-screen");
+      rightMenu.classList.add("split-right","right-screen");
       home.classList.remove("d-none");
       home.classList.add("d-block");
     }
     else {
       home.classList.add("d-block");
+      splitContainer.classList.remove("split-container");
     }
 
     for(item of sectionPages) {

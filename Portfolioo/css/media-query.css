@@ -10,7 +10,7 @@
         line-height: 24.08px;
     } 
     .about-me img {
-        width: 100%;
+        width: 90%;
         height: 100%;
     }
     .work-design img {
@@ -59,7 +59,7 @@
         padding-bottom: 10px;
     }
     .about-me img {
-        width: 100%;
+        width: 90%;
         height: 100%;
     }
     .about-me-text p {
@@ -155,7 +155,7 @@
     padding-bottom: 25px;
 }
 .about-me img {
-    width: 50%;
+    width: 30%;
     height: 50%;
 }
 .about-me-text p {
