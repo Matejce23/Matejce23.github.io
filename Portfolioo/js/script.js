@@ -18,16 +18,21 @@ function hideTopMenu(x) {
     if (i.matches) { // If media query matches
         rightMenu.classList.add("d-none");
         rightMenu.classList.remove("d-block");
+        leftImg.classList.remove("portfolio-bg");
+        leftImg.classList.add("portfolio-bg-js");
         leftScreen.classList.remove("split","left-screen");
         leftScreen.classList.add("split-query","left-screen");
     } else {
         rightMenu.classList.remove("d-none");
         rightMenu.classList.add("d-block");
+        leftImg.classList.remove("portfolio-bg-js");
+        leftImg.classList.add("portfolio-bg");
         leftScreen.classList.remove("split-query","left-screen");
         leftScreen.classList.add("split","left-screen");
         
     }
   }
+  var leftImg = document.getElementById('left-img')
   var leftScreen = document.getElementById('left-menu');
   var rightMenu = document.getElementById('right-menu');
   var i = window.matchMedia("(max-width: 991px)")
@@ -237,17 +242,32 @@ $("#ul-menu > li").click(function() {
   $("#right-menu").removeClass("show");
   if(media.matches) {
     $("#homePage > a").click(function() {
-      $("#left-menu").removeClass("split");
-      $("#left-menu").addClass("split-query");
+      $("#left-img").removeClass("portfolio-bg");
+      $("#left-img").addClass("portfolio-bg-js");
     })
   }
   else {
-      $("#left-menu").removeClass("split-query");
-      $("#left-menu").addClass("split");
+      $("#left-img").removeClass("portfolio-bg-js");
+      $("#left-img").addClass("portfolio-bg");
   }
  
 });
 var media = window.matchMedia("(max-width: 991px)")
+// $("#ul-menu > li").click(function() {
+//   $("#right-menu").removeClass("show");
+//   if(media.matches) {
+//     $("#homePage > a").click(function() {
+//       $("#left-menu").removeClass("split");
+//       $("#left-menu").addClass("split-query");
+//     })
+//   }
+//   else {
+//       $("#left-menu").removeClass("split-query");
+//       $("#left-menu").addClass("split");
+//   }
+ 
+// });
+// var media = window.matchMedia("(max-width: 991px)")
 // =================================== TYPESCRIPT HOME PAGE =======================================
 document.addEventListener("DOMContentLoaded", function(event) {
     var typed = new Typed('#typed',{

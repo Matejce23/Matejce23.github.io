@@ -9,10 +9,6 @@
         font-size: 47px;
         line-height: 24.08px;
     } 
-    .about-me img {
-        width: 90%;
-        height: 100%;
-    }
     .work-design img {
         width: 100%;
         height: 100%;
@@ -48,33 +44,12 @@
     .split {
         width: 50%;
     }  
-    .about-me h3 {
-        font-size: 27px;
-        margin-top: 10px;
-    }
-    .about-me-text h3 {
-        width: 400px;
-        display: flex;
-        font-size: 22px;
-        padding-bottom: 10px;
-    }
-    .about-me img {
-        width: 90%;
-        height: 100%;
-    }
-    .about-me-text p {
-        display: flex;
-        width: 400px;
-        word-wrap: break-word;
-        hyphens: auto;
-        overflow-wrap: break-word;
-    }
     .skills h3 {
         font-size: 25px;
     }
-    .skills-2 h3 {
+    /* .skills-2 h3 {
         margin-top: 20px;
-    }
+    } */
     #testimonial-1 {
         font-size: 15px;
         
@@ -143,32 +118,12 @@
 .split {
     width: 50%;
 }  
-.about-me h3 {
-    font-size: 35px;
-    width: 430px;
-    margin-top: 30px;
-}
-.about-me-text h3 {
-    width: 400px;
-    display: flex;
-    font-size: 25px;
-    padding-bottom: 25px;
-}
-.about-me img {
-    width: 30%;
-    height: 50%;
-}
-.about-me-text p {
-    display: flex;
-    font-size: 20px;
-    width: 400px;    
-}
 .skills h3 {
     font-size: 25px;
 }
-.skills-2 h3 {
+/* .skills-2 h3 {
     margin-top: 20px;
-}
+} */
 #testimonial-1 {
     font-size: 20px;
     margin-right: 15px;
@@ -261,35 +216,6 @@
         bottom: 80px;
         left: 20px;
     }
-    .about-me h3 {
-        font-size: 35px;
-        margin-top: 30px;
-    }
-    #about-img {
-        float: left;
-    }
-    .about-me img {
-        width: 30%;
-        height: 30%;
-        float: left;
-    }
-    .about-me-text h3 {
-        width: 50%;
-        display: flex; 
-        /* padding-left: -50px; */
-        padding-top: 0px;
-        padding-bottom: 3px; 
-        font-size: 20px; 
-    }
-    .about-me-text p {
-        /* display: flex; */
-        font-size: 15px;
-        width: 60%;
-        /* width: 400px;     */
-    }
-    .skills-2 span {
-        margin-top: 5px;
-    }
     .img-wrap img {
         margin: 0;
         padding: 0;
@@ -365,25 +291,9 @@
     top: -125px;
     right: 50px;
 }
-.about-me img {
-    width: 28%;
-    height: 20%;
-    float: left;
-}
 .split {
     width: 50%;
 } 
-.about-me-text h3 {
-    width: 50%;
-    display: flex; 
-    padding-top: 0px;
-    padding-bottom: 3px; 
-    font-size: 20px; 
-}
-.about-me-text p {
-    font-size: 15px;
-    width: 70%;
-}
 .work-design img {
     width: 100%;
     height: 100%;

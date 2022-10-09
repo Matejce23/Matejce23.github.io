@@ -17,6 +17,17 @@ body {
 
 /* START OF HOME PAGE/ START MENU */
 /* home left testing */
+/* NEW 10/09/2022 */
+.portfolio-bg {
+    height: 100%;
+    max-width: 50vw;
+    aspect-ratio: 5000 / 3000;
+}
+.portfolio-bg-js {
+    height: 100%;
+    max-width: 100vw;
+    aspect-ratio: 5000 / 3000;
+}
 .split-container {
     position: relative;
     width: 100%;
@@ -31,15 +42,6 @@ body {
     left: 0;
     overflow-x: hidden;
     transition: all 0.6s;
-    /* padding-bottom: 67%; */
-    /* height: 100%;
-    width: 50%; 
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-    transition: all 0.6s; */
   }
   .split-right {
     height: 100%;
@@ -50,7 +52,6 @@ body {
     right: 0;
     overflow-x: hidden;
     transition: all 0.6s;
-    /* padding-bottom: 67%; */
   }
   .split-js {
     height: 100%;
@@ -61,7 +62,6 @@ body {
     left: 0;
     overflow-x: hidden;
     padding-top: 20px;
-    /* z-index: 99999999; */
     transition: all 0.6s;
   }
   .split-small {
@@ -84,9 +84,9 @@ body {
   /* Control the left side */
   .left-screen {
     /* left: 0; */
-    background-image: url('../home_personal.jpg');
+    /* background-image: url('../img/portfolio.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100%; */
   }
   .split-query {
     height: 100%;
@@ -319,9 +319,7 @@ body {
 .author-about {
     display: block;
     border: 10px solid rgba(95, 195, 228, 0.5);
-    margin-bottom: 0px;
-    width: 270px;
-    height: 300px;
+    max-width: 100%;
 }
 .about-me-text p {
     font-family: "Nunito";
@@ -332,18 +330,7 @@ body {
     font-size: 25px;
     padding: 0;
 }
-#i-am {
-    padding-top: 20px;
-    padding-left: 10px;
-}
-#designer {
-    padding: 0;
-    padding-left: 10px;
-    padding-bottom: 5px;
-    margin-top: 0;
-}
 .upwork {
-
     text-decoration: none;
     color: #007bff;
 }
@@ -371,9 +358,9 @@ span {
 	background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%) !important;
 	background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%) !important;
 }
-.skills-2 {
-    margin: 0;
-    padding: 0;
+.skills-2 h3{
+    margin-bottom:  0.26rem !important;
+    margin-top: 0 !important;
 }
 /* ===============END OF PROGRESS/SKILLS ================ */
 /* =====================TESTIMONIALS ==================== */
@@ -412,11 +399,15 @@ span {
   .testimonial{
     background: #fff;
     padding: 0px;
+    min-height: 100%;
+    border: 5px solid rgba(95, 195, 228, 0.5);
+    border-radius: 15px;
   }
   .testimonial img{
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    margin-top: 1em;
   }
   .name{
     font-size: 20px;
@@ -428,18 +419,15 @@ span {
     margin-bottom: 20px;
   }
   .text-contain-testi {
-      padding-left: 15px;
-      padding-bottom: 10px;
-      text-align: left;
+      /* padding-left: 15px;
+      padding-bottom: 10px; */
+      text-align: center;
   }
   .fa, .fas {
     font-weight: 900;
     color: rgba(33,147,176,1);
 }
 /* OLD */
-.text-break {
-    padding-left: 10px;
-}
 .text-break-span {
     padding-left: 10px;
     font-family: "Nunito";
